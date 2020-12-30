@@ -1,0 +1,10 @@
+name: Menu
+form: $/tamphuc/management/models/menu/fields.yaml
+modelClass: TamPhuc\Management\Models\Menu
+defaultRedirect: tamphuc/management/menu
+create:
+    redirect: 'tamphuc/management/menu/update/:id'
+    redirectClose: tamphuc/management/menu
+update:
+    redirect: tamphuc/management/menu
+    redirectClose: tamphuc/management/menu

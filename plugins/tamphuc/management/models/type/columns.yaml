@@ -1,0 +1,23 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    slug:
+        label: slug
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    position:
+        label: position
+        type: number
+        sortable: true
+    is_available:
+        label: is_availabe
+        type: switch

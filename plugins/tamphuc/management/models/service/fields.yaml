@@ -1,0 +1,24 @@
+fields:
+    name:
+        label: 'Tên Dịch Vụ'
+        span: auto
+        type: text
+    icon:
+        label: 'Biểu Tượng'
+        span: auto
+        type: text
+    content:
+        label: 'Nội Dung'
+        size: ''
+        span: auto
+        default: ''
+        type: textarea
+    position:
+        label: 'Vị Trí'
+        span: auto
+        type: number
+    is_available:
+        label: 'Ẩn Dịch Vụ'
+        span: auto
+        default: 1
+        type: checkbox

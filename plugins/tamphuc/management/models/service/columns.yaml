@@ -1,0 +1,28 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    icon:
+        label: icon
+        type: text
+    content:
+        label: content
+        type: text
+    others:
+        label: others
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    position:
+        label: position
+        type: number
+    is_available:
+        label: is_available
+        type: switch

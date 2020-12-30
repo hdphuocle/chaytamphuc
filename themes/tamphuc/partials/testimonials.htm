@@ -1,0 +1,47 @@
+==
+{% set
+comments = [
+{
+"url": "#",
+"name": "Nguyễn Thị Hợp",
+"job": "Nhà Thiết Kế Thời Trang",
+"content": "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin."
+},
+{
+"url": "#",
+"name": "Jennifer",
+"job": "Marketing Executive",
+"content": "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nechendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Namultricies dolor et mi tempor, non pulvinar felis sollicitudin."
+},
+{
+"url": "#",
+"name": "Hoàng Văn Nam",
+"job": "Kỹ sư CNTT",
+"content": "Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nechendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Namultricies dolor et mi tempor, non pulvinar felis sollicitudin."
+},
+]
+%}
+
+{% macro render_comment(comments) %}
+{% for item in comments %}
+<li>
+    <div class="testimonails-content">
+        <p>{{ item.content }}</p>
+        <h6>{{ item.name }} - <a href="{{ item.url }}">{{ item.job }}</a></h6>
+    </div>
+</li>{% endfor %}
+{% endmacro %}
+
+{% import _self as nav %}
+
+<div class="row">
+        <div class="row justify-content-center">
+            <div class="testimonails-slider">
+                <ul class="slides">
+                    {{ nav.render_comment(comments) }}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            

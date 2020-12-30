@@ -1,0 +1,10 @@
+name: Service
+form: $/tamphuc/management/models/service/fields.yaml
+modelClass: TamPhuc\Management\Models\Service
+defaultRedirect: tamphuc/management/service
+create:
+    redirect: 'tamphuc/management/service/update/:id'
+    redirectClose: tamphuc/management/service
+update:
+    redirect: tamphuc/management/service
+    redirectClose: tamphuc/management/service

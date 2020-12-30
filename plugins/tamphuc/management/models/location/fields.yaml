@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: 'Địa ĐIểm'
+        span: auto
+        type: text
+    slug:
+        label: 'Tên Rút Gọn'
+        span: auto
+        type: text

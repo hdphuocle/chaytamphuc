@@ -1,0 +1,65 @@
+==
+{% set
+service_types = [
+{
+"icon": "fa-pencil",
+"name": "Food",
+"content": "Sản phẩm luôn luôn sạch, an toàn",
+"date": "13-06-2020",
+},
+{
+"icon": "fa-bullhorn",
+"name": "Online",
+"content": "Hỗ trợ đặt hàng Online dễ dàng.",
+"date": "07-10-2020",
+},
+{
+"icon": "fa-bell",
+"name": "Park",
+"content": "Có chỗ đậu xe Ô tô miễn phí",
+"date": "Có chỗ đậu xe Ô tô miễn phí",
+},
+{
+"icon": "fa-heart",
+"name": "Wifi",
+"content": "Sóng wifi mạnh phủ khắp nhà hàng",
+"date": "22-11-2020",
+},
+{
+"icon": "fa-heart",
+"name": "Time",
+"content": "Mở cửa từ 6h sáng tới 9h tối",
+"date": "11-08-2020",
+}
+]
+%}
+
+{% macro render_item(service_types) %}
+{% for item in service_types %}
+<div class="col-md-2 col-sm-4">
+    <div class="service-item">
+        <div class="icon">
+            <i class="fa {{ item.icon }}"></i>
+        </div>
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.content }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as service %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Tại sao nên chọn Nhà hàng Tâm Phúc</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        {{ service.render_item(service_types) }}
+    </div>
+</div>

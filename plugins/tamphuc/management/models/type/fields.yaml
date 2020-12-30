@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: 'Loại Món Ăn'
+        span: auto
+        type: text
+    slug:
+        label: 'Tên Rút Gọn'
+        span: auto
+        type: text
+    position:
+        label: 'Vị Trí'
+        span: auto
+        type: number
+    is_available:
+        label: !!binary Q2jhu41uIMSR4buDIB1oaeG7g24gdGjhu4s=
+        span: auto
+        type: checkbox

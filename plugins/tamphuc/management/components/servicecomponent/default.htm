@@ -1,0 +1,30 @@
+{% set serviceList = __SELF__.serviceList %}
+{% macro render_item(serviceList) %}
+{% for item in serviceList %}
+<div class="col-md-2 col-sm-4">
+    <div class="service-item">
+        <div class="icon">
+            <i class="fa {{ item.icon }}"></i>
+        </div>
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.content }}</p>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as service %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Tại sao nên chọn Nhà hàng Tâm Phúc</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        {{ service.render_item(serviceList) }}
+    </div>
+</div>

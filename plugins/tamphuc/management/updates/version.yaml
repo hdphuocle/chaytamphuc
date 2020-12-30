@@ -1,0 +1,38 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table tamphuc_management_type'
+    - builder_table_create_tamphuc_management_type.php
+1.0.3:
+    - 'Created table tamphuc_management_location'
+    - builder_table_create_tamphuc_management_location.php
+1.0.4:
+    - 'Created table tamphuc_management_list'
+    - builder_table_create_tamphuc_management_list.php
+1.0.5:
+    - 'Updated table tamphuc_management_list'
+    - builder_table_update_tamphuc_management_menu.php
+1.0.6:
+    - 'Updated table tamphuc_management_menu'
+    - builder_table_update_tamphuc_management_menu_2.php
+1.0.7:
+    - 'Updated table tamphuc_management_menu'
+    - builder_table_update_tamphuc_management_menu_3.php
+1.0.8:
+    - 'Updated table tamphuc_management_type'
+    - builder_table_update_tamphuc_management_type.php
+1.0.9:
+    - 'Updated table tamphuc_management_type'
+    - builder_table_update_tamphuc_management_type_2.php
+1.0.10:
+    - 'Created table tamphuc_management_services'
+    - builder_table_create_tamphuc_management_services.php
+1.0.11:
+    - 'Updated table tamphuc_management_services'
+    - builder_table_update_tamphuc_management_services.php
+1.0.12:
+    - 'Updated table tamphuc_management_services'
+    - builder_table_update_tamphuc_management_services_2.php
+1.0.13:
+    - 'Created table tamphuc_management_cook_blog'
+    - builder_table_create_tamphuc_management_cook_blog.php

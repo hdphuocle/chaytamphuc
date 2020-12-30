@@ -1,0 +1,28 @@
+title = "Home"
+url = "/"
+layout = "default"
+description = "Home Page"
+meta_description = "Free restaurant theme by templatemo, converted for OctoberCMS"
+is_hidden = 0
+
+[menuList]
+[serviceList]
+==
+<div id="slider">
+    {% partial "slider" %}
+</div>
+
+<div id="menu">
+    {% component 'menuList' %}
+</div>
+<div id="services">
+    {% component 'serviceList' %}
+</div>
+
+<div id="latest-blog">
+    {% partial "latest-blog" %}
+</div>
+
+<div id="customer-feedback">
+    {% partial "customer-feedback" %}
+</div>

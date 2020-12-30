@@ -1,0 +1,10 @@
+name: Type
+form: $/tamphuc/management/models/type/fields.yaml
+modelClass: TamPhuc\Management\Models\Type
+defaultRedirect: tamphuc/management/type
+create:
+    redirect: 'tamphuc/management/type/update/:id'
+    redirectClose: tamphuc/management/type
+update:
+    redirect: tamphuc/management/type
+    redirectClose: tamphuc/management/type

@@ -1,0 +1,28 @@
+plugin:
+    name: 'tamphuc.management::lang.plugin.name'
+    description: 'tamphuc.management::lang.plugin.description'
+    author: TamPhuc
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: "\bTamPhuc-Management"
+        url: tamphuc/management/menu
+        icon: icon-list
+        sideMenu:
+            side-menu-location:
+                label: 'Địa Điểm'
+                url: tamphuc/management/location
+                icon: icon-sitemap
+            side-menu-type:
+                label: 'Loại Món Ăn'
+                url: tamphuc/management/type
+                icon: icon-sitemap
+            !!binary c2lkZS1tZW51LR1zZXJ2aWNl:
+                label: 'Dịch Vụ'
+                url: tamphuc/management/service
+                icon: icon-sitemap
+            side-menu-cook-blog:
+                label: 'Bài Viết'
+                url: tamphuc/management/cookblog
+                icon: icon-sitemap

@@ -1,0 +1,46 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+    location_id:
+        label: location_id
+        type: number
+    type_id:
+        label: type_id
+        type: number
+    describe:
+        label: describe
+        type: text
+    image_url:
+        label: image_url
+        type: text
+    slug:
+        label: slug
+        type: text
+    is_new:
+        label: is_new
+        type: text
+    is_available:
+        label: is_available
+        type: text
+    is_promotion:
+        label: is_promotion
+        type: text
+    price:
+        label: price
+        type: text
+    price_promotion:
+        label: price_promotion
+        type: text
+    other:
+        label: other
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

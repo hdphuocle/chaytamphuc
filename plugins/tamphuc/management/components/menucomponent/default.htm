@@ -1,0 +1,65 @@
+{% set menuList = __SELF__.menuList %}
+
+
+{% set typeList = __SELF__.typeList %}
+
+{% macro render_item(menuList) %}
+{% for item in menuList %}
+<div class="col-xs-12 col-sm-6 col-md-4 mix {{ item.slugType }}">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p>
+                            <img class=" img-fluid" src= '{{ "assets/images#{item.image_url}"|theme }}' alt="{{ item.slug }}">
+                        </p>
+                        <h4 class="card-title"> <span>{{ item.name }}</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="backside">
+                <div class="card">
+                    <div class="card-body text-center mt-4">
+                        <h4 class="card-title">{{ item.name }}</h4>
+                        <p class="card-text">{{ item.describe }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_type(typeList) %}
+{% for item in typeList %}
+<li><span class="filter" data-filter=".{{ item.slug }}">{{ item.name }}</span></li>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as nav %}
+<section id="menu_list" class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Thực đơn tại Nhà hàng Tâm Phúc</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters">
+                    <li><span class="filter" data-filter="all">Tất cả</span></li>
+                    {{ nav.render_type(typeList) }}
+                </ul>
+            </div>
+        </div>
+        <div class="row dishes">
+            {{ nav.render_item(menuList) }}
+        </div>
+    </div>
+</section>
+

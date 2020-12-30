@@ -1,0 +1,10 @@
+name: Location
+form: $/tamphuc/management/models/location/fields.yaml
+modelClass: TamPhuc\Management\Models\Location
+defaultRedirect: tamphuc/management/location
+create:
+    redirect: 'tamphuc/management/location/update/:id'
+    redirectClose: tamphuc/management/location
+update:
+    redirect: tamphuc/management/location
+    redirectClose: tamphuc/management/location

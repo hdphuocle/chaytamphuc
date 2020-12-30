@@ -1,0 +1,47 @@
+fields:
+    name:
+        label: 'Tên Món Ăn'
+        span: auto
+        type: text
+    location:
+        label: 'Địa Điểm'
+        nameFrom: id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation
+    type:
+        label: !!binary HUxv4bqhaQ==
+        nameFrom: id
+        descriptionFrom: description
+        select: name
+        span: auto
+        type: relation
+    price:
+        label: Giá
+        span: auto
+        type: number
+    is_new:
+        label: 'Món ăn mới'
+        span: auto
+        type: checkbox
+    is_available:
+        label: 'Món ăn đang sẵn có'
+        span: auto
+        type: checkbox
+    is_promotion:
+        label: 'Đang khuyến mãi'
+        span: auto
+        type: checkbox
+    image_url:
+        label: 'Hình Ảnh'
+        mode: image
+        span: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: mediafinder
+    describe:
+        label: 'Mô tả'
+        span: auto
+        size: ''
+        type: textarea

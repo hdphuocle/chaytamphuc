@@ -1,0 +1,87 @@
+==
+{% set
+menus = {
+'mon1':      ['assets/images/dish1.jpg', 'Bánh xèo', 'banh xeo'],
+'mon2':      ['assets/images/dish2.jpg', 'Gỏi cuốn ngũ sắc', 'goi cuon'],
+'mon3':      ['assets/images/dish3.jpg', 'Bánh nậm', 'banh nậm'],
+'mon4':      ['assets/images/dish4.jpg', 'Hến xúc bánh tráng', 'hen xuc banh trang'],
+'mon5':      ['assets/images/dish5.jpg', 'Bánh xèo', 'banh xeo'],
+'mon6':      ['assets/images/dish6.jpg', 'Bánh xèo', 'banh xeo'],
+}
+%}
+
+{% set
+menu_types = {
+'1': ['Tất Cả', 'tc'],
+'2': ['Khai Vị', 'kv'],
+'3': ['Điểm Tâm Sáng', 'dt'],
+'4': ['Canh', 'ch'],
+'5': ['Món Kho/Xào', 'kx'],
+'6': ['Cơm Chiên', 'cc'],
+}
+%}
+
+{% macro render_item(menus) %}
+{% for item in menus %}
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p>
+                            <img class=" img-fluid" src= '{{ "#{item[0]}"|theme }}' alt="{{ item[2] }}">
+                        </p>
+                        <h4 class="card-title"> <span>{{ item[1] }}</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="backside">
+                <div class="card">
+                    <div class="card-body text-center mt-4">
+                        <h4 class="card-title">{{ item[1] }}</h4>
+                        <p class="card-text">This is basic card with image on top, title, description and button.This is
+                            basic card with image on top, title, description and button.This is basic card with image on
+                            top, title, description and button.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_type(menu_types) %}
+{% for item in menu_types %}
+<li><span class="filter" data-filter="{{ item[1] }}">{{ item[0] }}</span></li>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as nav %}
+
+<section id="menu_list" class="pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Thực đơn tại Nhà hàng Tâm Phúc</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters">
+                    {{ nav.render_type(menu_types) }}
+                </ul>
+            </div>
+        </div>
+        <div class="row dishes">
+            <!-- Team member -->
+            {{ nav.render_item(menus) }}
+            <!-- ./Team member -->
+
+        </div>
+    </div>
+</section>
