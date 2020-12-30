@@ -1,10 +1,10 @@
 # Composer ignores
 /vendor
-composer.phar
-composer.lock
+#composer.phar
+#composer.lock
 
 # Framework ignores
-.env
+#.env
 .env.*.php
 .env.php
 selenium.php
