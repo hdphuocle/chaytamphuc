@@ -36,3 +36,24 @@
 1.0.13:
     - 'Created table tamphuc_management_cook_blog'
     - builder_table_create_tamphuc_management_cook_blog.php
+1.0.14:
+    - 'Created table tamphuc_management_slide'
+    - builder_table_create_tamphuc_management_slide.php
+1.0.15:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide.php
+1.0.16:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide_2.php
+1.0.17:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide_3.php
+1.0.18:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide_4.php
+1.0.19:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide_5.php
+1.0.20:
+    - 'Updated table tamphuc_management_slide'
+    - builder_table_update_tamphuc_management_slide_6.php

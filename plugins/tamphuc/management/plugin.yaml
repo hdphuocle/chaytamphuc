@@ -6,10 +6,18 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item:
-        label: "\bTamPhuc-Management"
+        label: 'Quản Lý Tâm Phúc'
         url: tamphuc/management/menu
         icon: icon-list
         sideMenu:
+            side-menu-item:
+                label: 'Thực Đơn'
+                url: tamphuc/management/menu
+                icon: icon-sitemap
+            side-menu-cook-blog:
+                label: 'Bài Viết'
+                url: tamphuc/management/cookblog
+                icon: icon-sitemap
             side-menu-location:
                 label: 'Địa Điểm'
                 url: tamphuc/management/location
@@ -22,7 +30,7 @@ navigation:
                 label: 'Dịch Vụ'
                 url: tamphuc/management/service
                 icon: icon-sitemap
-            side-menu-cook-blog:
-                label: 'Bài Viết'
-                url: tamphuc/management/cookblog
+            side-menu-slide:
+                label: !!binary HVNsaWRl
+                url: tamphuc/management/slide
                 icon: icon-sitemap

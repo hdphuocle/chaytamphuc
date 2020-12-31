@@ -1,0 +1,27 @@
+fields:
+    name:
+        label: !!binary HVTDqm4gU2xpZGU=
+        span: auto
+        type: text
+    title:
+        label: 'Tiêu Đề'
+        span: auto
+        type: text
+    content:
+        label: 'Nội Dung'
+        size: ''
+        span: auto
+        type: textarea
+    is_available:
+        label: 'Chọn để hiển thị'
+        span: auto
+        type: checkbox
+    position:
+        label: 'Vị trí'
+        span: auto
+        type: number
+    image_url:
+        label: 'Hình Ảnh'
+        mode: image
+        span: auto
+        type: mediafinder

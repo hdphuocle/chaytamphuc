@@ -2,15 +2,14 @@ title = "Blog"
 url = "/food-info"
 layout = "default"
 description = "Blog Single Post"
-meta_author = "templatemo and József Tamás Herczeg"
 meta_description = "Free restaurant theme by templatemo, converted for OctoberCMS"
-meta_keywords = "business, restaurant, blog, responsive, bootstrap"
-==
+is_hidden = 0
 
+==
 <div id="product-post">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="c{% component 'blogPost' %}ol-md-12">
                 <div class="heading-section">
                     <h2>Single Blog Post</h2>
                     <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="" />
@@ -22,7 +21,7 @@ meta_keywords = "business, restaurant, blog, responsive, bootstrap"
                 <div class="row">
                     <div class="product-item col-md-12">
                         <div class="row">
-                            <div class="col-md-8">  
+                            <div class="col-md-8">
                                 <div class="image">
                                     <div class="image-post">
                                         <img src="{{ 'assets/images/single-post.jpg'|theme }}" alt="">
@@ -45,6 +44,6 @@ meta_keywords = "business, restaurant, blog, responsive, bootstrap"
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
     </div>
 </div>

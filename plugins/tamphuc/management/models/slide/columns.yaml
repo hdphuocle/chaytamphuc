@@ -1,0 +1,32 @@
+columns:
+    id:
+        label: id
+        type: number
+    name:
+        label: name
+        type: text
+        sortable: false
+    title:
+        label: title
+        type: text
+    content:
+        label: content
+        type: text
+    is_available:
+        label: is_available
+        type: text
+    position:
+        label: position
+        type: number
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
+    image_url:
+        label: image_url
+        type: text
+    href:
+        label: href
+        type: text

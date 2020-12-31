@@ -1,0 +1,10 @@
+name: Slide
+form: $/tamphuc/management/models/slide/fields.yaml
+modelClass: TamPhuc\Management\Models\Slide
+defaultRedirect: tamphuc/management/slide
+create:
+    redirect: 'tamphuc/management/slide/update/:id'
+    redirectClose: tamphuc/management/slide
+update:
+    redirect: tamphuc/management/slide
+    redirectClose: tamphuc/management/slide

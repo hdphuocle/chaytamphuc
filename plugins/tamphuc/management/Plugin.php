@@ -8,7 +8,8 @@ class Plugin extends PluginBase
     {
         return [
             'TamPhuc\Management\Components\MenuComponent' => 'menuList',
-            'TamPhuc\Management\Components\ServiceComponent' => 'serviceList'
+            'TamPhuc\Management\Components\ServiceComponent' => 'serviceList',
+            'TamPhuc\Management\Components\SlideComponent' => 'slideList',
         ];
     }
 

@@ -17,8 +17,8 @@ class ServiceComponent extends ComponentBase
 
     public function onRun()
     {
-//        $this->serviceList = Service::orderBy('position')->get();
-        $this->serviceList = Service::all();
+        $this->serviceList = Service::orderBy('position')->get();
+//        $this->serviceList = Service::all();
     }
 
     public function defineProperties()

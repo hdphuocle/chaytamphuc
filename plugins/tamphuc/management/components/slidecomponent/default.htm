@@ -1,3 +1,25 @@
-<p>This is the default markup for component SlideComponent</p>
+{% set slideList = __SELF__.slideList %}
+{% macro render_item(slideList) %}
+{% for item in slideList %}
+<li>
+    <div class="slider-caption">
+        <div class="slider-caption-background">
+            <h1>{{ item.title }}</h1>
+            <p>
+                {{ item.content }}
+            </p>
+            <a href="{{ item.href }}">Đặt bàn ngay</a>
+        </div>
+    </div>
+    <img src='{{ "storage/app/media#{item.image_url}" }}' alt=""/>
+</li>
+{% endfor %}
+{% endmacro %}
 
-<small>You can delete this file if you want</small>
+{% import _self as slide %}
+
+<div class="flexslider">
+    <ul class="slides">
+        {{ slide.render_item(slideList) }}
+    </ul>
+</div>
