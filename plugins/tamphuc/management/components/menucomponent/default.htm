@@ -15,7 +15,7 @@
                     <img src='{{ "assets/images#{item.image_url}"|theme }}'>
                 </div>
 
-                <a href="#0" class="link">{{ item.name }}</a>
+                <a href="#0" class="link"><span>{{ item.name }}</span></a>
                 <div class="img-wrap img-2">
                     <img src="https://assets.codepen.io/1462889/sea.png" alt="">
                 </div>
@@ -249,14 +249,16 @@
 
     .link {
         position: relative;
-        padding: 10px 20px;
-        border-radius: 4px;
+        /*padding: 10px 20px;*/
+        border-radius: 8px;
         display: inline-block;
         text-align: center;
+        padding: 1px;
+        text-decoration: none;
         color: #aa441d;
         min-width: 180px;
         margin-top: 4px;
-        background: linear-gradient(145deg, rgb(195, 240, 200), rgb(80, 155, 245));
+        background: linear-gradient(to right, Orange, Yellow, Orange);
         transition: all 200ms linear;
         font-family: 'Goldman', sans-serif;
         font-weight: 700;
@@ -264,12 +266,17 @@
         line-height: 1.2;
         transform: translate3d(0, 0, 30px) perspective(100px);
     }
+    .link span{
+        background: linear-gradient(145deg, rgb(225, 219, 255), rgb(212, 220, 245));
+        display: block;
+        padding: 0.6em 1.5em;
+        border-radius: 6px;
+    }
 
     .link:hover {
         color: #102770;
         background-color: #ffeba7;
     }
-
 
 
     .img-menu img {
