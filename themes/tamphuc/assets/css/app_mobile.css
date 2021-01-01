@@ -32,3 +32,35 @@ html {
 #slider .flex-direction-nav .flex-prev {
     display: none !important;
 }
+.main-footer {
+    font-family: 'Goldman', sans-serif;
+}
+
+.main-footer .footer-title {
+    font-weight: 900;
+    font-family: 'Goldman', sans-serif;
+}
+
+.main-footer p {
+    font-family: 'Goldman', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.main-footer .recent-posts a {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+}
+
+.subscribe-form span {
+    font-family: 'Goldman', sans-serif;
+    font-size: 18px;
+}
+
+.social-bottom span {
+    font-family: 'Goldman', sans-serif;
+    font-size: 20px;
+}
+.subscribe-form input#subscribe{
+    width: auto!important;
+}
