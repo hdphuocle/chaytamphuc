@@ -38,6 +38,13 @@ html {
 
 .main-footer .footer-title {
     font-weight: 900;
+    font-size: 20px;
+    font-family: 'Goldman', sans-serif;
+}
+
+.main-footer .shop-list ul a {
+    font-weight: 500;
+    font-size: 15px;
     font-family: 'Goldman', sans-serif;
 }
 
@@ -45,6 +52,7 @@ html {
     font-family: 'Goldman', sans-serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .main-footer .recent-posts a {

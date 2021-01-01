@@ -10,6 +10,13 @@
 
 .main-footer .footer-title {
     font-weight: 900;
+    font-size: 16px;
+    font-family: 'Goldman', sans-serif;
+}
+
+.main-footer .shop-list ul a {
+    font-weight: 500;
+    font-size: 14px;
     font-family: 'Goldman', sans-serif;
 }
 
@@ -17,6 +24,7 @@
     font-family: 'Goldman', sans-serif;
     font-style: italic;
     font-weight: 400;
+    font-size: 14px;
 }
 
 .main-footer .recent-posts a {
@@ -27,12 +35,16 @@
 .subscribe-form span {
     font-family: 'Goldman', sans-serif;
     font-size: 18px;
+    margin-top: 4px;
 }
 
 .social-bottom span {
     font-family: 'Goldman', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 4px;
 }
 .subscribe-form input#subscribe{
     width: auto!important;
+    min-width: 180px;
 }
+
