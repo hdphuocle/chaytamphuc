@@ -23,21 +23,7 @@ $(document).ready(function () {
         controlNav: false
     });
 
-    $(function () {
 
-        // Instantiate MixItUp:
-
-        $('#Container').mixItUp();
-
-
-        $(document).ready(function () {
-            $(".fancybox").fancybox();
-        });
-
-    });
-    $(document).on("click", ".card-3d-wrap", function () {
-        $("#pricing").click();
-    });
 });
 
 
