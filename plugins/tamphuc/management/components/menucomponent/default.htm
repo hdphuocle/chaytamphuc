@@ -12,7 +12,7 @@
                 <h4 class="mb-5"></h4>
                 <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
                 <div class="img-menu">
-                    <img src='{{ "storage/app/media#{item.image_url}" }}'>
+                    <img src='{{ "assets/images#{item.image_url}"|theme }}'>
                 </div>
 
                 <a href="#0" class="link">{{ item.name }}</a>
@@ -20,7 +20,7 @@
                     <img src="https://assets.codepen.io/1462889/sea.png" alt="">
                 </div>
                 <div class="img-wrap img-1">
-                    <img src="{{ 'storage/app/media/hst.png' }}" alt="">
+                    <img src="{{ 'assets/images/hst.png'|theme }}" alt="">
                 </div>
                 <div class="img-wrap img-3">
                     <img src="https://assets.codepen.io/1462889/water.png" alt="">
@@ -128,8 +128,9 @@
     .card-front {
         width: 100%;
         height: 100%;
-        background-image: url("storage/app/media/bg_mn.jpg ");
-        background-size: contain;
+        /*background-image: url("{{ 'storage/app/media/bg_mn.jpg'|theme }}");*/
+        /*background-size: contain;*/
+        background: linear-gradient(217deg, rgba(151, 194, 224, 0.98), #c9bcc5);
         position: absolute;
         border-radius: 6px;
         left: 0;
@@ -277,9 +278,12 @@
         border-radius: 11%;
         padding: 5px;
         border: 10px #eff4ff;
+        transition: width 1s, height 1s;
     }
 
     .img-menu img:hover {
+        width: 260px;
+        height: 190px;
         box-shadow: 1px 1px 1px #d3e4ff;
     }
 
@@ -378,3 +382,7 @@
     }
 
 </style>
+
+<script>
+
+</script>
