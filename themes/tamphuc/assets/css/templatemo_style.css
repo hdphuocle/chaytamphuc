@@ -946,11 +946,13 @@ textarea {
 .blog-post {
     position: relative;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .blog-thumb {
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 
 .blog-thumb img {
@@ -965,6 +967,7 @@ textarea {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 15px;
+    border-radius: 10px;
 }
 
 .content-show a {
