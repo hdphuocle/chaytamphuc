@@ -25,6 +25,14 @@ html {
     display: none !important;
 }
 
+.testimonails-content {
+    padding: 8px !important;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 #slider .flex-direction-nav .flex-next {
     display: none !important;
 }
