@@ -146,7 +146,7 @@
 
     .pricing-wrap {
         position: relative;
-        padding-top: 156px;
+        padding-top: 137px;
         width: 100%;
         display: block;
         z-index: 1;
@@ -258,7 +258,8 @@
         color: #aa441d;
         min-width: 180px;
         margin-top: 4px;
-        background: linear-gradient(to right, Orange, Yellow, Orange);
+        background: -webkit-linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         transition: all 200ms linear;
         font-family: 'Goldman', sans-serif;
         font-weight: 700;
@@ -266,8 +267,10 @@
         line-height: 1.2;
         transform: translate3d(0, 0, 30px) perspective(100px);
     }
-    .link span{
-        background: linear-gradient(145deg, rgb(225, 219, 255), rgb(212, 220, 245));
+
+    .link span {
+        background: -webkit-linear-gradient(to right, #d9ccd4, #fffcdc); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #d9cdd5, #fffcdc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         display: block;
         padding: 0.6em 1.5em;
         border-radius: 6px;
@@ -278,20 +281,24 @@
         background-color: #ffeba7;
     }
 
+    .img-menu {
+        padding: 5px;
+    }
 
     .img-menu img {
-        width: 250px;
-        height: 185px;
+        width: 270px;
+        height: 200px;
         border-radius: 11%;
         padding: 5px;
-        border: 10px #eff4ff;
+        /*border: 10px #eff4ff;*/
+        box-shadow: 1px 1px 1px 1px #d3e4ff;
         transition: width 1s, height 1s;
     }
 
     .img-menu img:hover {
-        width: 260px;
-        height: 190px;
-        box-shadow: 1px 1px 1px #d3e4ff;
+        width: 280px;
+        height: 210px;
+        box-shadow: 1px 1px 1px #fff29f;
     }
 
     .img-wrap img {
