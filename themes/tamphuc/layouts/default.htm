@@ -3,27 +3,30 @@ description = "Default layout"
 <!DOCTYPE html>
 <html lang="en">
 {% partial "meta" %}
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=431872177550574&autoLogAppEvents=1" nonce="XYf4GefS"></script>
 
 <body>
 <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="https://browsehappy.com/">Upgrade your browser today</a> or <a href="https://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
-	
+    <div id="fb-root"></div>
+
+
 <header>
     {% partial "top" %}
     {% partial "nav" %}
 </header>
 
 	{% page %}
-    
+
 <footer>
     <div class="container">
-       {% partial "socials" %}             
-       {% partial "bottom" %}             
-       {% partial "footer" %}             
+       {% partial "socials" %}
+       {% partial "bottom" %}
+       {% partial "footer" %}
     </div>
 </footer>
-    
+
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

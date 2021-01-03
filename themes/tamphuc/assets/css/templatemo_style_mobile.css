@@ -929,27 +929,231 @@ textarea {
 
 /*-- Services --*/
 
-.service-item {
-    text-align: center;
+
+.service-btn {
+    margin-bottom: 24px;
+    position: relative;
+    width: 100%;
 }
 
-.icon i {
-    border-radius: 50%;
-    border: 20px solid #f78e21;
-    color: #f78e21;
-    font-size: 28px;
-    line-height: 80px;
-    width: 120px;
-    height: 120px;
+.service-content {
+    margin: 0 auto;
+}
+
+.service-btn img {
+    height: 50px;
+    margin-bottom: 32px
+}
+
+.service-btn .btn {
+    position: relative;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    line-height: 120px;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 999px;
+    color: rgba(155, 155, 155, 1);
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.8), 1px 1px 2px rgb(252, 255, 182);
+    font-size: 5em;
+    font-family: sans-serif;
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset 3px 15px 45px rgba(255, 255, 255, 0.1),
+    inset -1px -1px 2px rgba(255, 242, 159, 0.5),
+    inset -3px -15px 45px rgba(0, 0, 0, 0.2),
+    1px 5px 30px -4px rgb(153, 186, 243);
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+    transition: 0.1s ease-out;
+    padding: 0 !important;
+}
+
+.service-btn .btn:before {
+    content: "";
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e8cbc0, #636fa4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    z-index: -1;
+    border-radius: 999px;
+    box-shadow: inset -1px -1px 2px rgba(255, 242, 159, 0.3),
+    inset -5px -15px 40px rgba(255, 255, 255, 0.1),
+    inset 1px 1px 2px rgba(255, 242, 159, 0.5),
+    inset 5px 15px 40px rgba(255, 242, 159, 0.2),
+    -2px -40px 50px -20px rgba(255, 255, 255, 0.1),
+    2px 35px 50px -10px rgba(255, 193, 34, 0.4),
+    0px 0px 25px 8px rgba(60, 60, 60, 1);
+}
+
+.service-btn .btn:active {
+    color: rgba(95, 98, 110, 0.7);
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset 3px 15px 45px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+    inset -3px -15px 45px rgba(255, 255, 255, 0.1),
+    1px 5px 10px -4px rgba(0, 0, 0, 0.5);
+}
+
+.blob, .blob:before {
+    -webkit-animation: blob 1s linear;
+    -moz-animation: blob 1s linear;
+    -o-animation: blob 1s linear;
+    animation: blob 1s linear;
+}
+
+.blob {
+    color: rgba(0, 00, 0, 0.4);
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset 3px 15px 45px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+    inset -3px -15px 45px rgba(255, 255, 255, 0.1),
+    1px 5px 10px -4px rgb(255, 242, 159);
+}
+
+@-webkit-keyframes blob {
+    0% {
+        border-radius: 999px 999px;
+    }
+    5% {
+        border-radius: 999px 200px;
+    }
+    22% {
+        border-radius: 400px 999px;
+    }
+    34% {
+        border-radius: 999px 700px;
+    }
+    48% {
+        border-radius: 700px 999px;
+    }
+    70% {
+        border-radius: 999px 999px;
+    }
+    85% {
+        border-radius: 850px 999px;
+    }
+    100% {
+        border-radius: 999px 999px;
+    }
+}
+
+@-moz-keyframes blob {
+    0% {
+        border-radius: 999px 999px;
+    }
+    5% {
+        border-radius: 999px 200px;
+    }
+    22% {
+        border-radius: 400px 999px;
+    }
+    34% {
+        border-radius: 999px 700px;
+    }
+    48% {
+        border-radius: 700px 999px;
+    }
+    70% {
+        border-radius: 999px 999px;
+    }
+    85% {
+        border-radius: 850px 999px;
+    }
+    100% {
+        border-radius: 999px 999px;
+    }
+}
+
+@-o-keyframes blob {
+    0% {
+        border-radius: 999px 999px;
+    }
+    5% {
+        border-radius: 999px 200px;
+    }
+    22% {
+        border-radius: 400px 999px;
+    }
+    34% {
+        border-radius: 999px 700px;
+    }
+    48% {
+        border-radius: 700px 999px;
+    }
+    70% {
+        border-radius: 999px 999px;
+    }
+    85% {
+        border-radius: 850px 999px;
+    }
+    100% {
+        border-radius: 999px 999px;
+    }
+}
+
+@keyframes blob {
+    0% {
+        border-radius: 999px 999px;
+    }
+    5% {
+        border-radius: 999px 200px;
+    }
+    22% {
+        border-radius: 400px 999px;
+    }
+    34% {
+        border-radius: 999px 700px;
+    }
+    48% {
+        border-radius: 700px 999px;
+    }
+    70% {
+        border-radius: 999px 999px;
+    }
+    85% {
+        border-radius: 850px 999px;
+    }
+    100% {
+        border-radius: 999px 999px;
+    }
+}
+
+.service-item {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.service-list {
+    /*width: 100%;*/
+    display: flex;
+    flex-direction: row;
+
 }
 
 .service-item h4 {
-    font-family: 'Yanone+Kaffeesatz', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
-    margin-top: 25px;
+    font-family: 'Goldman', sans-serif;
+    justify-content: center;
+    color: #000000;
+    max-width: 100px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.service-item p {
+    font-family: 'Goldman', sans-serif;
+    justify-content: center;
+    font-size: 14px;
+    color: #000000;
+    max-width: 100px;
+    text-align: center;
 }
 
 /*-- End Services --*/
@@ -959,7 +1163,7 @@ textarea {
 
 .blog-post {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-radius: 10px;
 }
 
@@ -981,7 +1185,8 @@ textarea {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     padding: 15px;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .content-show a {
@@ -1256,9 +1461,6 @@ footer {
         display: none;
     }
 
-    .service-item {
-        margin-top: 40px;
-    }
 
     .footer-title {
         margin-top: 60px;
@@ -1321,10 +1523,6 @@ footer {
 
     .slider-caption {
         display: none;
-    }
-
-    .service-item {
-        margin-top: 40px;
     }
 
     .footer-title {

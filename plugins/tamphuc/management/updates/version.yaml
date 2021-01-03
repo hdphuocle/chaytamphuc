@@ -57,3 +57,9 @@
 1.0.20:
     - 'Updated table tamphuc_management_slide'
     - builder_table_update_tamphuc_management_slide_6.php
+1.0.21:
+    - 'Updated table tamphuc_management_services'
+    - builder_table_update_tamphuc_management_services_3.php
+1.0.22:
+    - 'Updated table tamphuc_management_services'
+    - builder_table_update_tamphuc_management_services_4.php

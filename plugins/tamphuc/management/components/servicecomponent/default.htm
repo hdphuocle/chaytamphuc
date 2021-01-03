@@ -1,11 +1,13 @@
 {% set serviceList = __SELF__.serviceList %}
 {% macro render_item(serviceList) %}
 {% for item in serviceList %}
-<div class="col-md-2 col-sm-4">
-    <div class="service-item">
-        <div class="icon">
-            <i class="fa {{ item.icon }}"></i>
+<div class="service-item">
+    <div class="service-btn">
+        <div class="btn btn-blob ">
+            <img src='{{ "assets/images#{item.image_url}"|theme }}'>
         </div>
+    </div>
+    <div class="service-content">
         <h4>{{ item.name }}</h4>
         <p>{{ item.content }}</p>
     </div>

@@ -2,33 +2,39 @@
 {% set
 service_types = [
 {
-"icon": "fa-pencil",
+"image_url": "/food.png",
 "name": "Food",
 "content": "Sản phẩm luôn luôn sạch, an toàn",
 "date": "13-06-2020",
 },
 {
-"icon": "fa-bullhorn",
+"image_url": "/sell-online.png",
 "name": "Online",
 "content": "Hỗ trợ đặt hàng Online dễ dàng.",
 "date": "07-10-2020",
 },
 {
-"icon": "fa-bell",
+"image_url": "/free-parking.png",
 "name": "Park",
 "content": "Có chỗ đậu xe Ô tô miễn phí",
 "date": "Có chỗ đậu xe Ô tô miễn phí",
 },
 {
-"icon": "fa-heart",
+"image_url": "/free-wifi.png",
 "name": "Wifi",
 "content": "Sóng wifi mạnh phủ khắp nhà hàng",
 "date": "22-11-2020",
 },
 {
-"icon": "fa-heart",
+"image_url": "/time.png",
 "name": "Time",
 "content": "Mở cửa từ 6h sáng tới 9h tối",
+"date": "11-08-2020",
+},
+{
+"image_url": "/bamboo.png",
+"name": "Bamboo",
+"content": "Không gian tre mộc phục vụ thực khách!",
 "date": "11-08-2020",
 }
 ]
@@ -36,21 +42,24 @@ service_types = [
 
 {% macro render_item(service_types) %}
 {% for item in service_types %}
-<div class="col-md-2 col-sm-4">
-    <div class="service-item">
-        <div class="icon">
-            <i class="fa {{ item.icon }}"></i>
+<div class="service-item">
+    <div class="service-btn">
+        <div class="btn btn-blob ">
+            <img src='{{ "assets/images/#{item.image_url}"|theme }}'>
         </div>
+    </div>
+    <div class="service-content">
         <h4>{{ item.name }}</h4>
         <p>{{ item.content }}</p>
     </div>
 </div>
+
 {% endfor %}
 {% endmacro %}
 
 {% import _self as service %}
 
-<div class="container">
+<div class="container ">
     <div class="row">
         <div class="col-md-12">
             <div class="heading-section">
@@ -59,7 +68,238 @@ service_types = [
             </div>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row d-flex flex-wrap justify-content-center service-list">
         {{ service.render_item(service_types) }}
     </div>
 </div>
+<style>
+    .service-btn {
+        margin-bottom: 24px;
+        position: relative;
+        width: 100%;
+    }
+
+    .service-content {
+        margin: 0 auto;
+    }
+
+    .service-btn img {
+        height: 60px;
+        margin-bottom: 36px
+    }
+
+    .service-btn .btn {
+        position: relative;
+        cursor: pointer;
+        width: 120px;
+        height: 120px;
+        line-height: 140px;
+        margin: 0px auto;
+        text-align: center;
+        border-radius: 999px;
+        color: rgba(155, 155, 155, 1);
+        text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.8), 1px 1px 2px rgb(252, 255, 182);
+        font-size: 5em;
+        font-family: sans-serif;
+        box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        inset 3px 15px 45px rgba(255, 255, 255, 0.1),
+        inset -1px -1px 2px rgba(255, 242, 159, 0.5),
+        inset -3px -15px 45px rgba(0, 0, 0, 0.2),
+        1px 5px 30px -4px rgb(153, 186, 243);
+        -webkit-transition: 0.1s ease-out;
+        -moz-transition: 0.1s ease-out;
+        -o-transition: 0.1s ease-out;
+        transition: 0.1s ease-out;
+        padding: 0 !important;
+    }
+
+    .service-btn .btn:before {
+        content: "";
+        background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #e8cbc0, #636fa4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        z-index: -1;
+        border-radius: 999px;
+        box-shadow: inset -1px -1px 2px rgba(255, 242, 159, 0.3),
+        inset -5px -15px 40px rgba(255, 255, 255, 0.1),
+        inset 1px 1px 2px rgba(255, 242, 159, 0.5),
+        inset 5px 15px 40px rgba(255, 242, 159, 0.2),
+        -2px -40px 50px -20px rgba(255, 255, 255, 0.1),
+        2px 35px 50px -10px rgba(255, 193, 34, 0.4),
+        0px 0px 25px 8px rgba(60, 60, 60, 1);
+    }
+
+    .service-btn .btn:active {
+        color: rgba(95, 98, 110, 0.7);
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+        box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        inset 3px 15px 45px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+        inset -3px -15px 45px rgba(255, 255, 255, 0.1),
+        1px 5px 10px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    .blob, .blob:before {
+        -webkit-animation: blob 1s linear;
+        -moz-animation: blob 1s linear;
+        -o-animation: blob 1s linear;
+        animation: blob 1s linear;
+    }
+
+    .blob {
+        color: rgba(0, 00, 0, 0.4);
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+        box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        inset 3px 15px 45px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 2px rgba(0, 0, 0, 0.5),
+        inset -3px -15px 45px rgba(255, 255, 255, 0.1),
+        1px 5px 10px -4px rgb(255, 242, 159);
+    }
+
+    @-webkit-keyframes blob {
+        0% {
+            border-radius: 999px 999px;
+        }
+        5% {
+            border-radius: 999px 200px;
+        }
+        22% {
+            border-radius: 400px 999px;
+        }
+        34% {
+            border-radius: 999px 700px;
+        }
+        48% {
+            border-radius: 700px 999px;
+        }
+        70% {
+            border-radius: 999px 999px;
+        }
+        85% {
+            border-radius: 850px 999px;
+        }
+        100% {
+            border-radius: 999px 999px;
+        }
+    }
+
+    @-moz-keyframes blob {
+        0% {
+            border-radius: 999px 999px;
+        }
+        5% {
+            border-radius: 999px 200px;
+        }
+        22% {
+            border-radius: 400px 999px;
+        }
+        34% {
+            border-radius: 999px 700px;
+        }
+        48% {
+            border-radius: 700px 999px;
+        }
+        70% {
+            border-radius: 999px 999px;
+        }
+        85% {
+            border-radius: 850px 999px;
+        }
+        100% {
+            border-radius: 999px 999px;
+        }
+    }
+
+    @-o-keyframes blob {
+        0% {
+            border-radius: 999px 999px;
+        }
+        5% {
+            border-radius: 999px 200px;
+        }
+        22% {
+            border-radius: 400px 999px;
+        }
+        34% {
+            border-radius: 999px 700px;
+        }
+        48% {
+            border-radius: 700px 999px;
+        }
+        70% {
+            border-radius: 999px 999px;
+        }
+        85% {
+            border-radius: 850px 999px;
+        }
+        100% {
+            border-radius: 999px 999px;
+        }
+    }
+
+    @keyframes blob {
+        0% {
+            border-radius: 999px 999px;
+        }
+        5% {
+            border-radius: 999px 200px;
+        }
+        22% {
+            border-radius: 400px 999px;
+        }
+        34% {
+            border-radius: 999px 700px;
+        }
+        48% {
+            border-radius: 700px 999px;
+        }
+        70% {
+            border-radius: 999px 999px;
+        }
+        85% {
+            border-radius: 850px 999px;
+        }
+        100% {
+            border-radius: 999px 999px;
+        }
+    }
+
+    /*.service-item:last-child {*/
+    /*    margin: 0*/
+    /*}*/
+
+    .service-item {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+
+    .service-list {
+        /*width: 100%;*/
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .service-item h4 {
+        font-family: 'Goldman', sans-serif;
+        justify-content: center;
+        color: #000000;
+        max-width: 140px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .service-item p {
+        font-family: 'Goldman', sans-serif;
+        justify-content: center;
+        font-size: 16px;
+        color: #000000;
+        max-width: 140px;
+        text-align: center;
+    }
+</style>
