@@ -4,7 +4,8 @@ use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\DB;
 use TamPhuc\Management\Models\Menu;
 use TamPhuc\Management\Models\Type;
-use TamPhuc\Management\Models\Location;
+
+//use TamPhuc\Management\Models\Location;
 
 class MenuComponent extends ComponentBase
 {
@@ -37,24 +38,17 @@ class MenuComponent extends ComponentBase
 
     public function onRun()
     {
-        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-            $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        } else {
-            $ip_address = $_SERVER['REMOTE_ADDR'];
-        }
+
+        $ip_address = $this->getUserIP();
         echo $ip_address;
-
-
         $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
-        $country = $geo['geoplugin_countryName'];
         $city = $geo["geoplugin_city"];
         echo $city;
         if ($city) {
-            $location = Db::select("select * from tamphuc_management_location where LIKE '%$city%'", [1]);
-            echo 'OK'.$location;
+            $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
+            dd($location);
         }
+
 
         $this->menuList = Menu::all();
 
