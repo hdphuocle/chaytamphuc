@@ -53,7 +53,7 @@ class MenuComponent extends ComponentBase
         echo $city;
         if ($city) {
             $location = Db::select("select * from tamphuc_management_location where LIKE '%$city%'", [1]);
-            echo $location;
+            echo 'OK'.$location;
         }
 
         $this->menuList = Menu::all();
