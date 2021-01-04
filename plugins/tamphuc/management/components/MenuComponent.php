@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\DB;
 use TamPhuc\Management\Models\Menu;
 use TamPhuc\Management\Models\Type;
 
-//use TamPhuc\Management\Models\Location;
-
 class MenuComponent extends ComponentBase
 {
     public function componentDetails()
@@ -19,6 +17,7 @@ class MenuComponent extends ComponentBase
 
     public $menuList;
     public $typeList;
+    public $location_name = 'Hà Nội';
 
     function getUserIP()
     {
@@ -40,17 +39,21 @@ class MenuComponent extends ComponentBase
     {
 
         $ip_address = $this->getUserIP();
-        echo $ip_address;
+//        $ip_address = "116.97.55.126";
+//        echo $ip_address;
         $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
         $city = $geo["geoplugin_city"];
-        echo $city;
+//        echo $city;
+        $location_id = 1;
         if ($city) {
             $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
-            dd($location);
+            if ($location) {
+                $location_id = $location->id;
+                $this->location_name = $location->name;
+            }
         }
 
-
-        $this->menuList = Menu::all();
+        $this->menuList = Menu::where('location_id', $location_id)->get();
 
         $this->typeList = Type::orderBy('position')->get();
 
