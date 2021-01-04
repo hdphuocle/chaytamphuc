@@ -1,0 +1,34 @@
+title = "Chay Tâm Phúc Hà Nội"
+url = "/tamphuc-hanoi"
+layout = "default"
+is_hidden = 0
+[hanoiMenuList]
+
+[serviceList]
+
+[slideList]
+
+[restaurantImagesList]
+==
+
+<div id="slider">
+    {% component 'slideList' %}
+</div>
+
+<div id="menu">
+    {% component 'hanoiMenuList' %}
+</div>
+<div id="services">
+    {% component 'serviceList' %}
+</div>
+<div id="gallery">
+    {% component 'restaurantImagesList' %}
+</div>
+
+<div id="latest-blog">
+    {% partial "latest-blog" %}
+</div>
+
+<div id="customer-feedback">
+    {% partial "customer-feedback" %}
+</div>

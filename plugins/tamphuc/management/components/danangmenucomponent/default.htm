@@ -1,3 +1,360 @@
-<p>This is the default markup for component DanangMenuComponent</p>
+{% set menuList = __SELF__.danangMenuList %}
 
-<small>You can delete this file if you want</small>
+{% set typeList = __SELF__.typeList %}
+
+{% set location_name = __SELF__.location_name  %}
+
+{% macro render_item(menuList) %}
+{% for item in menuList %}
+<div class="card-3d-wrap mx-auto">
+    <div class="card-3d-wrapper">
+        <div class="card-front">
+            <div class="card-content">
+                <h4 class="mb-5"></h4>
+                <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+                <div class="img-menu">
+                    <img src='{{ "assets/images#{item.image_url}"|theme }}'>
+                </div>
+
+                <a href="#0" class="link"><span>{{ item.name }}</span></a>
+                <div class="img-wrap img-2">
+                    <img src="https://assets.codepen.io/1462889/sea.png" alt="">
+                </div>
+                <div class="img-wrap img-1">
+                    <img src="{{ 'assets/images/hst.png'|theme }}" alt="">
+                </div>
+                <div class="img-wrap img-3">
+                    <img src="https://assets.codepen.io/1462889/water.png" alt="">
+                </div>
+                <div class="img-wrap img-6">
+                    <img src="https://assets.codepen.io/1462889/IvyRock.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro render_type(typeList) %}
+{% for item in typeList %}
+<li><span class="filter" data-filter=".{{ item.slug }}">{{ item.name }}</span></li>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as menu %}
+<section id="menu_list">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Thực đơn tại Nhà hàng Tâm Phúc Tại {{ location_name }} </h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters">
+                    <li><span class="filter" data-filter="all">Tất cả</span></li>
+                    {{ menu.render_type(typeList) }}
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center align-self-center">
+                        <div class="section text-center py-2 py-md-0">
+                            <div class="row">
+                                {{ menu.render_item(menuList) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+
+    .section {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        display: block;
+    }
+
+
+    .card-3d-wrap {
+        position: relative;
+        width: 320px;
+        max-width: calc(100% - 20px);
+        height: 490px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        margin-top: 90px;
+        border-radius: 24px;
+        transition: width 1s, height 1s;
+        box-shadow: 20px 5px 40px #99baf3,
+        0px 5px 40px #fcffb6,
+        -20px 5px 40px #9686db;
+    }
+
+    .card-3d-wrap:hover {
+        position: relative;
+        width: 325px;
+        max-width: calc(100% - 20px);
+        height: 500px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        margin-top: 90px;
+    }
+
+    .card-3d-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: transform 700ms 400ms ease-out;
+    }
+
+    .card-front {
+        width: 100%;
+        height: 100%;
+        /*background-image: url("{{ 'storage/app/media/bg_mn.jpg'|theme }}");*/
+        /*background-size: contain;*/
+        background: linear-gradient(217deg, rgba(151, 194, 224, 0.98), #c9bcc5);
+        position: absolute;
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        box-shadow: 0 12px 35px 0 rgba(16, 39, 112, .07);
+    }
+
+    .card-content {
+        position: relative;
+        padding-top: 137px;
+        width: 100%;
+        display: block;
+        z-index: 1;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .card-content h4 {
+        position: relative;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        letter-spacing: 3px;
+        font-size: 22px;
+        line-height: 1.7;
+        color: #102770;
+        transform: translate3d(0, 0, 35px) perspective(100px);
+    }
+
+    .card-content h4:before {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        background: linear-gradient(217deg, #448ad5, #b8eaf9);
+        width: 70px;
+        height: 70px;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 6px 20px 0 rgba(16, 39, 112, .3);
+        animation: border-transform 6s linear infinite;
+    }
+
+    @keyframes border-transform {
+        0%, 100% {
+            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        }
+        14% {
+            border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+        }
+        28% {
+            border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+        }
+        42% {
+            border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+        }
+        56% {
+            border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+        }
+        70% {
+            border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+        }
+        84% {
+            border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+        }
+    }
+
+    .card-content h2 {
+        position: relative;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        font-size: 36px;
+        line-height: 1.1;
+        color: #102770;
+        transform: translate3d(0, 0, 30px) perspective(100px);
+    }
+
+    .card-content h2 sup {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        position: relative;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        letter-spacing: 1px;
+        color: #102770;
+        transform: translate3d(0, 0, 30px) perspective(100px);
+    }
+
+    .link {
+        position: relative;
+        /*padding: 10px 20px;*/
+        border-radius: 8px;
+        display: inline-block;
+        text-align: center;
+        padding: 1px;
+        text-decoration: none;
+        color: #aa441d;
+        min-width: 180px;
+        margin-top: 4px;
+        background: -webkit-linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        transition: all 200ms linear;
+        font-family: 'Goldman', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 1.2;
+        transform: translate3d(0, 0, 30px) perspective(100px);
+    }
+
+    .link span {
+        background: -webkit-linear-gradient(to right, #d9ccd4, #fffcdc); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #d9cdd5, #fffcdc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: block;
+        padding: 0.6em 1.5em;
+        border-radius: 6px;
+    }
+
+    .link:hover {
+        color: #102770;
+        background-color: #ffeba7;
+    }
+
+    .img-menu {
+        padding: 5px;
+    }
+
+    .img-menu img {
+        width: 270px;
+        height: 200px;
+        border-radius: 11%;
+        padding: 5px;
+        /*border: 10px #eff4ff;*/
+        box-shadow: 1px 1px 1px 1px #d3e4ff;
+        transition: width 1s, height 1s;
+    }
+
+    .img-menu img:hover {
+        width: 280px;
+        height: 210px;
+        box-shadow: 1px 1px 1px #fff29f;
+    }
+
+    .img-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .img-1 {
+        position: absolute;
+        display: block;
+        left: 110px;
+        top: 31px;
+        z-index: 5;
+        width: calc(30% + 20px);
+        transform: translate3d(0, 0, 45px) perspective(100px);
+        opacity: 1;
+        pointer-events: auto;
+        transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
+    }
+
+    .img-2 {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        transform: translate3d(0, 0, 15px) perspective(100px);
+    }
+
+    .img-3 {
+        position: absolute;
+        display: block;
+        right: -58px;
+        top: -49px;
+        z-index: 5;
+        width: calc(60% + 10px);
+        transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+        transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
+    }
+
+    .img-6 {
+        position: absolute;
+        display: block;
+        right: -20px;
+        bottom: -55px;
+        z-index: 5;
+        width: calc(20% + 30px);
+        transform: translate3d(0, 0, 25px) perspective(100px) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+        transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
+    }
+
+
+</style>

@@ -2,7 +2,7 @@
 {# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
 links = {
-'home':      ['home', 'Trang chủ'],
+'home':      ['', 'Trang chủ'],
 'tamphuc-hanoi':  ['tamphuc-hanoi', 'Tâm Phúc Hà Nội'],
 'tamphuc-danang': ['tamphuc-danang', 'Tâm Phúc Đà Nẵng'],
 'product':   ['product', 'Sản phẩm thực dưỡng'],
@@ -14,7 +14,7 @@ links = {
 {% for code, link in links %}
 <li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
     <a
-            href="{{ link.sublinks ? '#' : (link.page ?: link[0])|page }}"
+            href="{{ link.sublinks ? '#' : (link.page ?: link[0]) }}"
             {% if link.sublinks %}data-toggle="dropdown" {% endif %}
             class="{{ link.sublinks ? 'dropdown-toggle' }}"
     >

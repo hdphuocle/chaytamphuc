@@ -38,8 +38,8 @@ class MenuComponent extends ComponentBase
     public function onRun()
     {
 
-        $ip_address = $this->getUserIP();
-//        $ip_address = "116.97.55.126";
+//        $ip_address = $this->getUserIP();
+        $ip_address = "116.97.55.126";
 //        echo $ip_address;
         $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
         $city = $geo["geoplugin_city"];
