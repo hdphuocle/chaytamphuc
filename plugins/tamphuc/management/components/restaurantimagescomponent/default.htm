@@ -1,103 +1,55 @@
 {% set
 imageList = [
 {
-"image_url": "https://source.unsplash.com/random/?tech,care",
+"image_url": "/2.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,studied",
+"image_url": "/aa.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,substance",
+"image_url": "/bg5-1024x389.png",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,choose",
+"image_url": "/post.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,past",
+"image_url": "/bb.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,lamp",
+"image_url": "/cc.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,yet",
+"image_url": "/ff.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,eight",
+"image_url": "/ffe.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,crew",
+"image_url": "/ffeg.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,event",
+"image_url": "/ffr.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,instrument",
+"image_url": "/ffw.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,practical",
+"image_url": "/ggt.jpg",
 "alt": "alt"
 },
 {
-"image_url": "https://source.unsplash.com/random/?tech,pass",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,bigger",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,number",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,feature",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,line",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,railroad",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,pride",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,too",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,bottle",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,base",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,cell",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,bag",
-"alt": "alt"
-},
-{
-"image_url": "https://source.unsplash.com/random/?tech,card",
+"image_url": "/ss.jpg",
 "alt": "alt"
 }
 ]
@@ -106,7 +58,7 @@ imageList = [
 {% macro render_item(imageList) %}
 {% for item in imageList %}
 <div class="gallery-item">
-    <div class="content"><img src='{{ item.image_url}}' alt="{{ item.alt}}"></div>
+    <div class="content"><img src='{{ "assets/images#{item.image_url}"|theme }}' alt="{{ item.alt}}"></div>
 </div>
 {% endfor %}
 {% endmacro %}
