@@ -1,0 +1,44 @@
+<div class="comments-block">
+    {% if user or guest %}
+    {{ form_ajax('onComment', {flash: true, id: 'comment_form', validate: true}) }}
+    <div data-validate-error></div>
+
+    {% if user == null %}
+
+    <label for="phuocle_comments_user_name{{post_id}}">
+        Your name
+        <input type="text" class=" reply-field" id="phuocle_comments_user_name{{post_id}}" name="user_name"/>
+    </label>
+    <br>
+    <label for="phuocle_comments_user_email{{post_id}}">
+        Your Email address
+        <input type="text" class=" reply-field" id="phuocle_comments_user_email{{post_id}}" name="user_email"/>
+    </label>
+    <br>
+
+    {% endif %}
+
+    <input type="hidden" value="{{post_id}}" name="parent_id" />
+    <label for="phuocle_comments_comment-text{{post_id}}">
+        Comment
+        <textarea class="form-control reply-field" id="phuocle_comments_comment-text{{post_id}}" name="comment" cols="50"
+                  rows="10"></textarea>
+    </label>
+
+    <br>
+    <button type="submit" data-attach-loading class='btn btn-default send-comment'>Send</button>
+    <br>
+    <div id="message"></div>
+    <br>
+    {{ form_close() }}
+
+    {% else %}
+    <div class="notification">
+        {% if login_notification %}
+        {{login_notification|raw}}
+        {% else %}
+        Please <a href="{{url('/login')}}">Login</a> to leave a comment
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

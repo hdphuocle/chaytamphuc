@@ -1,0 +1,13 @@
+plugin:
+    name: 'phuocle.blogcomments::lang.plugin.name'
+    description: 'phuocle.blogcomments::lang.plugin.description'
+    author: PhuocLe
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    comments:
+        label: Comments
+        url: phuocle/blogcomments/comments
+        icon: icon-file-text
+        permissions:
+            - phuocle.blogcomments.manage_comments

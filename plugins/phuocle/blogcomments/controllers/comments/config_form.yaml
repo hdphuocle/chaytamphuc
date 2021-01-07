@@ -1,0 +1,11 @@
+name: Comments
+form: $/phuocle/blogcomments/models/comments/fields.yaml
+modelClass: PhuocLe\BlogComments\Models\Comments
+defaultRedirect: phuocle/blogcomments/comments
+create:
+    redirect: 'phuocle/blogcomments/comments/update/:id'
+    redirectClose: phuocle/blogcomments/comments
+update:
+    redirect: phuocle/blogcomments/comments
+    redirectClose: phuocle/blogcomments/comments
+preview: {  }

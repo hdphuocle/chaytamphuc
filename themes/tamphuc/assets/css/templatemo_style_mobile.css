@@ -25,7 +25,7 @@ a:hover {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 13px;
     color: #666;
 }
@@ -74,7 +74,7 @@ p {
     margin-right: 15px;
     padding: 10px 0;
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
 }
 
 /*.margin-bottom: 20px;*/
@@ -87,7 +87,7 @@ p {
     text-align: right;
     padding: 8px 0;
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
 }
 
 #logo {
@@ -254,7 +254,7 @@ button:focus {
 
 .timeline-caption h4 {
     padding-top: 80px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
@@ -263,7 +263,7 @@ button:focus {
 }
 
 .timeline-caption p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 14px;
     font-weight: 300;
     color: #f78e21;
@@ -450,7 +450,7 @@ button:focus {
 .label-text span {
     color: #777;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-weight: 300;
     display: block;
     color: #f78e21
@@ -696,7 +696,7 @@ textarea {
     line-height: 30px;
     text-align: center;
     background-color: #f78e21;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -713,7 +713,7 @@ textarea {
     text-align: center;
     background-color: #f78e21;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -750,7 +750,7 @@ textarea {
 .info li {
     list-style: none;
     margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 13px;
     color: #666;
 }
@@ -821,7 +821,7 @@ textarea {
 }
 
 .recent-post-info h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -842,7 +842,7 @@ textarea {
 }
 
 .recent-post-info span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 13px;
     color: #f78e21;
 }
@@ -878,7 +878,7 @@ textarea {
     width: 100%;
     margin-top: 160px;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
 }
 .slider-caption-background{
     padding-top: 16px;
@@ -1251,7 +1251,7 @@ footer {
 }
 
 .social-bottom span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 22px;
     font-weight: 600;
     color: #333;
@@ -1291,7 +1291,7 @@ footer {
 }
 
 .subscribe-form span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 22px;
     font-weight: 600;
     color: #333;
@@ -1333,7 +1333,7 @@ footer {
 }
 
 .footer-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #333;
@@ -1384,7 +1384,7 @@ footer {
 }
 
 .recent-post-info h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1400,7 +1400,7 @@ footer {
 }
 
 .recent-post-info span {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 13px;
     color: #f78e21;
 }
@@ -1417,7 +1417,7 @@ footer {
 .more-info li {
     list-style: none;
     margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Goldman', sans-serif;
     font-size: 13px;
     color: #666;
 }

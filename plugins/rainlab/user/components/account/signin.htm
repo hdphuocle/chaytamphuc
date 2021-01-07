@@ -1,33 +1,179 @@
 {{ form_ajax('onSignin') }}
 
-    <div class="form-group">
-        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
-        <input
-            name="login"
-            type="text"
-            class="form-control"
-            id="userSigninLogin"
-            placeholder="Enter your {{ loginAttributeLabel|lower }}" />
-    </div>
+<div class="form-group">
+    <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+    <input
+        name="login"
+        type="text"
+        class="form-control"
+        id="userSigninLogin"
+        placeholder="Enter your {{ loginAttributeLabel|lower }}"/>
+</div>
 
-    <div class="form-group">
-        <label for="userSigninPassword">Password</label>
-        <input
-            name="password"
-            type="password"
-            class="form-control"
-            id="userSigninPassword"
-            placeholder="Enter your password" />
-    </div>
+<div class="form-group">
+    <label for="userSigninPassword">Password</label>
+    <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="userSigninPassword"
+        placeholder="Enter your password"/>
+</div>
 
-    {% if rememberLoginMode == 'ask' %}
-    <div class="form-group">
-        <div class="checkbox">
+{% if rememberLoginMode == 'ask' %}
+<div class="form-group">
+    <div class="checkbox">
         <label><input name="remember" type="checkbox" value="1">Stay logged in</label>
-        </div>
     </div>
-    {% endif %}
+</div>
+{% endif %}
+<button id="sign-in" type="submit" class="button button--social-login">Sign In
+</button> ---or---
+<div id="social-buttons">
 
-    <button type="submit" class="btn btn-default">Sign in</button>
+    {% for name, link in social_login_links %}
+    <a href="{{ link }}?s={{ 'home'|page }}&f={{ 'login'|page }}"
+       class="button button--social-login button--{{ name| lower }}" href="#"><i
+        class="icon fab fa-{{ name| lower }}"></i>Login
+        With {{ name }}</a>
+    {% endfor %}
+</div>
 
 {{ form_close() }}
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+    #social-buttons {
+        margin-top: 24px;
+    }
+
+    #social-buttons .button {
+        width: auto;
+        display: inline-block;
+        padding: 0 18px 0 6px;
+        border: 0 none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 250ms linear;
+    }
+
+    #social-buttons .button:hover {
+        text-decoration: none;
+    }
+
+    #social-buttons .button--social-login {
+        margin-bottom: 12px;
+        margin-right: 12px;
+        color: white;
+        height: 50px;
+        line-height: 46px;
+        position: relative;
+        text-align: left;
+    }
+
+    #social-buttons .button--social-login .icon {
+        margin-right: 12px;
+        font-size: 24px;
+        line-height: 24px;
+        width: 42px;
+        height: 24px;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 4px;
+    }
+
+    #social-buttons .button--social-login .icon:before {
+        display: inline-block;
+        width: 40px;
+    }
+
+    #social-buttons .button--social-login .icon:after {
+        content: "";
+    }
+
+
+    #social-buttons .button--facebook {
+        background-color: #4b70ab;
+        border: 1px solid #3b5988;
+    }
+
+    #social-buttons .button--facebook .icon {
+        border-right: 1px solid #3b5988;
+    }
+
+    #social-buttons .button--facebook .icon:after {
+        border-right: 1px solid #6b8bbe;
+    }
+
+    #social-buttons .button--facebook:hover {
+        background-color: #436499;
+    }
+
+    #social-buttons .button--google {
+        background-color: #DD4B39;
+        border: 1px solid #c23321;
+    }
+
+    #social-buttons .button--google .icon {
+        border-right: 1px solid #c23321;
+    }
+
+    #social-buttons .button--google .icon:after {
+        border-right: 1px solid #e47365;
+    }
+
+    #social-buttons .button--google:hover {
+        background-color: #d73925;
+    }
+
+
+    #sign-in {
+        background-color: #007DE1;
+        border: 1px solid #0061ae;
+        width: auto;
+        display: inline-block;
+        padding: 0 24px 0 24px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 250ms linear;
+    }
+
+    #sign-in:hover {
+        text-decoration: none;
+    }
+
+    #sign-in {
+        margin-bottom: 12px;
+        margin-right: 12px;
+        color: white;
+        height: 50px;
+        line-height: 46px;
+        position: relative;
+        text-align: left;
+    }
+
+    #sign-in .icon {
+        margin-right: 12px;
+        font-size: 24px;
+        line-height: 24px;
+        width: 42px;
+        height: 24px;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 4px;
+    }
+
+    #sign-in .icon:before {
+        display: inline-block;
+        width: 40px;
+    }
+
+    #sign-in .icon:after {
+        content: "";
+    }
+
+</style>
+

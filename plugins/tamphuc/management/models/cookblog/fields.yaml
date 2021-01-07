@@ -7,11 +7,6 @@ fields:
         label: 'Tiêu Đề'
         span: auto
         type: text
-    content:
-        label: 'Nội Dung Bài Viết'
-        size: ''
-        span: auto
-        type: textarea
     is_new:
         label: 'Bài Mới'
         span: auto
@@ -21,3 +16,8 @@ fields:
         span: auto
         default: 1
         type: checkbox
+    content:
+        label: 'Rich editor'
+        span: auto
+        size: ''
+        type: richeditor

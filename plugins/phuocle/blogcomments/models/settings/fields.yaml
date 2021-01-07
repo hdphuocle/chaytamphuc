@@ -1,0 +1,33 @@
+fields:
+    allow_guest:
+        span: left
+        label: phuocle.blogcomments::lang.settings.allow_guest_label
+        commentAbove: phuocle.blogcomments::lang.settings.allow_guest_above
+        type: switch
+    status:
+        span: right
+        label: phuocle.blogcomments::lang.settings.status_label
+        commentAbove: phuocle.blogcomments::lang.settings.status_above
+        type: dropdown
+    allow_reply:
+        span: left
+        label: phuocle.blogcomments::lang.settings.allow_reply_label
+        commentAbove: phuocle.blogcomments::lang.settings.allow_reply_comment
+        type: switch
+    login_notification:
+        span: full
+        label: phuocle.blogcomments::lang.settings.login_notification
+        commentAbove: phuocle.blogcomments::lang.settings.login_notification_comment
+        type: richeditor
+    approved_notification:
+        span: left
+        label: phuocle.blogcomments::lang.settings.approved_notification
+        commentAbove: phuocle.blogcomments::lang.settings.approved_notification_comment
+        type: text
+        default: 'Thanks for your comment!'
+    pending_notification:
+        span: right
+        label: phuocle.blogcomments::lang.settings.pending_notification
+        commentAbove: phuocle.blogcomments::lang.settings.pending_notification_comment
+        type: text
+        default: 'Thank you! We are reviewing your comment now!'

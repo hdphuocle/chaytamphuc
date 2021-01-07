@@ -3,10 +3,10 @@
 {% set
 links = {
 'home':      ['/', 'Trang chủ'],
-'tamphuc-hanoi':  ['tamphuc-hanoi', 'Tâm Phúc Hà Nội'],
-'tamphuc-danang': ['tamphuc-danang', 'Tâm Phúc Đà Nẵng'],
-'product':   ['san-pham-thuc-duong', 'Sản phẩm thực dưỡng'],
-'contact':   ['lien-he', 'Liên hệ'],
+'tamphuc-hanoi':  ['/tamphuc-hanoi', 'Tâm Phúc Hà Nội'],
+'tamphuc-danang': ['/tamphuc-danang', 'Tâm Phúc Đà Nẵng'],
+'product':   ['/blog', 'Sản phẩm thực dưỡng'],
+'contact':   ['/lien-he', 'Liên hệ'],
 }
 %}
 
@@ -14,9 +14,9 @@ links = {
 {% for code, link in links %}
 <li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
     <a
-            href="{{ link.sublinks ? '#' : (link.page ?: link[0]) }}"
-            {% if link.sublinks %}data-toggle="dropdown" {% endif %}
-            class="{{ link.sublinks ? 'dropdown-toggle' }}"
+        href="{{ link.sublinks ? '#' : (link.page ?: link[0]) }}"
+        {% if link.sublinks %}data-toggle="dropdown" {% endif %}
+        class="{{ link.sublinks ? 'dropdown-toggle' }}"
     >
         {{ link.name ?: link[1] }}
         {% if link.sublinks %}<span class="caret"></span>{% endif %}
@@ -36,22 +36,26 @@ links = {
 <nav class="container navbar navbar-expand-lg navbar-custom">
     <a href="{{ 'home'|page }}"><img height="60px" src="{{ 'assets/images/logo.png'|theme }}"
                                      title="Chay Tâm Phúc" alt="Nhà Hàng Chay Tâm Phúc"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 
         <svg width="30" height="32" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="gradient-bar" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:rgb(17,29,247);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(43,53,69);stop-opacity:1" />
+                    <stop offset="0%" style="stop-color:rgb(17,29,247);stop-opacity:1"/>
+                    <stop offset="100%" style="stop-color:rgb(43,53,69);stop-opacity:1"/>
                 </linearGradient>
             </defs>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18.5H21V16.5H3V18.5ZM3 13.5H21V11.5H3V13.5ZM3 6.5V8.5H21V6.5H3Z" fill="url(#gradient-bar)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 18.5H21V16.5H3V18.5ZM3 13.5H21V11.5H3V13.5ZM3 6.5V8.5H21V6.5H3Z" fill="url(#gradient-bar)"/>
         </svg>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             {{ nav.render_menu(links) }}
+            <li><a href="{{ user ? '#' : '/login' }}" data-request="onLogout" data-request-data="redirect: '/login'">{% if user %} Log Out {% else %} Log In {% endif %}</a>
+            </li>
         </ul>
     </div>
 </nav>

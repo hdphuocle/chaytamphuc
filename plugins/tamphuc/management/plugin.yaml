@@ -14,14 +14,6 @@ navigation:
                 label: 'Thực Đơn'
                 url: tamphuc/management/menu
                 icon: icon-sitemap
-            side-menu-cook-blog:
-                label: 'Bài Viết'
-                url: tamphuc/management/cookblog
-                icon: icon-sitemap
-            side-menu-location:
-                label: 'Địa Điểm'
-                url: tamphuc/management/location
-                icon: icon-sitemap
             side-menu-type:
                 label: 'Loại Món Ăn'
                 url: tamphuc/management/type

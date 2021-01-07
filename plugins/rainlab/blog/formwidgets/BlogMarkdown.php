@@ -6,7 +6,7 @@ use Response;
 use Validator;
 use RainLab\Blog\Models\Post as PostModel;
 use Backend\Classes\FormWidgetBase;
-use Backend\FormWidgets\MarkdownEditor;
+use Backend\FormWidgets\RichEditor;
 use System\Models\File;
 use ValidationException;
 use SystemException;
@@ -18,14 +18,14 @@ use Exception;
  * @package rainlab\blog
  * @author Alexey Bobkov, Samuel Georges
  */
-class BlogMarkdown extends MarkdownEditor
+class BlogMarkdown extends RichEditor
 {
     /**
      * {@inheritDoc}
      */
     public function init()
     {
-        $this->viewPath = base_path().'/modules/backend/formwidgets/markdowneditor/partials';
+        $this->viewPath = base_path().'/modules/backend/formwidgets/richeditor/partials';
 
         $this->checkUploadPostback();
 
@@ -37,7 +37,7 @@ class BlogMarkdown extends MarkdownEditor
      */
     protected function loadAssets()
     {
-        $this->assetPath = '/modules/backend/formwidgets/markdowneditor/assets';
+        $this->assetPath = '/modules/backend/formwidgets/richeditor/assets';
         parent::loadAssets();
     }
 

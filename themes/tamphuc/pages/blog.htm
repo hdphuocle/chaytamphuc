@@ -1,0 +1,36 @@
+title = "Sản Phẩm Thực Dưỡng"
+url = "/blog/:page?"
+layout = "default"
+is_hidden = 0
+role = 0
+permission = 0
+anonymous_only = 0
+logged_only = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<div class="container">
+    <div class="col-md-12">
+        <div class="heading-section">
+            <h2>Vào bếp cùng chay Tâm Phúc</h2>
+            <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {% component 'blogPosts' %}
+        </div>
+    </div>
+
+</div>

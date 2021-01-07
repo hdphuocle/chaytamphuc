@@ -44,6 +44,8 @@ class Post extends ComponentBase
         ];
     }
 
+    public $belongsTo = [ 'user' => ['Backend\Models\User','key'=>'user_id'] ];
+
     public function getCategoryPageOptions()
     {
         return Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
@@ -99,7 +101,7 @@ class Post extends ComponentBase
         if (!$this->checkEditor()) {
             $query->isPublished();
         }
-        
+
         $post = $query->first();
 
         /*

@@ -1,10 +1,16 @@
 {% if __SELF__.categories|length > 0 %}
-    <ul class="category-list">
+<div class="row">
+    <div class="filters col-md-12 col-xs-12">
+        <ul id="filters">
         {% partial __SELF__ ~ "::items"
-            categories = __SELF__.categories
-            currentCategorySlug = __SELF__.currentCategorySlug
+        categories = __SELF__.categories
+        currentCategorySlug = __SELF__.currentCategorySlug
         %}
-    </ul>
+        </ul>
+    </div>
+</div>
 {% else %}
+<div class="row">
     <p>No categories were found.</p>
+</div>
 {% endif %}

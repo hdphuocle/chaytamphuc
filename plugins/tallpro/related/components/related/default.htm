@@ -1,0 +1,29 @@
+<div class="task-manager pt-3">
+    <div class="right-bar">
+        <div class="header">Bạn có thể xem thêm</div>
+        <div class="right-content">
+            {% for relate in related %}
+            {% set image = relate.featured_images.first %}
+            <div class="task-box blue">
+                <a href="{{url('/blog/post', {'seo': relate.slug})}}">
+                    <div class="description-task">
+                        <div class="time">10:00 - 11:00 AM</div>
+                        <div class="task-name">{{relate.title}}</div>
+                    </div>
+                    <div class="more-button"></div>
+                    <div class="members">
+                        <img
+                            src="{{ image.path | default('https://images.unsplash.com/photo-1422255198496-21531f12a6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80') }}"
+                            alt="member">
+                    </div>
+                </a>
+            </div>
+
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+

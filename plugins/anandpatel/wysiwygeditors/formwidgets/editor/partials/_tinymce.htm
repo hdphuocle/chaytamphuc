@@ -1,0 +1,60 @@
+<?php
+$tID = substr($this->getId('textarea'), 16) . time();
+?>
+<div data-control="wysiwyg">
+    <textarea name="<?php echo $name ?>" id="<?php echo $tID ?>" style="display: none"><?= e($value) ?></textarea>
+</div>
+<style>
+    .mce-tinymce .mce-ico {
+        color: #c03f31 !important;
+    }
+</style>
+<script>
+    function tinymceInit() {
+        $('#<?php echo $tID ?>').show();
+
+        tinyMCE.baseURL = "<?php echo url('/plugins/anandpatel/wysiwygeditors/formwidgets/editor/assets/tinymce'); ?>";
+        tinyMCE.suffix = '.min';
+        tinymce.init({
+            selector: 'textarea#<?php echo $tID ?>',
+            theme: 'silver',
+            setup: function(editor) {
+                editor.on('change', function() {
+                    tinymce.triggerSave();
+                });
+            },
+            relative_urls: false,
+            width:  '<?php echo $width; ?>',
+            height: '<?php echo $height; ?>',
+            plugins: [
+                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                "save table contextmenu directionality emoticons template paste textcolor ocmediamanager"
+            ],
+            toolbar: "<?php echo $toolbar_tinymce; ?>"
+        });
+    }
+
+    $(document).ready(function() {
+        if (typeof tinymce === 'undefined') {
+            tinymce.init({
+                selector: 'textarea',
+                plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                toolbar_mode: 'floating',
+                content_style:
+                    "@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pattaya&family=Goldman&family=Yanone+Kaffeesatz&display=swap');"
+            });
+        }
+        else {
+            setTimeout(function() {
+                tinymceInit();
+            }, 500);
+        }
+
+        $(document).on('focusin', function(e) {
+            if ($(e.target).closest(".mce-window").length) {
+                e.stopImmediatePropagation();
+            }
+        });
+    });
+</script>

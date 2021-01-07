@@ -1,9 +1,14 @@
 description = "Default layout"
+
+[session]
+security = "all"
+redirect = "home"
 ==
 <!DOCTYPE html>
 <html lang="en">
 {% partial "meta" %}
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=431872177550574&autoLogAppEvents=1" nonce="XYf4GefS"></script>
+{% component 'session' %}
 
 <body>
 <!--[if lt IE 7]>

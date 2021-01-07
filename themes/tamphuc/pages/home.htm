@@ -1,9 +1,13 @@
-title = "Home"
+title = "Trang Chủ"
 url = "/"
 layout = "default"
 description = "Home Page"
 meta_description = "Free restaurant theme by templatemo, converted for OctoberCMS"
 is_hidden = 0
+role = 0
+permission = 0
+anonymous_only = 0
+logged_only = 0
 
 [menuList]
 
@@ -12,8 +16,14 @@ is_hidden = 0
 [slideList]
 
 [restaurantImagesList]
-==
 
+[blogPosts]
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
 <div id="slider">
     {% component 'slideList' %}
 </div>
@@ -29,7 +39,15 @@ is_hidden = 0
 </div>
 
 <div id="latest-blog">
-    {% partial "latest-blog" %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Vào bếp cùng chay Tâm Phúc</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+            </div>
+        </div>
+    </div>
+    {% component 'blogPosts' %}
 </div>
 
 <div id="customer-feedback">
