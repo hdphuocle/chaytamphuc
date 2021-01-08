@@ -1,92 +1,16 @@
 title = "Login"
-layout = "default"
 url = "/test"
+layout = "default"
+is_hidden = 0
+role = 0
+permission = 0
+anonymous_only = 0
+logged_only = 0
+
+[findus]
+location_title = "Ho Chi Minh"
+address = "10.746105, 106.750782"
+template = "info_small_map"
+color = "blue"
 ==
-
-
-<div id="social-buttons">
-    <a class="button button--social-login button--facebook" href="#"><i class="icon fab fa-facebook"></i>Login With Facebook</a>
-
-
-
-    <a class="button button--social-login button--google" href="#"><i class="icon fab fa-google"></i>Login With
-        Google</a>
-</div>
-
-
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
-
-    #social-buttons .button {
-        width: auto;
-        display: inline-block;
-        padding: 0 18px 0 6px;
-        border: 0 none;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: all 250ms linear;
-    }
-
-    #social-buttons .button:hover {
-        text-decoration: none;
-    }
-
-    #social-buttons .button--social-login {
-        margin-bottom: 12px;
-        margin-right: 12px;
-        color: white;
-        height: 50px;
-        line-height: 46px;
-        position: relative;
-        text-align: left;
-    }
-
-    #social-buttons .button--social-login .icon {
-        margin-right: 12px;
-        font-size: 24px;
-        line-height: 24px;
-        width: 42px;
-        height: 24px;
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        top: 4px;
-    }
-
-    #social-buttons .button--social-login .icon:before {
-        display: inline-block;
-        width: 40px;
-    }
-
-    #social-buttons .button--social-login .icon:after {
-        content: "";
-    }
-
-    #social-buttons .button--facebook {
-        background-color: #4b70ab;
-        border: 1px solid #3b5988;
-    }
-    #social-buttons .button--facebook .icon {
-        border-right: 1px solid #3b5988;
-    }
-    #social-buttons .button--facebook .icon:after {
-        border-right: 1px solid #6b8bbe;
-    }
-    #social-buttons .button--facebook:hover {
-        background-color: #436499;
-    }
-    #social-buttons .button--google {
-        background-color: #DD4B39;
-        border: 1px solid #c23321;
-    }
-    #social-buttons .button--google .icon {
-        border-right: 1px solid #c23321;
-    }
-    #social-buttons .button--google .icon:after {
-        border-right: 1px solid #e47365;
-    }
-    #social-buttons .button--google:hover {
-        background-color: #d73925;
-    }
-
-</style>
+{% component 'findus' %}
