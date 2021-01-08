@@ -73,7 +73,7 @@ secondaryTabs:
         featured_images:
             tab: rainlab.blog::lang.post.tab_manage
             label: rainlab.blog::lang.post.featured_images
-            type: fileupload
+            type: mediafinder
             mode: image
             imageWidth: 200
             imageHeight: 200
