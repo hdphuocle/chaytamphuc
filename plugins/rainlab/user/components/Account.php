@@ -93,7 +93,7 @@ class Account extends ComponentBase
         if ($redirect = $this->redirectForceSecure()) {
             return $redirect;
         }
-
+        $this->addCss('assets/css/signin.css');
         /*
          * Activation code supplied
          */
