@@ -1,28 +1,18 @@
-<div class="task-manager pt-3">
-    <div class="right-bar">
-        <div class="header">Bạn có thể xem thêm</div>
-        <div class="right-content">
-            {% for relate in related %}
-            {% set image = relate.featured_images.first %}
-            <div class="task-box blue">
-                <a href="{{url('/blog/post', {'seo': relate.slug})}}">
-                    <div class="description-task">
-                        <div class="time">10:00 - 11:00 AM</div>
-                        <div class="task-name">{{relate.title}}</div>
-                    </div>
-                    <div class="more-button"></div>
-                    <div class="members">
-                        <img
-                            src="{{ image.path | default('https://images.unsplash.com/photo-1422255198496-21531f12a6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80') }}"
-                            alt="member">
-                    </div>
-                </a>
+<div class="recent-news-section">
+    <div class="widget-title"><h3>Bài viết liên quan</h3></div>
+    <div class="section-list">
+        {% for relate in related %}
+        {% set image = relate.featured_images.first %}
+        <div class="news-item layout-two">
+            <div class="news-thumb "><img
+                src="{{ image.path | default('https://images.unsplash.com/photo-1422255198496-21531f12a6e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80') }}"
+                alt="Share your experience"></div>
+            <div class="news-text-wrap"><h2><a
+                href="{{url('/blog/post', {'seo': relate.slug})}}"> {{relate.title}} </a></h2> <span
+                class="posted-date"> {{relate.published_at|date("d/m/Y")}} </span>
             </div>
-
-
-            {% endfor %}
-
         </div>
+        {% endfor %}
     </div>
 </div>
 

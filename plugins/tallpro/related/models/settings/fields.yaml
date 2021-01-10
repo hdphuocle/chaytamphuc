@@ -3,3 +3,7 @@ fields:
         span: left
         label: tallpro.related::lang.settings.number_posts
         type: number
+    number_new_posts:
+        span: left
+        label: tallpro.related::lang.settings.number_new_posts
+        type: number

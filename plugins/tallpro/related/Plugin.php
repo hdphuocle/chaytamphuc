@@ -72,6 +72,7 @@ class Plugin extends PluginBase
 
         return [
             'Tallpro\Related\Components\Related' => 'related',
+            'Tallpro\Related\Components\NewPost' => 'newpost',
         ];
     }
 

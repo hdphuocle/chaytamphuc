@@ -35,7 +35,7 @@ class Related extends ComponentBase
     {
         parent::__construct($cmsObject, $properties);
 
-        $this->addCss("/plugins/tallpro/related/assets/main.css", "1.0.0");
+        $this->addCss("/plugins/tallpro/related/assets/related.css", "1.0.0");
 
     }
 
@@ -52,7 +52,7 @@ class Related extends ComponentBase
     }
 
     public function getRelated(){
-        
+
         if($this->property('slug')){
 
             $slug = $this->property('slug');

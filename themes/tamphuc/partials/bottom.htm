@@ -1,3 +1,5 @@
+[newpost]
+==
 <div class="main-footer">
     <div class="row">
         <div class="col-md-3">
@@ -18,27 +20,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="recent-posts">
-                <h4 class="footer-title">Bài viết mới</h4>
-                    <div class="recent-post">
-                        <div class="recent-post-thumb">
-                            <img src="{{ 'assets/images/recent-post1.jpg'|theme }}" alt="">
-                        </div>
-                        <div class="recent-post-info">
-                            <h6><a href="#">Cách làm Hến xúc bánh tráng</a></h6>
-                            <span>24/03/2020</span>
-                        </div>
-                    </div>
-                    <div class="recent-post">
-                        <div class="recent-post-thumb">
-                            <img src="{{ 'assets/images/recent-post2.jpg'|theme }}" alt="">
-                        </div>
-                        <div class="recent-post-info">
-                            <h6><a href="#">Cách làm Hến xúc bánh tráng</a></h6>
-                            <span>18/05/2020</span>
-                        </div>
-                </div>
-            </div>
+            {% component 'newpost' %}
         </div>
         <div class="col-md-3">
             <div class="more-info">
