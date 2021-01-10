@@ -314,22 +314,22 @@ return [
     'storage' => [
 
         'uploads' => [
-            'disk'            => 'local',
+            'disk'            => 's3',
             'folder'          => 'uploads',
-            'path'            => '/storage/app/uploads',
+            'path'            => 'https://s3-ap-southeast-1.amazonaws.com/tamphuc/uploads',
             'temporaryUrlTTL' => 3600,
         ],
 
         'media' => [
-            'disk'   => 'local',
+            'disk'   => 's3',
             'folder' => 'media',
-            'path'   => '/storage/app/media',
+            'path'   => 'https://s3-ap-southeast-1.amazonaws.com/tamphuc/media',
         ],
 
         'resized' => [
-            'disk'   => 'local',
+            'disk'   => 's3',
             'folder' => 'resized',
-            'path'   => '/storage/app/resized',
+            'path'   => 'https://s3-ap-southeast-1.amazonaws.com/tamphuc/resized',
         ],
 
     ],
