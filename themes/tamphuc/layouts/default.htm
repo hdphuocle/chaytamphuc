@@ -10,15 +10,12 @@ name = "chaytamphuc"
 <!DOCTYPE html>
 <html lang="en">
 {% partial "meta" %}
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0&appId=431872177550574&autoLogAppEvents=1" nonce="XYf4GefS"></script>
 {% component 'session' %}
 
 <body>
 <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="https://browsehappy.com/">Upgrade your browser today</a> or <a href="https://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
-    <div id="fb-root"></div>
-
 
 <header>
     {% partial "top" %}
@@ -34,7 +31,23 @@ name = "chaytamphuc"
        {% partial "footer" %}
     </div>
 </footer>
-{% component 'message' %}
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
