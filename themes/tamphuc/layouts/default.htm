@@ -2,10 +2,8 @@ description = "Default layout"
 
 [session]
 security = "all"
-redirect = "home"
+redirect = "/"
 
-[message]
-name = "chaytamphuc"
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +14,7 @@ name = "chaytamphuc"
 <!--[if lt IE 7]>
     <p class="chromeframe">You are using an outdated browser. <a href="https://browsehappy.com/">Upgrade your browser today</a> or <a href="https://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
+
 
 <header>
     {% partial "top" %}
@@ -32,6 +31,7 @@ name = "chaytamphuc"
     </div>
 </footer>
 <!-- Load Facebook SDK for JavaScript -->
+<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
     window.fbAsyncInit = function() {
@@ -45,9 +45,15 @@ name = "chaytamphuc"
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+     attribution=install_email
+     page_id="103314268397184">
+</div>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
