@@ -26,7 +26,7 @@ class Message extends ComponentBase
             'name' => [
                 'description'       => 'This is chatbox by Facebook',
                 'title'             => 'Chat by message facebook',
-                'default'           => 'itplusvn',
+                'default'           => 'chaytamphuc',
                 'type'              => 'string'
             ]
         ];

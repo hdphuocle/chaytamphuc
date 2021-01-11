@@ -3,6 +3,9 @@ description = "Default layout"
 [session]
 security = "all"
 redirect = "home"
+
+[message]
+name = "chaytamphuc"
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +34,7 @@ redirect = "home"
        {% partial "footer" %}
     </div>
 </footer>
+{% component 'message' %}
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
