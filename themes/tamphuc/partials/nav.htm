@@ -32,12 +32,12 @@ links = {
 {% endmacro %}
 
 {% import _self as nav %}
-<div class="container logo_content d-flex justify-content-between align-items-center">
-    <div class="search">
+<div class="container logo_content d-flex justify-content-between">
+    <form class="search">
         <div>
             <input type="text" placeholder="Tìm . . ." required>
         </div>
-    </div>
+    </form>
     <a href="{{ 'home'|page }}"><img height="70px" src="{{ 'assets/images/logo.png'|theme }}"
                                      title="Chay Tâm Phúc" alt="Nhà Hàng Chay Tâm Phúc"></a>
     <div class="hot_line">
@@ -62,7 +62,7 @@ links = {
         </svg>
     </button>
 
-    <div class=" d-flex collapse navbar-collapse" id="navbarToggler">
+    <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav justify-content-center">
             {{ nav.render_menu(links) }}
             <li><a href="{{ user ? '#' : '/login' }}" data-request="onLogout" data-request-data="redirect: '/login'">{%

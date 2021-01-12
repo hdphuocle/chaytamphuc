@@ -1,0 +1,54 @@
+<div id="book-now">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Liên hệ đặt bàn</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+            </div>
+        </div>
+        <div class="product-item col-md-12">
+            <div class="d-flex justify-content-center">
+                <span class="book_note">Quý khách vui lòng đặt bàn trước để chúng tôi sắp xếp cho quý khách chỗ ngồi tốt nhất!</span>
+            </div>
+            <div class="message-form">
+                <form role="form" action="#" method="post" class="send-message">
+                    <div class="row">
+                        <div class="name col-md-4">
+                            <input type="text" name="name" id="name" placeholder="Tên của bạn:"
+                                   class="form-control" required="required">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="email" id="email" placeholder="Email"
+                                   class="form-control" required="required">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="subject" id="subject" class="form-control"
+                                   placeholder="Số điện thoại của bạn:">
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-md-4">
+                            <input type="number" name="quatity" id="quantity" placeholder="Số người:"
+                                   class="form-control" required="required">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" name="date" id="book_date" onfocus="(this.type='date')"
+                                   onblur="(this.type='text')"
+                                   placeholder="Bạn chọn đi ngày nào?"
+                                   class="form-control" required="required">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text col-md-12">
+                                                <textarea name="text" placeholder="Nhập tin nhắn" class="form-control"
+                                                          required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="send">
+                        <button type="submit" name="submit" required="required">Gửi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
