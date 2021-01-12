@@ -168,3 +168,8 @@ html {
     font-style: italic;
     margin-bottom: 16px;
 }
+.logo_content {
+    justify-items: center;
+    padding-right: 4px!important;
+    padding-left: 4px!important;
+}
