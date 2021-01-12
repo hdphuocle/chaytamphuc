@@ -15,7 +15,7 @@ return [
         'allow_guest_above' => 'Guest posted comments',
         'status_label' => 'Status',
         'login_notification' => 'Login notification',
-        'login_notification_comment' => 'for example: Please Login to leave a comment ',
+        'login_notification_comment' => 'Vui lòng đăng nhập để để lại lời nhắn.',
         'approved_notification' => 'Approved comment notification',
         'pending_notification' => 'Pending comment notification',
 

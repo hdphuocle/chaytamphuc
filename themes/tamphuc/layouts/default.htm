@@ -12,7 +12,9 @@ redirect = "/"
 
 <body>
 <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an outdated browser. <a href="https://browsehappy.com/">Upgrade your browser today</a> or <a href="https://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<p class="chromeframe">You are using an outdated browser. <a href="https://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="https://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
 <![endif]-->
 
 
@@ -21,30 +23,31 @@ redirect = "/"
     {% partial "nav" %}
 </header>
 
-	{% page %}
+{% page %}
 
 <footer>
     <div class="container">
-       {% partial "socials" %}
-       {% partial "bottom" %}
-       {% partial "footer" %}
+        {% partial "socials" %}
+        {% partial "bottom" %}
+        {% partial "footer" %}
     </div>
 </footer>
 <!-- Load Facebook SDK for JavaScript -->
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
-            xfbml            : true,
-            version          : 'v9.0'
+            xfbml: true,
+            version: 'v9.0'
         });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
@@ -54,9 +57,13 @@ redirect = "/"
      attribution=install_email
      page_id="103314268397184">
 </div>
-<div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="350" data-height="420"></div>
+<div class="zalo-chat-widget" data-oaid="653927824137576220" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+     data-autopopup="0" data-width="350" data-height="420"></div>
 
 <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+<script id='autoAdsMaxLead-widget-script'
+        src='https://cdn.autoads.asia/scripts/autoads-maxlead-widget.js?business_id=DE270AC08F6A4A339BE7DBBD69D93124'
+        type='text/javascript' charset='UTF-8' async></script>
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

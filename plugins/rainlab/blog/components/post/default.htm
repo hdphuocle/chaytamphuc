@@ -7,7 +7,7 @@
     {% if post.categories.count %}
         {% set categoryLinks = post.categories | map(c => "") | join(', ') %}
 
-        {{ 'rainlab.blog::lang.post.posted_byline' | trans({
+        {{ 'Được đăng vào ngày :date' | trans({
             date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans),
             categories: categoryLinks
         }) }}
@@ -15,5 +15,5 @@
         {{ 'rainlab.blog::lang.post.posted_byline_no_categories' | trans({
             date: post.published_at | date('rainlab.blog::lang.post.date_format'|trans)
         }) }}
-    {% endif %} by {{ post.user.first_name }}
+    {% endif %} bởi {{ post.user.first_name }}
 </p>

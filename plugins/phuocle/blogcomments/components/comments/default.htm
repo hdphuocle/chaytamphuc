@@ -6,12 +6,12 @@
     {% if user == null %}
 
     <label for="phuocle_comments_user_name_{{post_id}}">
-        Your name
+        Tên của bạn
         <input type="text" class="name-field" id="phuocle_comments_user_name_{{post_id}}" name="user_name"/>
     </label>
     <br>
     <label for="phuocle_comments_user_email_{{post_id}}">
-        Your Email address
+        Địa chỉ email
         <input type="text" class="email-field" id="phuocle_comments_user_email_{{post_id}}" name="user_email"/>
     </label>
     <br>
@@ -20,13 +20,13 @@
 
     <input type="hidden" value="{{post_id}}" name="parent_id" />
     <label for="phuocle_comments_comment-text_{{post_id}}">
-        Comment
+        Bình luận
         <textarea class="form-control comment-field" id="phuocle_comments_comment-text_{{post_id}}" name="comment" cols="50"
                   rows="10"></textarea>
     </label>
     <input name="post_id" type="hidden" value="0">
     <br>
-    <button type="submit" data-attach-loading class='btn btn-default send-comment'>Send</button>
+    <button type="submit" data-attach-loading class='btn btn-default send-comment'>Gửi</button>
     <br>
     <div id="message"></div>
     <br>
@@ -37,7 +37,7 @@
         {% if login_notification %}
         {{login_notification|raw}}
         {% else %}
-        Please <a href="{{url('/login')}}">Login</a> to leave a comment
+        Vui lòng <a href="{{url('/login')}}">Đăng nhập</a> để để lại lời nhắn.
         {% endif %}
     </div>
     {% endif %}
