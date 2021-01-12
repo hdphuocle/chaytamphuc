@@ -80,3 +80,82 @@ html {
 .subscribe-form input#subscribe{
     width: auto!important;
 }
+.search {
+    margin-bottom: 22px;
+    min-width: 100px;
+}
+
+.search > h3 {
+    font-weight: normal;
+}
+
+.search > h1,
+.search > h3 {
+    color: #ed8830;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #ed8830;
+}
+
+.search > div {
+    display: inline-block;
+    position: relative;
+    margin-top: 0px !important;
+    filter: drop-shadow(0 1px #ed8830);
+}
+
+.search > div:after {
+    content: "";
+    background: #ed8830;
+    width: 4px;
+    height: 12px;
+    position: absolute;
+    top: 40px;
+    right: -2px;
+    transform: rotate(135deg);
+}
+
+.search > div > input {
+    color: #ed8830;
+    font-size: 12px;
+    background: transparent;
+    width: 22px;
+    height: 22px;
+    padding: 8px;
+    border: solid 3px #ed8830;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+    color: #ed8830;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+    opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+    height: 30px;
+    width: 100px;
+}
+.hot_line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.hot_line_text {
+    color: #ed8830;
+    font-size: 13px;
+}
+
+.hot_line_phone {
+    color: #ff2d25;
+    font-weight: bold;
+    font-size: 16px;
+}
