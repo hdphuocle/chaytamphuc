@@ -150,12 +150,21 @@ html {
 }
 
 .hot_line_text {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ed8830;
     font-size: 13px;
 }
 
 .hot_line_phone {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ff2d25;
     font-weight: bold;
     font-size: 16px;
+}
+
+.book_note {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 16px;
 }

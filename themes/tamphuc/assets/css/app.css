@@ -66,11 +66,13 @@
 }
 
 .hot_line {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
     margin-top: 16px;
     justify-items: center;
 }
 
 .hot_line_text {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ed8830;
     font-size: 15px;
 }
