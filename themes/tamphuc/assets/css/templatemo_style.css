@@ -902,7 +902,11 @@ textarea {
     margin-top: 20px;
     text-decoration: none;
     display: inline-block;
-    background-color: #f78e21;
+    background: linear-gradient(to right, Orange, #ff7156, Orange);
+    text-shadow: 0px -2px #edb143;
+    box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    -moz-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    -webkit-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
     width: 200px;
     height: 40px;
     text-align: center;
@@ -913,6 +917,23 @@ textarea {
     font-weight: 600;
     font-family: 'Goldman', sans-serif;
     border-radius: 5px;
+}
+
+.slider-caption a:hover .sun {
+    bottom: 176px;
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 0px 10px #ffdc2a;
+}
+
+.slider-caption .sun {
+    width: 64px;
+    height: 64px;
+    left: 55px;
+    bottom: 136px;
+    background-image: url("https://uphinh.vn/images/2021/01/13/161c9bfabaaa628a0a3ec9f34484ecb2.png");
+    z-index: 2;
+    border-radius: 65px;
+    transition: all 1s ease-in-out;
 }
 
 /*-- End Slider --*/
@@ -1454,7 +1475,6 @@ footer {
     /*.service-item {*/
     /*    margin-top: 40px;*/
     /*}*/
-
     .footer-title {
         margin-top: 60px;
     }
@@ -1521,7 +1541,6 @@ footer {
     /*.service-item {*/
     /*    margin-top: 40px;*/
     /*}*/
-
     .footer-title {
         margin-top: 60px;
     }

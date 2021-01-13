@@ -7,17 +7,29 @@ permission = 0
 anonymous_only = 0
 logged_only = 0
 ==
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-<select class="js-example-basic-single" name="state">
-    <option value="AL">Alabama</option>
-    <option value="WY">Wyoming</option>
-</select>
+
+<style>
+    #tooltip {
+        background-color: #333;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+</style>
+
+<button id="button" aria-describedby="tooltip">I'm a button</button>
+<div id="tooltip" role="tooltip">I'm a tooltip</div>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
 <script>
-    // In your Javascript (external .js resource or <script> tag)
-    $(document).ready(function() {
-        $('.js-example-basic-single').select2();
+    const button = document.querySelector('#button');
+    const tooltip = document.querySelector('#tooltip');
+
+    // Pass the button, the tooltip, and some options, and Popper will do the
+    // magic positioning for you:
+    Popper.createPopper(button, tooltip, {
+        placement: 'right',
     });
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 

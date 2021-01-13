@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pattaya&family=Goldman&family=Yanone+Kaffeesatz&display=swap');
+
 html {
     overflow: scroll;
     overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
 }
+
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
@@ -15,8 +18,9 @@ html {
 #menu_list {
     background: #eee !important;
     padding-bottom: 60px;
-    padding-top: 60px;
+    padding-top: 30px;
 }
+
 #testimonails .flex-direction-nav .flex-next {
     display: none !important;
 }
@@ -40,6 +44,7 @@ html {
 #slider .flex-direction-nav .flex-prev {
     display: none !important;
 }
+
 .main-footer {
     font-family: 'Goldman', sans-serif;
 }
@@ -77,9 +82,11 @@ html {
     font-family: 'Goldman', sans-serif;
     font-size: 20px;
 }
-.subscribe-form input#subscribe{
-    width: auto!important;
+
+.subscribe-form input#subscribe {
+    width: auto !important;
 }
+
 .search {
     margin-bottom: 22px;
     min-width: 100px;
@@ -142,6 +149,7 @@ html {
     height: 30px;
     width: 100px;
 }
+
 .hot_line {
     display: flex;
     flex-direction: column;
@@ -168,8 +176,82 @@ html {
     font-style: italic;
     margin-bottom: 16px;
 }
+
 .logo_content {
     justify-items: center;
-    padding-right: 4px!important;
-    padding-left: 4px!important;
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+}
+
+.book-now-container {
+    background: #eee !important;
+    padding-top: 24px;
+}
+
+.book-now-btn .animate {
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.book-now-btn .action-button {
+    font-family: 'Goldman', "Segoe UI", Sans-Serif;
+    position: relative;
+    padding: 4px 40px;
+    margin: 0px 10px 4px 0px;
+    float: left;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.book-now-btn .red {
+    background: linear-gradient(to right, Orange, #ff7156, Orange);
+    text-shadow: 0px -2px #edb143;
+    border-bottom: 2px solid #ed5913;
+    box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    -moz-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    -webkit-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+}
+
+.book-now-btn .action-button:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, Orange, #ff7156, Orange);
+    text-shadow: 0px -2px #edb143;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 999999999;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+}
+
+#return-to-top:hover {
+    background: linear-gradient(to right, Orange, #ff7156, Orange);
+    text-shadow: 0px -2px #edb143;
+    transform: translate3d(0, -10px, 0);
 }
