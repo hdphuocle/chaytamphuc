@@ -1,0 +1,120 @@
+<div class="rounded-chat-tp-buttons">
+    <a class="chat-tp-button facebook" href="https://m.me/1040934045" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a class="chat-tp-button linkedin" href="https://zalo.me/0972624014" target="_blank"><span class="zalo"></span></a>
+</div>
+
+<style>
+    .rounded-chat-tp-buttons {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 40%;
+        left: 10px;
+        z-index: 999999;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 0.125rem solid transparent;
+        padding: 0;
+        text-decoration: none;
+        text-align: center;
+        color: #fefefe;
+        font-size: 1.5625rem;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 1.6875rem;
+        transition: all 0.5s ease;
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button:hover, .rounded-chat-tp-buttons .chat-tp-button:focus {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    .rounded-chat-tp-buttons .fa-phone-alt, .fa-facebook-f, .fa-envelope-open-text {
+        font-size: 25px;
+    }
+    .rounded-chat-tp-buttons .foody {
+        margin-top: 6px;
+        margin-right: 6px;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        background-image: url(" {{ 'assets/images/icon-delivery-36x36.png'|theme }}");
+    }
+    .rounded-chat-tp-buttons .zalo {
+        margin-top: 4px;
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        background-image: url(" {{ 'assets/images/zalo-36x36.png'|theme }}");
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.facebook {
+        background: #3b5998;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.facebook:hover, .rounded-chat-tp-buttons .chat-tp-button.facebook:focus {
+        color: #3b5998;
+        background: #fefefe;
+        border-color: #3b5998;
+    }
+    .rounded-chat-tp-buttons .chat-tp-button.email {
+        background: #3b5998;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.email:hover, .rounded-chat-tp-buttons .chat-tp-button.email:focus {
+        color: #3b5998;
+        background: #fefefe;
+        border-color: #3b5998;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.twitter {
+        background: #10ee3b;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.twitter:hover, .rounded-chat-tp-buttons .chat-tp-button.twitter:focus {
+        color: #10ee3b;
+        background: #fefefe;
+        border-color: #74ee78;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.linkedin {
+        background: #ffffff;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.linkedin:hover, .rounded-chat-tp-buttons .chat-tp-button.linkedin:focus {
+        color: #007bb5;
+        background: #fefefe;
+        border-color: #379fb5;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.youtube {
+        background: #bb0000;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.youtube:hover, .rounded-chat-tp-buttons .chat-tp-button.foody:focus {
+        color: #ed8830;
+        background: #ed8830;
+        border-color: #ff7156;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.instagram {
+        background: #125688;
+    }
+
+    .rounded-chat-tp-buttons .chat-tp-button.instagram:hover, .rounded-chat-tp-buttons .chat-tp-button.instagram:focus {
+        color: #125688;
+        background: #fefefe;
+        border-color: #125688;
+    }
+</style>

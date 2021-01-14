@@ -221,7 +221,7 @@ html {
 }
 #return-to-top {
     position: fixed;
-    bottom: 80px;
+    bottom: 86px;
     right: 20px;
     background: linear-gradient(to right, Orange, #ff7156, Orange);
     opacity: 0.3;
