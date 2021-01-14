@@ -6,30 +6,8 @@ role = 0
 permission = 0
 anonymous_only = 0
 logged_only = 0
+
+[callNowButton]
 ==
 
-<style>
-    #tooltip {
-        background-color: #333;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 4px;
-        font-size: 13px;
-    }
-</style>
-
-<button id="button" aria-describedby="tooltip">I'm a button</button>
-<div id="tooltip" role="tooltip">I'm a tooltip</div>
-
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script>
-    const button = document.querySelector('#button');
-    const tooltip = document.querySelector('#tooltip');
-
-    // Pass the button, the tooltip, and some options, and Popper will do the
-    // magic positioning for you:
-    Popper.createPopper(button, tooltip, {
-        placement: 'right',
-    });
-</script>
-
+{% component 'callNowButton' %}

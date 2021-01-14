@@ -888,12 +888,12 @@ textarea {
 }
 
 .slider-caption p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     color: #fff;
     line-height: 26px;
     font-family: 'Goldman', sans-serif;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
