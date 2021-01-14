@@ -21,6 +21,13 @@ postPage = "blog/post"
 <div id="slider">
     {% component 'slideList' %}
 </div>
+<div class="book-now-container">
+    <div class="d-flex justify-content-center book-now-btn">
+        <a href="#book-now" class="action-button shadow animate red">Đặt Bàn Ngay</a>
+        <div class="sun"></div>
+    </div>
+</div>
+<a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
 
 <div id="menu">
     {% component 'danangMenuList' %}
@@ -43,7 +50,8 @@ postPage = "blog/post"
     </div>
     {% component 'blogPosts' %}
 </div>
-
+{% partial "book-now" %}
+{% partial "advisory" %}
 <div id="customer-feedback">
     {% partial "customer-feedback" %}
 </div>
