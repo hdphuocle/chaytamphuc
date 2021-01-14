@@ -160,7 +160,7 @@
 
 #return-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     background: linear-gradient(to right, Orange, #ff7156, Orange);
     text-shadow: 0px -2px #edb143;
