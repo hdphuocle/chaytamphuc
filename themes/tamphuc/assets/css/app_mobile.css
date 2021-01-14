@@ -188,12 +188,12 @@ html {
     padding-top: 24px;
 }
 
-.book-now-btn .animate {
+.book-now-btn-home .animate {
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
 }
 
-.book-now-btn .action-button {
+.book-now-btn-home .action-button {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     position: relative;
     padding: 4px 40px;
@@ -205,7 +205,7 @@ html {
     text-decoration: none;
 }
 
-.book-now-btn .red {
+.book-now-btn-home .red {
     background: linear-gradient(to right, Orange, #ff7156, Orange);
     text-shadow: 0px -2px #edb143;
     border-bottom: 2px solid #ed5913;
@@ -214,7 +214,7 @@ html {
     -webkit-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
 }
 
-.book-now-btn .action-button:active {
+.book-now-btn-home .action-button:active {
     transform: translate(0px, 5px);
     -webkit-transform: translate(0px, 5px);
     border-bottom: 1px solid;

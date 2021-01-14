@@ -1,12 +1,44 @@
-<div class="rounded-social-buttons">
-    <a class="social-button facebook" href="https://www.facebook.com/chattamphuc" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a class="social-button twitter" href="tel:0932238899" target="_blank"><i class="fas fa-phone-alt"></i></a>
-    <a class="social-button email" href="#" target="_blank"><i class="fas fa-envelope-open-text"></i></a>
-    <a class="social-button linkedin" href="https://zalo.me/0972624014" target="_blank"><span class="zalo"></span></a>
-    <a class="social-button youtube" href="https://www.foody.vn/ha-noi/chay-tam-phuc-ve-ho" target="_blank"><span class="foody"></span></a>
+<div class="social-btn-lists-wrap">
+    <div class="d-flex justify-content-center social-btn-lists">
+        <div class="{{ isLarge? 'book-now-btn-large' : 'book-now-btn' }}">
+            <a href="#book-now" class="action-button shadow animate red">Đặt Bàn Ngay</a>
+            <div class="sun"></div>
+        </div>
+        <div class="rounded-social-buttons">
+            <a class="{{ isLarge? 'social-button-large' : 'social-button' }} facebook" href="https://m.me/1040934045"
+               target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="{{ isLarge? 'social-button-large' : 'social-button' }} twitter" href="tel:0932238899"
+               target="_blank"><i class="fas fa-phone-alt"></i></a>
+            <a class="{{ isLarge? 'social-button-large' : 'social-button' }} email" href="mailto:chaytamphuc.danang@gmail.com" target="_blank"><i
+                class="fas fa-envelope-open-text"></i></a>
+            <a class="{{ isLarge? 'social-button-large' : 'social-button' }} {{ isLarge? 'zalo-large' : 'zalo' }}-container"
+               href="https://zalo.me/0972624014" target="_blank"><span
+                class="{{ isLarge? 'zalo-large' : 'zalo' }}"></span></a>
+            <a class="{{ isLarge? 'social-button-large' : 'social-button' }} youtube"
+               href="https://www.foody.vn/ha-noi/chay-tam-phuc-ve-ho"
+               target="_blank"><span
+                class="foody"></span></a>
+        </div>
+    </div>
 </div>
 
+
 <style>
+    .social-btn-lists-wrap {
+        position: relative;
+
+    }
+
+    .social-btn-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-btn-lists.book-now-btn {
+        align-items: center;
+    }
+
     .rounded-social-buttons {
         text-align: center;
         display: flex;
@@ -33,7 +65,33 @@
         margin-bottom: 0.25rem;
     }
 
+    .rounded-social-buttons .social-button-large {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 3.9rem;
+        height: 3.9rem;
+        border: 0.125rem solid transparent;
+        padding: 0;
+        text-decoration: none;
+        text-align: center;
+        color: #fefefe;
+        font-size: 1.7625rem;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 1.6875rem;
+        transition: all 0.5s ease;
+        margin-right: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
     .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    .rounded-social-buttons .social-button-large:hover, .rounded-social-buttons .social-button-large:focus {
         -webkit-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -42,6 +100,7 @@
     .rounded-social-buttons .fa-phone-alt, .fa-facebook-f, .fa-envelope-open-text {
         font-size: 25px;
     }
+
     .rounded-social-buttons .foody {
         margin-top: 6px;
         margin-right: 6px;
@@ -50,12 +109,31 @@
         width: 36px;
         background-image: url(" {{ 'assets/images/icon-delivery-36x36.png'|theme }}");
     }
-    .rounded-social-buttons .zalo {
-        margin-top: 4px;
+    .rounded-social-buttons .foody-large {
+        margin-top: 6px;
+        margin-right: 6px;
         display: inline-block;
         height: 36px;
         width: 36px;
-        background-image: url(" {{ 'assets/images/zalo-36x36.png'|theme }}");
+        background-image: url(" {{ 'assets/images/icon-delivery-36x36.png'|theme }}");
+    }
+
+    .rounded-social-buttons .zalo {
+        /*margin-top: 4px;*/
+        display: inline-block;
+        height: 46px;
+        width: 46px;
+        background-image: url(" {{ 'assets/images/zalo-43x43.png'|theme }}");
+        background-size: cover;
+        margin-bottom: 4px;
+    }
+
+    .rounded-social-buttons .zalo-large {
+        display: inline-block;
+        height: 62px;
+        width: 62px;
+        background-image: url(" {{ 'assets/images/zalo-61x61.png'|theme }}");
+        background-size: cover;
     }
 
     .rounded-social-buttons .social-button.facebook {
@@ -67,11 +145,32 @@
         background: #fefefe;
         border-color: #3b5998;
     }
+
     .rounded-social-buttons .social-button.email {
         background: #3b5998;
     }
 
     .rounded-social-buttons .social-button.email:hover, .rounded-social-buttons .social-button.email:focus {
+        color: #3b5998;
+        background: #fefefe;
+        border-color: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button-large.facebook {
+        background: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button-large.facebook:hover, .rounded-social-buttons .social-button-large.facebook:focus {
+        color: #3b5998;
+        background: #fefefe;
+        border-color: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button-large.email {
+        background: #3b5998;
+    }
+
+    .rounded-social-buttons .social-button-large.email:hover, .rounded-social-buttons .social-button-large.email:focus {
         color: #3b5998;
         background: #fefefe;
         border-color: #3b5998;
@@ -87,11 +186,22 @@
         border-color: #74ee78;
     }
 
-    .rounded-social-buttons .social-button.linkedin {
+    .rounded-social-buttons .social-button.zalo-container {
+        background: #fefefe;
+
+    }
+    .rounded-social-buttons .social-button.zalo-container:hover, .rounded-social-buttons .social-button.zalo-container:focus {
+        color: #007bb5;
+        background: #fefefe;
+        border-color: #379fb5;
+    }
+
+
+    .rounded-social-buttons .social-button.zalo-container {
         background: #ffffff;
     }
 
-    .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+    .rounded-social-buttons .social-button.zalo:hover, .rounded-social-buttons .social-button.zalo:focus {
         color: #007bb5;
         background: #fefefe;
         border-color: #379fb5;
@@ -115,5 +225,119 @@
         color: #125688;
         background: #fefefe;
         border-color: #125688;
+    }
+
+    .rounded-social-buttons .social-button-large.twitter {
+        background: #10ee3b;
+    }
+
+    .rounded-social-buttons .social-button-large.twitter:hover, .rounded-social-buttons .social-button-large.twitter:focus {
+        color: #10ee3b;
+        background: #fefefe;
+        border-color: #74ee78;
+    }
+
+    .rounded-social-buttons .social-button-large.zalo-large {
+        background: #ffffff;
+    }
+
+    .rounded-social-buttons .social-button-large.zalo-large:hover, .rounded-social-buttons .social-button-large.zalo-large:focus {
+        color: #007bb5;
+        background: #fefefe;
+        border-color: #379fb5;
+    }
+
+    .rounded-social-buttons .social-button-large.youtube {
+        background: #bb0000;
+    }
+
+    .rounded-social-buttons .social-button-large.youtube:hover, .rounded-social-buttons .social-button-large.foody:focus {
+        color: #ed8830;
+        background: #ed8830;
+        border-color: #ff7156;
+    }
+
+    .rounded-social-buttons .social-button-large.instagram {
+        background: #125688;
+    }
+
+    .rounded-social-buttons .social-button-large.instagram:hover, .rounded-social-buttons .social-button-large.instagram:focus {
+        color: #125688;
+        background: #fefefe;
+        border-color: #125688;
+    }
+
+    .book-now-btn {
+        margin: 16px 0;
+    }
+
+    .book-now-btn .animate {
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+    }
+
+    .book-now-btn .action-button {
+        font-family: 'Goldman', "Segoe UI", Sans-Serif;
+        position: relative;
+        padding: 4px 32px;
+        margin: 0px 6px 4px 0px;
+        float: left;
+        border-radius: 10px;
+        font-size: 16px;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+
+    .book-now-btn .red {
+        background: linear-gradient(to right, Orange, #ff7156, Orange);
+        text-shadow: 0px -2px #edb143;
+        border-bottom: 2px solid #ed5913;
+        box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+        -moz-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+        -webkit-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    }
+
+    .book-now-btn .action-button:active {
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        border-bottom: 1px solid;
+    }
+
+    .book-now-btn-large {
+        margin: 24px 0;
+    }
+
+    .book-now-btn-large .animate {
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+    }
+
+    .book-now-btn-large .action-button {
+        font-family: 'Goldman', "Segoe UI", Sans-Serif;
+        position: relative;
+        padding: 4px 40px;
+        margin: 0px 10px 4px 0px;
+        float: left;
+        border-radius: 10px;
+        font-size: 22px;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+
+    .book-now-btn-large .red {
+        background: linear-gradient(to right, Orange, #ff7156, Orange);
+        text-shadow: 0px -2px #edb143;
+        border-bottom: 2px solid #ed5913;
+        box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+        -moz-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+        -webkit-box-shadow: 20px 5px 40px #99baf3, 0px 5px 40px #fcffb6, -20px 5px 40px #9686db;
+    }
+
+    .book-now-btn-large .action-button:active {
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        border-bottom: 1px solid;
     }
 </style>
