@@ -99,7 +99,7 @@ html {
 
 .social-bottom span {
     font-family: 'Goldman', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .subscribe-form input#subscribe {
@@ -107,7 +107,7 @@ html {
 }
 
 .search {
-    min-width: 127px;
+    min-width: 125px;
 }
 
 .search > h3 {
@@ -172,7 +172,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: -10px;
+    margin-right: -6px;
 
 }
 
@@ -186,7 +186,7 @@ html {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ff2d25;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .book_note {
@@ -239,8 +239,8 @@ html {
 
 #return-to-top {
     position: fixed;
-    bottom: 86px;
-    right: 20px;
+    bottom: 85px;
+    right: 31px;
     background: linear-gradient(to right, Orange, #ff7156, Orange);
     opacity: 0.3;
     text-shadow: 0px -2px #edb143;
