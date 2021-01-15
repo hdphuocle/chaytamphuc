@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pattaya&family=Goldman&family=Yanone+Kaffeesatz&display=swap');
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Hoa Dao';
+    src: url('../fonts/uvnhoadao.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Bay Buom';
+    src: url('../fonts/uvnbaybuom.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
 html {
     overflow: scroll;
     overflow-x: hidden;
@@ -88,8 +107,7 @@ html {
 }
 
 .search {
-    /*margin-bottom: 22px;*/
-    min-width: 130px;
+    min-width: 127px;
 }
 
 .search > h3 {
@@ -168,7 +186,7 @@ html {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ff2d25;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .book_note {
@@ -196,7 +214,7 @@ html {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     position: relative;
     padding: 4px 40px;
-    margin: 0px 10px 4px 0px;
+    /*margin: 0px 10px 4px 0px;*/
     float: left;
     border-radius: 10px;
     font-size: 22px;
