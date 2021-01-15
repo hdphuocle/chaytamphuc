@@ -16,8 +16,6 @@ $(document).ready(function () {
     });
 
     $('.testimonails-slider').flexslider({
-        animation: 'slide',
-        slideshowSpeed: 5000,
         prevText: '',
         nextText: '',
         controlNav: false
