@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pattaya&family=Goldman&family=Yanone+Kaffeesatz&display=swap');
+
 @font-face {
     font-family: 'FontAwesome';
     src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
@@ -6,6 +7,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Hoa Dao';
     src: url('../fonts/uvnhoadao.ttf');
@@ -19,11 +21,16 @@
     font-weight: bold;
     font-style: normal;
 }
+
 .logo_content {
     height: 70px;
     justify-items: center;
     padding-right: 16px;
     padding-left: 16px;
+}
+
+.logo_content a img {
+    height: 70px;
 }
 
 #menu_list {
@@ -180,7 +187,7 @@
 #return-to-top {
     position: fixed;
     bottom: 90px;
-    right: 31px;
+    right: 30px;
     background: linear-gradient(to right, Orange, #ff7156, Orange);
     text-shadow: 0px -2px #edb143;
     width: 50px;
@@ -219,53 +226,68 @@
     transition: all 0.35s;
     transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
 }
+
 .social-btns .btn-social:before {
     top: 90%;
     left: -110%;
 }
+
 .social-btns .btn-social .fa {
     transform: scale(0.8);
 }
+
 .social-btns .btn-social.facebook:before {
     background-color: #3b5998;
 }
+
 .social-btns .btn-social.facebook .fa {
     color: #3b5998;
 }
+
 .social-btns .btn-social.twitter:before {
     background-color: #3cf;
 }
+
 .social-btns .btn-social.twitter .fa {
     color: #3cf;
 }
+
 .social-btns .btn-social.google:before {
     background-color: #dc4a38;
 }
+
 .social-btns .btn-social.google .fa {
     color: #dc4a38;
 }
+
 .social-btns .btn-social.dribbble:before {
     background-color: #f26798;
 }
+
 .social-btns .btn-social.dribbble .fa {
     color: #f26798;
 }
+
 .social-btns .btn-social.skype:before {
     background-color: #00aff0;
 }
+
 .social-btns .btn-social.skype .fa {
     color: #00aff0;
 }
+
 .social-btns .btn-social:focus:before,
 .social-btns .btn-social:hover:before {
     top: -10%;
     left: -10%;
 }
+
 .social-btns .btn-social:focus .fa,
 .social-btns .btn-social:hover .fa {
     color: #fff;
     transform: scale(1);
 }
+
 .social-btns {
     height: 50px;
     margin: auto;
@@ -274,6 +296,7 @@
     flex-direction: row;
     justify-content: flex-start;
 }
+
 .social-btns .btn-social {
     display: inline-block;
     background-color: #fff;
@@ -285,9 +308,10 @@
     position: relative;
     overflow: hidden;
     border-radius: 28%;
-    box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
     opacity: 0.99;
 }
+
 .social-btns .btn-social:before {
     content: '';
     width: 120%;
@@ -295,6 +319,7 @@
     /*position: absolute;*/
     transform: rotate(45deg);
 }
+
 .social-btns .btn-social .fa {
     font-size: 38px;
     vertical-align: middle;
