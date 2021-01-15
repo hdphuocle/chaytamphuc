@@ -88,8 +88,8 @@ html {
 }
 
 .search {
-    margin-bottom: 22px;
-    min-width: 100px;
+    /*margin-bottom: 22px;*/
+    min-width: 130px;
 }
 
 .search > h3 {
@@ -147,27 +147,28 @@ html {
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
     height: 30px;
-    width: 100px;
+    width: 120px;
 }
 
 .hot_line {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: -10px;
 
 }
 
 .hot_line_text {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ed8830;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .hot_line_phone {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ff2d25;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .book_note {
@@ -179,8 +180,6 @@ html {
 
 .logo_content {
     justify-items: center;
-    padding-right: 4px !important;
-    padding-left: 4px !important;
 }
 
 .book-now-container {
@@ -219,6 +218,7 @@ html {
     -webkit-transform: translate(0px, 5px);
     border-bottom: 1px solid;
 }
+
 #return-to-top {
     position: fixed;
     bottom: 86px;
