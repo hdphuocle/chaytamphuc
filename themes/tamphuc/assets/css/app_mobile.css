@@ -107,7 +107,7 @@ html {
 }
 
 .search {
-    min-width: 125px;
+    min-width: 117px;
 }
 
 .search > h3 {
@@ -185,7 +185,7 @@ html {
     font-family: 'Goldman', "Segoe UI", Sans-Serif;
     color: #ff2d25;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 17px;
 }
 
 .book_note {
