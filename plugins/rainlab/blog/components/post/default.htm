@@ -1,12 +1,9 @@
 {% set post = __SELF__.post %}
 
 <div class="content">{{ post.content_html | raw }}</div>
-
-<p class="info">
-
+<p class="blog-info">
     {% if post.categories.count %}
         {% set categoryLinks = post.categories | map(c => "") | join(', ') %}
-
         {{ 'Được đăng vào ngày :date' | trans({
             date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans),
             categories: categoryLinks
