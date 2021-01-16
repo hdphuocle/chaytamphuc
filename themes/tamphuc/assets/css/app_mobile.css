@@ -171,6 +171,11 @@ html {
     width: 100px;
 }
 
+#latest-blog {
+    z-index: 0 !important;
+}
+
+
 .hot_line {
     display: flex;
     flex-direction: column;
