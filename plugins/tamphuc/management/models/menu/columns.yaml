@@ -5,6 +5,7 @@ columns:
     name:
         label: name
         type: text
+        sortable: true
     location_id:
         label: location_id
         type: number
@@ -35,9 +36,10 @@ columns:
     price_promotion:
         label: price_promotion
         type: text
-    other:
-        label: other
-        type: text
+    position:
+        label: position
+        type: number
+        sortable: true
     created_at:
         label: created_at
         type: datetime

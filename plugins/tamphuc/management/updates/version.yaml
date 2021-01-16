@@ -12,27 +12,12 @@
 1.0.5:
     - 'Updated table tamphuc_management_list'
     - builder_table_update_tamphuc_management_menu.php
-1.0.6:
-    - 'Updated table tamphuc_management_menu'
-    - builder_table_update_tamphuc_management_menu_2.php
-1.0.7:
-    - 'Updated table tamphuc_management_menu'
-    - builder_table_update_tamphuc_management_menu_3.php
 1.0.8:
     - 'Updated table tamphuc_management_type'
     - builder_table_update_tamphuc_management_type.php
-1.0.9:
-    - 'Updated table tamphuc_management_type'
-    - builder_table_update_tamphuc_management_type_2.php
 1.0.10:
     - 'Created table tamphuc_management_services'
     - builder_table_create_tamphuc_management_services.php
-1.0.11:
-    - 'Updated table tamphuc_management_services'
-    - builder_table_update_tamphuc_management_services.php
-1.0.12:
-    - 'Updated table tamphuc_management_services'
-    - builder_table_update_tamphuc_management_services_2.php
 1.0.13:
     - 'Created table tamphuc_management_cook_blog'
     - builder_table_create_tamphuc_management_cook_blog.php
@@ -40,26 +25,11 @@
     - 'Created table tamphuc_management_slide'
     - builder_table_create_tamphuc_management_slide.php
 1.0.15:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide.php
+    - 'Drop table tamphuc_management_image_category'
+    - builder_table_delete_tamphuc_management_image_category.php
 1.0.16:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide_2.php
+    - 'Created table tamphuc_management_image_category'
+    - builder_table_create_tamphuc_management_image_category.php
 1.0.17:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide_3.php
-1.0.18:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide_4.php
-1.0.19:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide_5.php
-1.0.20:
-    - 'Updated table tamphuc_management_slide'
-    - builder_table_update_tamphuc_management_slide_6.php
-1.0.21:
-    - 'Updated table tamphuc_management_services'
-    - builder_table_update_tamphuc_management_services_3.php
-1.0.22:
-    - 'Updated table tamphuc_management_services'
-    - builder_table_update_tamphuc_management_services_4.php
+    - 'Updated table tamphuc_management_menu'
+    - builder_table_update_tamphuc_management_menu_2.php

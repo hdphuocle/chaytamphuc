@@ -26,3 +26,7 @@ navigation:
                 label: !!binary HVNsaWRl
                 url: tamphuc/management/slide
                 icon: icon-sitemap
+            side-menu-image-category:
+                label: 'Hình Ảnh Nhà Hàng'
+                url: tamphuc/management/imagecategory
+                icon: icon-sitemap

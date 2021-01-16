@@ -10,14 +10,16 @@ class BuilderTableUpdateTamphucManagementType extends Migration
         Schema::table('tamphuc_management_type', function($table)
         {
             $table->integer('position')->nullable();
+            $table->boolean('is_available')->default(TRUE);
         });
     }
-    
+
     public function down()
     {
         Schema::table('tamphuc_management_type', function($table)
         {
             $table->dropColumn('position');
+            $table->dropColumn('is_available');
         });
     }
 }

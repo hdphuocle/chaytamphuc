@@ -22,12 +22,14 @@ class BuilderTableCreateTamphucManagementList extends Migration
             $table->boolean('is_promotion')->default(false);
             $table->double('price', 10, 0)->nullable()->default(0);
             $table->double('price_promotion', 10, 0)->nullable()->default(0);
-            $table->string('other')->nullable();
+            $table->integer('position')->nullable()->default(0);
+            $table->integer('location_id')->unsigned(false);
+            $table->integer('type_id')->unsigned(false);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('tamphuc_management_list');

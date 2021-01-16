@@ -1,62 +1,7 @@
-{% set
-imageList = [
-{
-"image_url": "/2.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/aa.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/bg5-1024x389.png",
-"alt": "alt"
-},
-{
-"image_url": "/post1.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/bb.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/cc.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ff.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ffe.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ffeg.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ffr.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ffw.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ggt.jpg",
-"alt": "alt"
-},
-{
-"image_url": "/ss.jpg",
-"alt": "alt"
-}
-]
-%}
+{% set imageCategory = __SELF__.imageCategory %}
 
-{% macro render_item(imageList) %}
-{% for item in imageList %}
+{% macro render_item(imageCategory) %}
+{% for item in imageCategory %}
 <div class="gallery-item">
     <div class="content"><img src='{{ "https://s3-ap-southeast-1.amazonaws.com/tamphuc/media#{item.image_url}" }}' alt="{{ item.alt}}"></div>
 </div>
@@ -75,7 +20,7 @@ imageList = [
         </div>
     </div>
     <div class="gallery" id="galleryList">
-        {{ service.render_item(imageList) }}
+        {{ service.render_item(imageCategory) }}
     </div>
 </div>
 

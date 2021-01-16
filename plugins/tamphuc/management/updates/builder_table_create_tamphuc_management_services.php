@@ -14,10 +14,15 @@ class BuilderTableCreateTamphucManagementServices extends Migration
             $table->string('name');
             $table->string('icon');
             $table->text('content');
-            $table->string('others')->nullable();
+            $table->boolean('is_available')->default(1);
+            $table->string('icon', 191)->default('null');
+            $table->string('others', 191)->default('null');
+            $table->integer('position')->default(0);
+            $table->string('image_url', 255)->default('null');
+
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('tamphuc_management_services');

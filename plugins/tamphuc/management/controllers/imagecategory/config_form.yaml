@@ -1,0 +1,10 @@
+name: ImageCategory
+form: $/tamphuc/management/models/imagecategory/fields.yaml
+modelClass: TamPhuc\Management\Models\ImageCategory
+defaultRedirect: tamphuc/management/imagecategory
+create:
+    redirect: 'tamphuc/management/imagecategory/update/:id'
+    redirectClose: tamphuc/management/imagecategory
+update:
+    redirect: tamphuc/management/imagecategory
+    redirectClose: tamphuc/management/imagecategory

@@ -14,7 +14,7 @@ fields:
         default: ''
         type: textarea
     position:
-        label: 'Vị Trí'
+        label: 'Vị Trí Muốn Hiển Thị'
         span: auto
         type: number
     is_available:
