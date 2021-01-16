@@ -58,7 +58,7 @@ imageList = [
 {% macro render_item(imageList) %}
 {% for item in imageList %}
 <div class="gallery-item">
-    <div class="content"><img src='{{ "assets/images#{item.image_url}"|theme }}' alt="{{ item.alt}}"></div>
+    <div class="content"><img src='{{ "https://s3-ap-southeast-1.amazonaws.com/tamphuc/media#{item.image_url}" }}' alt="{{ item.alt}}"></div>
 </div>
 {% endfor %}
 {% endmacro %}
