@@ -24,12 +24,7 @@
 1.0.14:
     - 'Created table tamphuc_management_slide'
     - builder_table_create_tamphuc_management_slide.php
-1.0.15:
-    - 'Drop table tamphuc_management_image_category'
-    - builder_table_delete_tamphuc_management_image_category.php
-1.0.16:
+1.0.26:
     - 'Created table tamphuc_management_image_category'
     - builder_table_create_tamphuc_management_image_category.php
-1.0.17:
-    - 'Updated table tamphuc_management_menu'
-    - builder_table_update_tamphuc_management_menu_2.php
+
