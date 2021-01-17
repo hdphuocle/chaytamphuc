@@ -1,0 +1,24 @@
+{% set
+menu_types = {
+'1': ['Tất Cả', 'tc'],
+'2': ['Khai Vị', 'kv'],
+'3': ['Điểm Tâm Sáng', 'dt'],
+'4': ['Canh', 'ch'],
+'5': ['Món Kho/Xào', 'kx'],
+'6': ['Cơm Chiên', 'cc'],
+}
+%}
+
+{% macro render_type(menu_types) %}
+{% for item in menu_types %}
+<li><span class="filter" data-filter="{{ item[1] }}">{{ item[0] }}</span></li>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as nav %}
+
+<div class="filters col-md-12 col-xs-12">
+    <ul id="filters">
+        {{ nav.render_type(menu_types) }}
+    </ul>
+</div>
