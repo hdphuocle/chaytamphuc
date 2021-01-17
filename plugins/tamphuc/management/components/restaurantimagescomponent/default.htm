@@ -3,7 +3,8 @@
 {% macro render_item(imageCategory) %}
 {% for item in imageCategory %}
 <div class="gallery-item">
-    <div class="content"><img src='{{ "https://s3-ap-southeast-1.amazonaws.com/tamphuc/media#{item.image_url}" }}' alt="{{ item.alt}}"></div>
+    <div class="content"><img src='{{ "https://s3-ap-southeast-1.amazonaws.com/tamphuc/media#{item.image_url}" }}'
+                              alt="{{ item.alt}}"></div>
 </div>
 {% endfor %}
 {% endmacro %}
@@ -45,8 +46,8 @@
         left: 50%;
         transform: translate3d(0, 0, 0);
         animation: zoomin 1s ease;
-        max-width: 70%;
-        max-height: 70%;
+        max-width: 100%;
+        max-height: 100%;
         margin: auto;
     }
 
@@ -184,7 +185,6 @@
         }
     }
 </style>
-
 <script>
     var gallery = document.querySelector('#galleryList');
     var getVal = function (elem, style) {

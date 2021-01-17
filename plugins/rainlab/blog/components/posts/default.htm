@@ -46,17 +46,6 @@
 <style>
     @import url("https://fonts.googleapis.com/css?family=Oswald:300|Roboto:300&display=swap");
 
-    /**
-     * Reset Styles
-     */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font: inherit;
-    }
 
     #content-list img {
         border-style: none;
@@ -226,7 +215,6 @@
             #c6972b,
             #c19f63
         ) 1;
-        z-index: 2;
         opacity: 0;
         -webkit-transition: all 0.25s ease-out;
         transition: all 0.25s ease-out;
@@ -237,7 +225,6 @@
     }
 
     .post > * {
-        z-index: 4;
         position: relative;
     }
 
@@ -293,7 +280,6 @@
         border-radius: 50%;
         left: 0;
         top: calc(50% - 8px);
-        z-index: 1;
     }
 
     .post__comments:after {
@@ -303,7 +289,6 @@
         transform: rotate(31deg);
         top: 50%;
         left: 11px;
-        z-index: 2;
         background-color: var(--secondary1-bg-color);
     }
 
