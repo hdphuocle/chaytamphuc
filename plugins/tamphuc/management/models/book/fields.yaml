@@ -1,0 +1,36 @@
+fields:
+    name:
+        label: 'Họ Tên'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    phone:
+        label: 'Số Điện Thoại'
+        span: auto
+        type: text
+    address:
+        label: 'Địa Chỉ'
+        span: auto
+        type: text
+    quatity:
+        label: 'Số Lượng Người'
+        span: auto
+        type: number
+    date_type:
+        label: 'Buổi nào?'
+        span: auto
+        options:
+            1: 'Buổi Sáng'
+            2: 'Buổi Trưa'
+            3: 'Buổi Chiều'
+            4: 'Buổi Tối'
+        showSearch: true
+        type: dropdown
+    note:
+        label: 'Lưu Ý'
+        size: ''
+        span: auto
+        type: textarea

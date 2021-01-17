@@ -1,0 +1,22 @@
+fields:
+    name:
+        label: 'Họ Và Tên'
+        span: auto
+        type: text
+    subject:
+        label: 'Tiêu Đề'
+        span: auto
+        type: text
+    phone:
+        label: 'Số Điện Thoại'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    content:
+        label: 'Nội Dung Cần Tư Vấn'
+        span: auto
+        size: ''
+        type: textarea

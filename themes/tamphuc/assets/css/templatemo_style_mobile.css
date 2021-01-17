@@ -94,13 +94,15 @@ p {
     padding: 0px 0;
     /*margin-right: 24px;*/
 }
+
 #logo > a > img {
-height: 70px!important;
+    height: 70px !important;
 }
 
 .logo {
     padding: 20px 0;
 }
+
 /*.navbar-nav > li > a {*/
 /*    margin-right: 0 !important;*/
 /*    margin-left: 35px!important;*/
@@ -120,7 +122,7 @@ height: 70px!important;
     list-style: none;
     display: inline-block;
     padding: 40px 0;
-    float: right!important;
+    float: right !important;
 }
 
 .main-menu a {
@@ -143,11 +145,13 @@ height: 70px!important;
     margin-right: 35px !important;
     /*float: right!important;*/
 }
-.navbar-light .navbar-toggler{
+
+.navbar-light .navbar-toggler {
     border-color: transparent !important;
 }
+
 button:focus {
-     outline: none!important;
+    outline: none !important;
 }
 
 .main-menu a:hover {
@@ -363,7 +367,7 @@ button:focus {
     text-transform: uppercase;
 }
 
-#product-heading img{
+#product-heading img {
     width: 80%;
 }
 
@@ -375,7 +379,7 @@ button:focus {
 
 #filters {
     text-align: center;
-    padding: 0!important;
+    padding: 0 !important;
 }
 
 #filters ul {
@@ -416,7 +420,8 @@ button:focus {
     padding: 0.25em 1em;
     border-radius: 6px;
 }
-.text-category{
+
+.text-category {
     display: none;
 }
 
@@ -692,10 +697,26 @@ textarea {
     width: 90px;
     color: #fff;
     cursor: pointer;
-    height: 35px;
+    height: 40px;
     line-height: 30px;
     text-align: center;
     background-color: #f78e21;
+    font-family: 'Goldman', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+}
+.send button:hover {
+    width: 90px;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f7cd4e;
     font-family: 'Goldman', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -735,7 +756,7 @@ textarea {
 }
 
 .send {
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .info p {
@@ -880,11 +901,12 @@ textarea {
     color: #fff;
     font-family: 'Goldman', sans-serif;
 }
-.slider-caption-background{
+
+.slider-caption-background {
     padding-top: 16px;
     padding-bottom: 32px;
     /*background-color: rgba(0, 0, 0, 0.5);*/
-    background-image: linear-gradient(to bottom right,rgba(0, 0, 0, 0.5), rgba(43, 53, 69, 0.56));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(43, 53, 69, 0.56));
     /*opacity: 0.5;*/
 }
 
@@ -1218,8 +1240,8 @@ textarea {
 
 
 .testimonails-content p {
-    padding-left: 8px!important;
-    padding-right: 8px!important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
     text-align: center;
     font-size: 15px;
     color: #333;
@@ -1608,7 +1630,9 @@ footer {
         overflow-x: hidden;
     }
 }
+
 .heading-section img {
     width: 80%;
 }
+
 /*--- END RESPONSIVE ---*/

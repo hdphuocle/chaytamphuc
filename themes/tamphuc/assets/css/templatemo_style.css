@@ -678,10 +678,26 @@ textarea {
     width: 90px;
     color: #fff;
     cursor: pointer;
-    height: 35px;
+    height: 40px;
     line-height: 30px;
     text-align: center;
     background-color: #f78e21;
+    font-family: 'Goldman', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+}
+.send button:hover {
+    width: 90px;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f7cd4e;
     font-family: 'Goldman', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -694,7 +710,7 @@ textarea {
 .leave input {
     width: 90px;
     cursor: pointer;
-    height: 35px;
+    height: 40px;
     line-height: 30px;
     text-align: center;
     background-color: #f78e21;
@@ -721,7 +737,7 @@ textarea {
 }
 
 .send {
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .info p {

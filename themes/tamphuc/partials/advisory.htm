@@ -1,3 +1,6 @@
+[customForm]
+formCode = "advisory"
+==
 <div id="advisory">
     <div class="container">
         <div class="col-md-12">
@@ -7,33 +10,7 @@
             </div>
         </div>
         <div class="product-item col-md-12">
-            <div class="message-form">
-                <form role="form" action="#" method="post" class="send-message">
-                    <div class="row">
-                        <div class="name col-md-4">
-                            <input type="text" name="name" id="name" placeholder="Tên của bạn"
-                                   class="form-control" required="required">
-                        </div>
-                        <div class="email col-md-4">
-                            <input type="text" name="email" id="email" placeholder="Email"
-                                   class="form-control" required="required">
-                        </div>
-                        <div class="email col-md-4">
-                            <input type="text" name="subject" id="subject" class="form-control"
-                                   placeholder="Số điện thoại của bạn">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="text col-md-12">
-                            <textarea name="text" placeholder="Bạn có muốn nhắn gì thêm không?" class="form-control"
-                            ></textarea>
-                        </div>
-                    </div>
-                    <div class="send">
-                        <button type="submit" name="submit" required="required">Gửi</button>
-                    </div>
-                </form>
-            </div>
+            {% component 'customForm' %}
         </div>
     </div>
 </div>

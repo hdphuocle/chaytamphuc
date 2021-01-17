@@ -30,3 +30,16 @@ navigation:
                 label: 'Hình Ảnh Nhà Hàng'
                 url: tamphuc/management/imagecategory
                 icon: icon-sitemap
+    book-and-advisory:
+        label: 'Đặt Hàng và Tư Vấn'
+        url: tamphuc/management/book
+        icon: icon-life-ring
+        sideMenu:
+            side-service-book:
+                label: 'Đặt Chỗ'
+                url: tamphuc/management/book
+                icon: icon-support
+            side-service-advisory:
+                label: 'Tư Vấn'
+                url: tamphuc/management/advisory
+                icon: icon-support
