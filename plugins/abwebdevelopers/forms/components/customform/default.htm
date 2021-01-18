@@ -1,5 +1,6 @@
 {% if __SELF__.form.recaptchaEnabled() %}
 <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
 {% endif %}
-
+{{ form_ajax('onSubmit') }}
 {{ __SELF__.getRenderedPartial() | raw }}
+{{ form_close() }}

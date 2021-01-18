@@ -1,0 +1,45 @@
+{{ form_ajax('onAdvisorySubmit') }}
+<div class="message-form">
+    <form role="form" class="send-message">
+        <section class="row advisory-wrap">
+            <b-field label="Tên Quý Khách"
+                     type="is-danger"
+                     message="Bạn nhập tên không hợp lệ"
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                <b-input name="name"
+                         placeholder=""
+                         maxlength="30">
+                </b-input>
+            </b-field>
+            <b-field label="Email"
+                     type="is-danger"
+                     message="Email này không hợp lệ"
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                <b-input type="email"
+                         name="email"
+                         placeholder=""
+                         maxlength="40">
+                </b-input>
+            </b-field>
+
+            <b-field label="Số Điện Thoại"
+                     type="is-success"
+                     message="Số điện thoại này không hợp lệ"
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                <b-input name="phone" maxlength="11"></b-input>
+            </b-field>
+
+            <b-field label="Yêu Cầu Khác" class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                <b-input maxlength="200" type="textarea" name="content"
+                         placeholder="Bạn có muốn yêu cầu gì thêm không?"></b-input>
+            </b-field>
+        </section>
+        <section class="advisory-wrap-send">
+            <div class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
+            <div class="send">
+                <button type="submit" name="submit" class="g-capcha" required="required">Gửi</button>
+            </div>
+        </section>
+    </form>
+</div>
+{{ form_close() }}

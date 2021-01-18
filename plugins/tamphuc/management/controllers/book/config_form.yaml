@@ -1,0 +1,10 @@
+name: Book
+form: $/tamphuc/management/models/book/fields.yaml
+modelClass: TamPhuc\Management\Models\Book
+defaultRedirect: tamphuc/management/book
+create:
+    redirect: 'tamphuc/management/book/update/:id'
+    redirectClose: tamphuc/management/book
+update:
+    redirect: tamphuc/management/book
+    redirectClose: tamphuc/management/book

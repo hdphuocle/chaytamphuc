@@ -528,21 +528,21 @@ button:focus {
     box-shadow: 0 10px 6px -6px #777;
 }
 
-.pagination {
+.pagination1 {
     margin-top: 60px;
 }
 
-.pagination ul {
+.pagination1 ul {
     padding: 0;
     margin: 0;
 }
 
-.pagination li {
+.pagination1 li {
     list-style: none;
     display: inline-block;
 }
 
-.pagination a {
+.pagination1 a {
     background-color: #444;
     width: 40px;
     height: 40px;
@@ -554,7 +554,7 @@ button:focus {
     text-align: center;
 }
 
-.pagination a:hover {
+.pagination1 a:hover {
     background-color: #f78e21;
 }
 
@@ -666,26 +666,6 @@ button:focus {
     color: #666;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #e2e2e2;
-    width: 100%;
-    margin-top: 25px;
-    font-size: 13px;
-    font-style: italic;
-    font-weight: 300;
-    color: #aaa;
-    outline: none;
-}
-
-textarea {
-    height: 165px;
-    max-height: 180px;
-    max-width: 770px;
-    line-height: 18px;
-    width: 100%
 }
 
 .form label {
@@ -952,22 +932,23 @@ textarea {
 /*-- Services --*/
 
 
-.service-btn {
+.service-btn1 {
     margin-bottom: 24px;
     position: relative;
     width: 100%;
+    z-index: 1;
 }
 
 .service-content {
     margin: 0 auto;
 }
 
-.service-btn img {
+.service-btn1 img {
     height: 50px;
     margin-bottom: 32px
 }
 
-.service-btn .btn {
+.service-btn1 .btn1 {
     position: relative;
     cursor: pointer;
     width: 100px;
@@ -992,7 +973,7 @@ textarea {
     padding: 0 !important;
 }
 
-.service-btn .btn:before {
+.service-btn1 .btn1:before {
     content: "";
     background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e8cbc0, #636fa4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -1012,7 +993,7 @@ textarea {
     0px 0px 25px 8px rgba(60, 60, 60, 1);
 }
 
-.service-btn .btn:active {
+.service-btn1 .btn1:active {
     color: rgba(95, 98, 110, 0.7);
     text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
     box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),

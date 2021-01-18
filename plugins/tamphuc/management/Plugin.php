@@ -13,6 +13,8 @@ class Plugin extends PluginBase
             'TamPhuc\Management\Components\ServiceComponent' => 'serviceList',
             'TamPhuc\Management\Components\SlideComponent' => 'slideList',
             'TamPhuc\Management\Components\RestaurantImagesComponent' => 'restaurantImagesList',
+            'TamPhuc\Management\Components\AdvisoryComponent' => 'advisoryForm',
+            'TamPhuc\Management\Components\BookComponent' => 'bookForm',
         ];
     }
 

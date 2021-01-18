@@ -1,0 +1,10 @@
+name: Advisory
+form: $/tamphuc/management/models/advisory/fields.yaml
+modelClass: TamPhuc\Management\Models\Advisory
+defaultRedirect: tamphuc/management/advisory
+create:
+    redirect: 'tamphuc/management/advisory/update/:id'
+    redirectClose: tamphuc/management/advisory
+update:
+    redirect: tamphuc/management/advisory
+    redirectClose: tamphuc/management/advisory

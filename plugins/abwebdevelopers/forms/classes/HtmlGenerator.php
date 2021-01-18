@@ -179,7 +179,7 @@ class HtmlGenerator
     /**
      * Generate a Form Element
      *
-     * @param Form  $form
+     * @param Form $form
      * @param Field $field
      * @return HtmlElement
      */
@@ -515,10 +515,10 @@ class HtmlGenerator
                     'label' => $option->option_label,
                 ]);
 
-                foreach ($option->options as $option) {
+                foreach ($option->options as $opt) {
                     $optgroup->addChild(new HtmlOption([
-                        'value' => $option->option_code,
-                        'node' => $option->option_label,
+                        'value' => $opt->option_code,
+                        'node' => $opt->option_label,
                     ]));
                 }
 
@@ -586,10 +586,10 @@ class HtmlGenerator
      */
     public function resolveTypeTextarea(Form $form, Field $field)
     {
-        $el = new HtmlTextarea();
+        $el = new HtmlTextarea(['placeholder' => $field->placeholder,]);
 
         $el->set($this->resolveTypeGlobal($form, $field));
-        
+
         $this->addCustomAttributes($el, $field);
 
         return $el;

@@ -2,8 +2,8 @@
 {% macro render_item(serviceList) %}
 {% for item in serviceList %}
 <div class="service-item">
-    <div class="service-btn">
-        <div class="btn btn-blob ">
+    <div class="service-btn1">
+        <div class="btn1 btn1-blob ">
             <img src='{{ "assets/images#{item.image_url}"|theme }}'>
         </div>
     </div>
@@ -18,12 +18,10 @@
 {% import _self as service %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="heading-section">
-                <h2>Tại sao nên chọn Nhà hàng Tâm Phúc</h2>
-                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
-            </div>
+    <div class="col-md-12">
+        <div class="heading-section">
+            <h2>Tại sao nên chọn Nhà hàng Tâm Phúc</h2>
+            <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
         </div>
     </div>
     <div class="row justify-content-center">

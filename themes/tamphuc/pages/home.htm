@@ -23,6 +23,9 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
+
+[advisoryForm]
+[bookForm]
 ==
 <div id="slider">
     {% component 'slideList' %}
@@ -56,8 +59,36 @@ postPage = "blog/post"
     </div>
     {% component 'blogPosts' %}
 </div>
-{% partial "book-now" %}
-{% partial "advisory" %}
+<div id="app">
+    <div id="book">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Liên Hệ Đặt Hàng</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+            <div class="product-item col-md-12">
+                {% component 'bookForm' %}
+            </div>
+        </div>
+    </div>
+    <div id="advisory">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Tư vấn ăn chay</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+            <div class="product-item col-md-12">
+                {% component 'advisoryForm' %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <div id="customer-feedback">
     {% partial "customer-feedback" %}
 </div>

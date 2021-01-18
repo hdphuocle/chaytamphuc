@@ -26,9 +26,6 @@ $(document).ready(function () {
         $(this).next('ul').slideToggle('500');
         $(this).find('i').toggleClass('fa-minus fa-plus ')
     });
-    $('.carousel').carousel()
-
-
 });
 $(window).scroll(function () {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
