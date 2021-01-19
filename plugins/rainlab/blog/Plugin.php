@@ -65,7 +65,7 @@ class Plugin extends PluginBase
     {
         return [
             'blog' => [
-                'label'       => 'rainlab.blog::lang.blog.menu_label',
+                'label'       => 'Bài Viết',
                 'url'         => Backend::url('rainlab/blog/posts'),
                 'icon'        => 'icon-pencil',
                 'iconSvg'     => 'plugins/rainlab/blog/assets/images/blog-icon.svg',
