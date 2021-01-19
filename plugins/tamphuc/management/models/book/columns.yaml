@@ -1,37 +1,32 @@
 columns:
     id:
-        label: id
+        label: STT
         type: number
     name:
-        label: name
+        label: Tên Khách Hàng
         type: text
     email:
-        label: email
+        label: Email
         type: text
     subject:
-        label: subject
+        label: Nội Dung Đặt Bàn
         type: text
     quatity:
-        label: quatity
+        label: Số Lượng Người
         type: number
     book_date:
-        label: book_date
-        type: text
+        label: Ngày Đặt Bàn
+        type: date
+        format: d-m-Y
     date_type:
-        label: date_type
+        label: Thời Gian
         type: text
     phone:
-        label: phone
+        label: Số Điện Thoại
         type: text
     note:
-        label: note
+        label: Yêu Cầu Khác
         type: text
     address:
-        label: address
+        label: Địa Chỉ
         type: text
-    created_at:
-        label: created_at
-        type: datetime
-    updated_at:
-        label: updated_at
-        type: datetime
