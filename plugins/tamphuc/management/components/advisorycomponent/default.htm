@@ -3,7 +3,7 @@
     <form role="form" class="send-message" @submit="checkAdvisoryForm">
         <section class="row advisory-wrap">
             <b-field label="Tên Quý Khách"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input name="name"
                          placeholder=""
@@ -12,7 +12,7 @@
                 </b-input>
             </b-field>
             <b-field label="Email"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input type="email"
                          name="email"
@@ -24,12 +24,12 @@
             </b-field>
 
             <b-field label="Số Điện Thoại"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input name="phone" required maxlength="11"></b-input>
             </b-field>
 
-            <b-field label="Yêu Cầu Khác" class="col-md-5 col-xs-12 col-sm-6 mb-2">
+            <b-field label="Yêu Cầu Khác" class="col-md-5 col-xs-12 col-sm-6 mb-2" type="is-info">
                 <b-input maxlength="200" type="textarea" name="content"
                          placeholder="Bạn có muốn yêu cầu gì thêm không?"></b-input>
             </b-field>

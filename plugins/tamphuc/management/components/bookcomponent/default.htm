@@ -3,7 +3,7 @@
     <form role="form" method="post" @submit="checkBookForm" class="g-recaptcha">
         <section class="row book-wrap">
             <b-field label="Tên Quý Khách"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input required name="name"
                          placeholder=""
@@ -12,7 +12,7 @@
                 </b-input>
             </b-field>
             <b-field label="Email"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input required type="email"
                          name="email"
@@ -22,23 +22,23 @@
                 </b-input>
             </b-field>
             <b-field label="Số Lượng Người"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input required name="quatity"></b-input>
+                <b-input type="number" required name="quatity"></b-input>
             </b-field>
             <b-field label="Số Điện Thoại"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input required name="phone" maxlength="11"
                          validation-message="Bạn chưa nhập số điện thoại."></b-input>
             </b-field>
             <b-field label="Nội Dung Đặt Bàn"
-                     type="is-success"
+                     type="is-info"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input required name="subject" validation-message="Bạn chưa nhập nội dung."></b-input>
             </b-field>
             <b-field label="Ngày Đặt Bàn"
-                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2" type="is-info">
                 <b-datepicker
                     placeholder="Chọn ngày..."
                     required
@@ -47,8 +47,8 @@
                 </b-datepicker>
             </b-field>
             <b-field label="Thời Gian"
-                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-select name="date_type" placeholder="Chọn ngày..." required expanded>
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2" type="is-info">
+                <b-select name="date_type" placeholder="Chọn thời gian" required expanded validation-message="Bạn chưa chọn thời gian.">
                     <option value="Buổi Sáng">
                         Buổi Sáng
                     </option>
@@ -65,7 +65,7 @@
             </b-field>
 
             <b-field label="Yêu Cầu Khác"
-                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2" type="is-info">
                 <b-input maxlength="200" type="textarea" name="content"
                          placeholder="Bạn có muốn lưu ý gì thêm không?"></b-input>
             </b-field>
