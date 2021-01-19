@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use Validator;
 use Input;
 use TamPhuc\Management\Models\Book;
+use Carbon\Carbon;
 
 class BookComponent extends ComponentBase
 {
@@ -36,10 +37,13 @@ class BookComponent extends ComponentBase
         );
         $model = new Book();
         $model->name = post('name');
+        $model->subject = post('subject');;
         $model->email = post('email');
         $model->phone = post('phone');
-        $model->subject = post('subject');
-        $model->content = post('note');
+        $model->quatity = post('quatity');
+        $model->book_date = Carbon::create(post('book_date'));
+        $model->date_type = post('date_type');
+        $model->note = post('note');
         $model->save();
     }
 

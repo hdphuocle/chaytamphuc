@@ -68,7 +68,42 @@ redirect = "/"
 
 <script>
     new Vue({
-        el: '#app'
+        el: '#app',
+        data: {
+            errors: [],
+            advisory_name: null,
+            advisory_email: null,
+            advisory_phone: null,
+            advisory_note: null,
+            book_name: null,
+            book_email: null,
+            book_phone: null,
+            book_note: null
+        },
+        methods: {
+            checkAdvisoryForm: function (e) {
+                if (this.advisory_name && this.advisory_email) return true;
+                this.errors = [];
+                if (!this.advisory_name) this.errors.push("Name required.");
+                if (!this.advisory_email) this.errors.push("Email required.");
+                var recaptcha = $("#advisory-g-recaptcha").val();
+                if (recaptcha === "") {
+                    e.preventDefault();
+                    alert("Please check the recaptcha");
+                }
+            },
+            checkBookForm: function (e) {
+                if (this.book_name && this.book_email) return true;
+                this.errors = [];
+                if (!this.book_name) this.errors.push("Name required.");
+                if (!this.book_email) this.errors.push("Email required.");
+                var recaptcha = $("#book-g-recaptcha").val();
+                if (recaptcha === "") {
+                    e.preventDefault();
+                    alert("Please check the recaptcha");
+                }
+            }
+        }
     })
 </script>
 <!-- Scripts -->

@@ -1,57 +1,64 @@
 {{ form_ajax('onBookSubmit') }}
 <div class="message-form">
-    <form role="form" method="post">
+    <form role="form" method="post" @submit="checkBookForm" class="g-recaptcha">
         <section class="row book-wrap">
             <b-field label="Tên Quý Khách"
-                     type="is-danger"
-                     message="Bạn nhập tên không hợp lệ"
+                     type="is-success"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input name="name"
+                <b-input required name="name"
                          placeholder=""
-                         maxlength="30">
+                         validation-message="Bạn chưa nhập tên."
+                         maxlength="50">
                 </b-input>
             </b-field>
             <b-field label="Email"
-                     type="is-danger"
-                     message="Email này không hợp lệ"
+                     type="is-success"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input type="email"
+                <b-input required type="email"
                          name="email"
                          placeholder=""
-                         maxlength="40">
+                         validation-message="Bạn phải nhập đúng định dạng email."
+                         maxlength="50">
                 </b-input>
             </b-field>
             <b-field label="Số Lượng Người"
                      type="is-success"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input name="quatity"></b-input>
+                <b-input required name="quatity"></b-input>
             </b-field>
             <b-field label="Số Điện Thoại"
                      type="is-success"
-                     message="Số điện thoại này không hợp lệ"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input name="phone" maxlength="11"></b-input>
+                <b-input required name="phone" maxlength="11"
+                         validation-message="Bạn chưa nhập số điện thoại."></b-input>
+            </b-field>
+            <b-field label="Nội Dung Đặt Bàn"
+                     type="is-success"
+                     class="col-md-5 col-xs-12 col-sm-6 mb-2">
+                <b-input required name="subject" validation-message="Bạn chưa nhập nội dung."></b-input>
             </b-field>
             <b-field label="Ngày Đặt Bàn"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-datepicker
                     placeholder="Chọn ngày..."
+                    required
+                    validation-message="Bạn chưa chọn ngày."
                     name="book_date">
                 </b-datepicker>
             </b-field>
             <b-field label="Thời Gian"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-select placeholder="Chọn ngày..." required expanded>
-                    <option value="buoi-sang">
+                <b-select name="date_type" placeholder="Chọn ngày..." required expanded>
+                    <option value="Buổi Sáng">
                         Buổi Sáng
                     </option>
-                    <option value="buoi-trua">
+                    <option value="Buổi Trưa">
                         Buổi Trưa
                     </option>
-                    <option value="buoi-chieu">
+                    <option value="Buổi Chiều">
                         Buổi Chiều
                     </option>
-                    <option value="buoi-toi">
+                    <option value="Buổi Tối">
                         Buổi Tối
                     </option>
                 </b-select>
@@ -65,7 +72,7 @@
 
         </section>
         <section class="book-wrap-send">
-            <div class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
+            <div id="book-g-recaptcha" class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
             <div class="send">
                 <button type="submit" name="submit" class="g-capcha" required="required">Gửi</button>
             </div>

@@ -1,32 +1,32 @@
 {{ form_ajax('onAdvisorySubmit') }}
 <div class="message-form">
-    <form role="form" class="send-message">
+    <form role="form" class="send-message" @submit="checkAdvisoryForm">
         <section class="row advisory-wrap">
             <b-field label="Tên Quý Khách"
-                     type="is-danger"
-                     message="Bạn nhập tên không hợp lệ"
+                     type="is-success"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input name="name"
                          placeholder=""
-                         maxlength="30">
+                         required
+                         maxlength="50">
                 </b-input>
             </b-field>
             <b-field label="Email"
-                     type="is-danger"
-                     message="Email này không hợp lệ"
+                     type="is-success"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
                 <b-input type="email"
                          name="email"
+                         required
                          placeholder=""
-                         maxlength="40">
+                         validation-message="Bạn phải nhập đúng định dạng email."
+                         maxlength="50">
                 </b-input>
             </b-field>
 
             <b-field label="Số Điện Thoại"
                      type="is-success"
-                     message="Số điện thoại này không hợp lệ"
                      class="col-md-5 col-xs-12 col-sm-6 mb-2">
-                <b-input name="phone" maxlength="11"></b-input>
+                <b-input name="phone" required maxlength="11"></b-input>
             </b-field>
 
             <b-field label="Yêu Cầu Khác" class="col-md-5 col-xs-12 col-sm-6 mb-2">
@@ -35,7 +35,7 @@
             </b-field>
         </section>
         <section class="advisory-wrap-send">
-            <div class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
+            <div id="advisory-g-recaptcha" class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
             <div class="send">
                 <button type="submit" name="submit" class="g-capcha" required="required">Gửi</button>
             </div>

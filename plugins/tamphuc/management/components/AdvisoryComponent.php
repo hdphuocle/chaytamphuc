@@ -39,7 +39,7 @@ class AdvisoryComponent extends ComponentBase
         $model->email = post('email');
         $model->phone = post('phone');
         $model->subject = post('subject');
-        $model->content = post('note');
+        $model->content = post('content');
         $model->save();
     }
 
