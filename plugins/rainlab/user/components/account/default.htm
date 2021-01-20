@@ -1,24 +1,34 @@
 {% if not user %}
 
-    <div class="row">
+<ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#login-page">Đăng Nhập</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#register-page">Đăng Ký</a>
+    </li>
+</ul>
 
+<!-- Tab panes -->
+<div class="tab-content justify-content-center pt-4">
+    <div class="tab-pane container active" id="login-page">
         <div class="col-md-6">
-            <h3>Sign in</h3>
             {% partial __SELF__ ~ '::signin' %}
         </div>
-
+    </div>
+    <div class="tab-pane container fade" id="register-page">
         <div class="col-md-6">
             {% partial __SELF__ ~ '::register' %}
         </div>
-
     </div>
+</div>
 
 {% else %}
 
-    {% partial __SELF__ ~ '::activation_check' %}
+{% partial __SELF__ ~ '::activation_check' %}
 
-    {% partial __SELF__ ~ '::update' %}
+{% partial __SELF__ ~ '::update' %}
 
-    {% partial __SELF__ ~ '::deactivate_link' %}
+{% partial __SELF__ ~ '::deactivate_link' %}
 
 {% endif %}

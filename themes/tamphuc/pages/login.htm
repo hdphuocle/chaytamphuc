@@ -16,7 +16,18 @@ forceSecure = 0
 requirePassword = 1
 
 [sociallogin]
+
+[hotline]
+location= "any"
+
+[navbar]
+location= "any"
 ==
+<header>
+    {% partial "top" %}
+    {% component "navbar" %}
+</header>
+{% component 'hotline' %}
 <div class="container pt-5">
     {% component 'account' %}
 </div>

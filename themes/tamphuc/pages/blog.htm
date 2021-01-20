@@ -19,11 +19,18 @@ postPage = "blog/post"
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
+
+[hotline]
+location= "any"
+
+[navbar]
+location= "any"
 ==
 <header>
     {% partial "top" %}
-    {% partial "nav" hanoi=true %}
+    {% component "navbar" %}
 </header>
+{% component 'hotline' %}
 <div class="container">
     <div class="col-md-12">
         <div class="heading-section">

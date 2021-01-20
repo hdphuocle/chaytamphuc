@@ -1,8 +1,15 @@
 .social-buttons {
     margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.social-buttons .button {
+.login-buttons{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.social-buttons .social-button {
     width: auto;
     display: inline-block;
     padding: 0 18px 0 6px;
@@ -12,7 +19,7 @@
     transition: all 250ms linear;
 }
 
-.social-buttons .button:hover {
+.social-buttons .social-button:hover {
     text-decoration: none;
 }
 
@@ -30,7 +37,6 @@
     margin-right: 12px;
     font-size: 24px;
     line-height: 24px;
-    width: 42px;
     height: 24px;
     text-align: center;
     display: inline-block;
@@ -41,6 +47,9 @@
 .social-buttons .button--social-login .icon:before {
     display: inline-block;
     width: 40px;
+}
+social-buttons .button--social-login .icon span{
+    margin-left: 8px !important;
 }
 
 .social-buttons .button--social-login .icon:after {
