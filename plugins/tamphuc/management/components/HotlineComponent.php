@@ -36,7 +36,7 @@ class HotlineComponent extends ComponentBase
     public function onRun()
     {
         $local = $this->property('location');
-        $limitSize = $this->property('limit');
+//        echo $local;
         $location_id = 1;
         if (strcmp($local, 'hanoi') == 0) {
             $location_id = 1;
@@ -45,10 +45,9 @@ class HotlineComponent extends ComponentBase
             $location_id = 2;
             $this->location_name = 'TP. Hồ Chí Minh';
         } elseif (strcmp($local, 'danang') == 0) {
+            echo $local;
             $location_id = 3;
             $this->location_name = 'Đà Nẵng';
-        } elseif (strcmp($local, 'all') == 0) {
-            $this->location_name = 'Tâm Phúc';
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
@@ -67,9 +66,7 @@ class HotlineComponent extends ComponentBase
                 }
             }
         }
-        if (strcmp($local, 'all') !== 0) {
-            $this->hotline = Hotline::where('location_id', $location_id)->first();
-        }
+        $this->hotline = Hotline::where('location_id', $location_id)->first();
     }
 
     public function defineProperties()

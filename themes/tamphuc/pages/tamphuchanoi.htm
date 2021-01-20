@@ -26,13 +26,20 @@ categoryPage = "blog/category"
 postPage = "blog/post"
 
 [advisoryForm]
+
 [bookForm]
+
+[hotline]
+location = "hanoi"
+
+[navbar]
+location = "hanoi"
 ==
 <header>
     {% partial "top" %}
-    {% partial "nav" hanoi=true %}
+    {% component "navbar" %}
 </header>
-{% partial "hotline-call" hanoi=true %}
+{% component 'hotline' %}
 <div id="slider">
     {% component 'slideList' %}
 </div>
