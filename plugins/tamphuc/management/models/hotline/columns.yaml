@@ -1,0 +1,19 @@
+columns:
+    id:
+        label: id
+        type: number
+    phone_number:
+        label: 'Số Điện Thoại'
+        type: text
+    location_id:
+        label: ' Địa Điểm'
+        type: number
+    is_available:
+        label: 'Đang Tồn Tại'
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime

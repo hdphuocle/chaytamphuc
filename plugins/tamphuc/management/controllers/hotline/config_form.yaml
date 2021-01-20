@@ -1,0 +1,10 @@
+name: Hotline
+form: $/tamphuc/management/models/hotline/fields.yaml
+modelClass: TamPhuc\Management\Models\Hotline
+defaultRedirect: tamphuc/management/hotline
+create:
+    redirect: 'tamphuc/management/hotline/update/:id'
+    redirectClose: tamphuc/management/hotline
+update:
+    redirect: tamphuc/management/hotline
+    redirectClose: tamphuc/management/hotline

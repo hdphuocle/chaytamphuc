@@ -2,21 +2,21 @@
 
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\DB;
-use TamPhuc\Management\Models\Menu;
-use TamPhuc\Management\Models\Type;
+use TamPhuc\Management\Models\Hotline;
+use TamPhuc\Management\Models\Navbar;
 
-class MenuComponent extends ComponentBase
+class NavbarComponent extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name' => 'Menu Component',
+            'name' => 'NavbarComponent Component',
             'description' => 'No description provided yet...'
         ];
     }
 
-    public $menuList;
-    public $typeList;
+    public $hotline;
+    public $navbarList;
     public $location_name = 'Hà Nội';
 
     function getUserIP()
@@ -67,16 +67,8 @@ class MenuComponent extends ComponentBase
                 }
             }
         }
-
-        $this->menuList = Menu::where('location_id', $location_id)->take($limitSize)->get();
-
-        $this->typeList = Type::orderBy('position')->get();
-
-        $this->menuList = $this->menuList->map(function ($menu) {
-            $type = Type::where('id', $menu->type_id)->first();
-            $menu->slugType = $type->slug;
-            return $menu;
-        });
+        $this->hotline = Hotline::where('location_id', $location_id)->first();
+        $this->navbarList = Navbar::where('location_id', $location_id)->get();
     }
 
     public function defineProperties()
@@ -86,14 +78,7 @@ class MenuComponent extends ComponentBase
                 'title' => 'location',
                 'description' => 'Location',
                 'type' => 'string',
-            ],
-            'limit' => [
-                'title' => 'limit',
-                'description' => 'Limit the quatity of menu is showed',
-                'type' => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'default' => '6',
-            ],
+            ]
         ];
     }
 }

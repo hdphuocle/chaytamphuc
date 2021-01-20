@@ -15,6 +15,8 @@ class Plugin extends PluginBase
             'TamPhuc\Management\Components\RestaurantImagesComponent' => 'restaurantImagesList',
             'TamPhuc\Management\Components\AdvisoryComponent' => 'advisoryForm',
             'TamPhuc\Management\Components\BookComponent' => 'bookForm',
+            'TamPhuc\Management\Components\HotlineComponent' => 'hotline',
+            'TamPhuc\Management\Components\NavbarComponent' => 'navbar'
         ];
     }
 

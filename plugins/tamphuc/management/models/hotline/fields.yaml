@@ -1,0 +1,16 @@
+fields:
+    phone_number:
+        label: 'Số Điện Thoại'
+        span: auto
+        type: text
+    is_available:
+        label: 'Hiển Thị'
+        span: auto
+        default: 1
+        type: checkbox
+    location:
+        label: 'Địa Điểm'
+        span: auto
+        nameFrom: name
+        descriptionFrom: description
+        type: relation

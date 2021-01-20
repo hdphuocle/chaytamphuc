@@ -1,8 +1,16 @@
 title = "Chay Tâm Phúc Đà Nẵng"
 url = "/tamphuc-danang"
 layout = "default"
+description = "Trang Chủ"
+meta_description = "Chào mừng quý khách đến với website của nhà hàng Chay Tâm Phúc."
 is_hidden = 0
-[danangMenuList]
+role = 0
+permission = 0
+anonymous_only = 0
+logged_only = 0
+
+[menuList]
+location = "danang"
 
 [serviceList]
 
@@ -16,23 +24,32 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
-==
 
+[advisoryForm]
+[bookForm]
+==
+<header>
+    {% partial "top" %}
+    {% partial "nav" danang=true %}
+</header>
+{% partial "hotline-call" danang=true  %}
 <div id="slider">
     {% component 'slideList' %}
 </div>
 <div class="book-now-container">
-    <div class="d-flex justify-content-center book-now-btn">
+    <div class="d-flex justify-content-center book-now-btn-home">
         <a href="#book-now" class="action-button shadow animate red">Đặt Bàn Ngay</a>
         <div class="sun"></div>
     </div>
 </div>
+
 <div id="menu">
-    {% component 'danangMenuList' %}
+    {% component 'menuList' %}
 </div>
 <div id="services">
     {% component 'serviceList' %}
 </div>
+{% partial "social-buttons" isLarge=true %}
 <div id="gallery">
     {% component 'restaurantImagesList' %}
 </div>
@@ -48,8 +65,36 @@ postPage = "blog/post"
     </div>
     {% component 'blogPosts' %}
 </div>
-{% partial "book-now" %}
-{% partial "advisory" %}
+<div id="app">
+    <div id="book-now">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Liên Hệ Đặt Hàng</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+            <div class="product-item col-md-12">
+                {% component 'bookForm' %}
+            </div>
+        </div>
+    </div>
+    <div id="advisory">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Tư vấn ăn chay</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+            <div class="product-item col-md-12">
+                {% component 'advisoryForm' %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <div id="customer-feedback">
     {% partial "customer-feedback" %}
 </div>

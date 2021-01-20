@@ -2,21 +2,19 @@
 
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\DB;
-use TamPhuc\Management\Models\Menu;
-use TamPhuc\Management\Models\Type;
+use TamPhuc\Management\Models\Hotline;
 
-class MenuComponent extends ComponentBase
+class HotlineComponent extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name' => 'Menu Component',
+            'name' => 'HotlineComponent Component',
             'description' => 'No description provided yet...'
         ];
     }
 
-    public $menuList;
-    public $typeList;
+    public $hotline;
     public $location_name = 'Hà Nội';
 
     function getUserIP()
@@ -49,6 +47,8 @@ class MenuComponent extends ComponentBase
         } elseif (strcmp($local, 'danang') == 0) {
             $location_id = 3;
             $this->location_name = 'Đà Nẵng';
+        } elseif (strcmp($local, 'all') == 0) {
+            $this->location_name = 'Tâm Phúc';
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
@@ -67,16 +67,9 @@ class MenuComponent extends ComponentBase
                 }
             }
         }
-
-        $this->menuList = Menu::where('location_id', $location_id)->take($limitSize)->get();
-
-        $this->typeList = Type::orderBy('position')->get();
-
-        $this->menuList = $this->menuList->map(function ($menu) {
-            $type = Type::where('id', $menu->type_id)->first();
-            $menu->slugType = $type->slug;
-            return $menu;
-        });
+        if (strcmp($local, 'all') !== 0) {
+            $this->hotline = Hotline::where('location_id', $location_id)->first();
+        }
     }
 
     public function defineProperties()
@@ -86,14 +79,7 @@ class MenuComponent extends ComponentBase
                 'title' => 'location',
                 'description' => 'Location',
                 'type' => 'string',
-            ],
-            'limit' => [
-                'title' => 'limit',
-                'description' => 'Limit the quatity of menu is showed',
-                'type' => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'default' => '6',
-            ],
+            ]
         ];
     }
 }

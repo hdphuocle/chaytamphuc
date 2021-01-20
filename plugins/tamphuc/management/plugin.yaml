@@ -30,6 +30,14 @@ navigation:
                 label: 'Hình Ảnh Nhà Hàng'
                 url: tamphuc/management/imagecategory
                 icon: icon-sitemap
+            side-menu-hotline:
+                label: Hotline
+                url: tamphuc/management/hotline
+                icon: icon-sitemap
+            !!binary c2lkZS1tZW51LR1uYXZiYXI=:
+                label: !!binary HVRoYW5oIE1lbnU=
+                url: tamphuc/management/navbar
+                icon: icon-sitemap
     book-and-advisory:
         label: 'Đặt Hàng và Tư Vấn'
         url: tamphuc/management/book

@@ -30,3 +30,12 @@
 1.0.28:
     - 'Created table tamphuc_management_book'
     - builder_table_create_tamphuc_management_book.php
+1.0.30:
+    - 'Created table tamphuc_management_navbar'
+    - builder_table_create_tamphuc_management_navbar.php
+1.0.31:
+    - 'Created table tamphuc_management_hotline'
+    - builder_table_create_tamphuc_management_hotline.php
+1.0.32:
+    - 'Updated table tamphuc_management_hotline'
+    - builder_table_update_tamphuc_management_hotline.php

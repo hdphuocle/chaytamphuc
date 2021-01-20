@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: Tên
+        span: auto
+        type: text
+    url:
+        label: 'Đường Dẫn'
+        span: auto
+        type: text
+    is_available:
+        label: 'Hiển Thị'
+        span: auto
+        default: 1
+        type: checkbox
+    location:
+        label: 'Địa Điểm'
+        span: auto
+        nameFrom: id
+        descriptionFrom: description
+        select: name
+        type: relation

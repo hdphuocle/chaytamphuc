@@ -1,22 +1,18 @@
-==
-function onStart()
-{
-echo $this['location'];
-}
-==
+{% set hotline = __SELF__.hotline %}
+
 <div class="hotline-phone-ring-wrap">
     <div class="hotline-phone-ring">
         <div class="hotline-phone-ring-circle"></div>
         <div class="hotline-phone-ring-circle-fill"></div>
         <div class="hotline-phone-ring-img-circle">
-            <a href="tel:{{ hanoi ? '0932238899': hcm ? '0906682791' : '0972624014'}}" class="pps-btn-img">
+            <a href="tel:{{ hotline.phone_number }}" class="pps-btn-img">
                 <img src="{{ 'assets/images/icon-call.png'|theme }}" alt="Gọi điện thoại" width="50">
             </a>
         </div>
     </div>
     <div class="hotline-bar">
         <a href="tel:0932238899">
-            <span class="text-hotline">{{ hanoi ? '0932.238.899': hcm ? '0906.682.791' : '0972.624.014'}}</span>
+            <span class="text-hotline">{{ hotline.phone_number}}</span>
         </a>
     </div>
 </div>

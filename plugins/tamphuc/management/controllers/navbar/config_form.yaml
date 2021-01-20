@@ -1,0 +1,10 @@
+name: Navbar
+form: $/tamphuc/management/models/navbar/fields.yaml
+modelClass: TamPhuc\Management\Models\Navbar
+defaultRedirect: tamphuc/management/navbar
+create:
+    redirect: 'tamphuc/management/navbar/update/:id'
+    redirectClose: tamphuc/management/navbar
+update:
+    redirect: tamphuc/management/navbar
+    redirectClose: tamphuc/management/navbar
