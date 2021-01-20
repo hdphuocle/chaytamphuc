@@ -36,7 +36,6 @@ class HotlineComponent extends ComponentBase
     public function onRun()
     {
         $local = $this->property('location');
-//        echo $local;
         $location_id = 1;
         if (strcmp($local, 'hanoi') == 0) {
             $location_id = 1;
@@ -45,7 +44,6 @@ class HotlineComponent extends ComponentBase
             $location_id = 2;
             $this->location_name = 'TP. Hồ Chí Minh';
         } elseif (strcmp($local, 'danang') == 0) {
-            echo $local;
             $location_id = 3;
             $this->location_name = 'Đà Nẵng';
         } else {
