@@ -36,6 +36,9 @@ html {
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
+.nav-item-custom {
+    margin-left: 8px!important;
+}
 
 #menu_list {
     background: #eee !important;

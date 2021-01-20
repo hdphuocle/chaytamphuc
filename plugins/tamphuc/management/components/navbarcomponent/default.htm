@@ -13,7 +13,7 @@ links = {
 
 {% macro render_menu(links) %}
 {% for code, link in links %}
-<li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
+<li class="nav-item-custom {{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
     <a
         href="{{ link.sublinks ? '#' : (link.page ?: link[0]) }}"
         {% if link.sublinks %}data-toggle="dropdown" {% endif %}
@@ -66,7 +66,7 @@ links = {
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav justify-content-center">
             {{ nav.render_menu(links) }}
-            <li><a href="{{ user ? '#' : '/login' }}" data-request="onLogout" data-request-data="redirect: '/login'">{%
+            <li class="nav-item-custom"><a href="{{ user ? '#' : '/login' }}" data-request="onLogout" data-request-data="redirect: '/login'">{%
                 if user %} Log Out {% else %} Log In {% endif %}</a>
             </li>
         </ul>
