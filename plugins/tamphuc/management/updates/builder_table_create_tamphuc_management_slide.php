@@ -16,7 +16,7 @@ class BuilderTableCreateTamphucManagementSlide extends Migration
             $table->text('content');
             $table->boolean('is_available')->default(0);
             $table->integer('position')->default(0);
-            $table->string('href', 199)->default('\'#book-now\'');
+            $table->string('href', 199)->default('#book-now');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
