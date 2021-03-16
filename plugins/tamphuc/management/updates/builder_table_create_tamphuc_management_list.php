@@ -12,8 +12,6 @@ class BuilderTableCreateTamphucManagementList extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('location_id');
-            $table->string('type_id');
             $table->text('describe')->nullable();
             $table->string('image_url')->nullable();
             $table->string('slug')->nullable();
