@@ -12,7 +12,6 @@ class BuilderTableCreateTamphucManagementServices extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('icon');
             $table->text('content');
             $table->boolean('is_available')->default(1);
             $table->string('icon', 191)->default('null');
