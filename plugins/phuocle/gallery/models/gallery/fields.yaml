@@ -1,0 +1,30 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    imageUrl:
+        label: 'Image Upload'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    position:
+        label: Postion
+        span: auto
+        default: '0'
+        type: number
+    is_availble:
+        label: "\bis Available?"
+        span: auto
+        default: 1
+        type: checkbox
+    describe:
+        label: Describe
+        span: auto
+        type: text

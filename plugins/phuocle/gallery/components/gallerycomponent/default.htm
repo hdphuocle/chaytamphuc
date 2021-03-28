@@ -1,0 +1,19 @@
+{% set gallery = __SELF__.gallery %}
+
+{% macro render_item(gallery) %}
+{% for item in gallery %}
+<!--{{item}}-->
+<div class="gallery1-item">
+    <div class="content"><img src='{{ item.imageUrl.path }}'
+                              alt="{{ item.name}}"></div>
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% import _self as service %}
+
+<div class="container">
+    <div class="gallery1" id="gallery1List">
+        {{ service.render_item(gallery) }}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+name: Gallery
+form: $/phuocle/gallery/models/gallery/fields.yaml
+modelClass: PhuocLe\Gallery\Models\Gallery
+defaultRedirect: phuocle/gallery/gallery
+create:
+    redirect: 'phuocle/gallery/gallery/update/:id'
+    redirectClose: phuocle/gallery/gallery
+update:
+    redirect: phuocle/gallery/gallery
+    redirectClose: phuocle/gallery/gallery

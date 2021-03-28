@@ -1,0 +1,11 @@
+plugin:
+    name: 'phuocle.gallery::lang.plugin.name'
+    description: 'phuocle.gallery::lang.plugin.description'
+    author: PhuocLe
+    icon: oc-icon-image
+    homepage: ''
+navigation:
+    gallery-image:
+        label: Gallery
+        url: phuocle/gallery/gallery
+        icon: icon-image

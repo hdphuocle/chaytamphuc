@@ -1,0 +1,12 @@
+list: $/phuocle/gallery/models/gallery/columns.yaml
+modelClass: PhuocLe\Gallery\Models\Gallery
+title: Gallery
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'phuocle/gallery/gallery/update/:id'
