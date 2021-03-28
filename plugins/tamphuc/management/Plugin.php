@@ -16,7 +16,8 @@ class Plugin extends PluginBase
             'TamPhuc\Management\Components\AdvisoryComponent' => 'advisoryForm',
             'TamPhuc\Management\Components\BookComponent' => 'bookForm',
             'TamPhuc\Management\Components\HotlineComponent' => 'hotline',
-            'TamPhuc\Management\Components\NavbarComponent' => 'navbar'
+            'TamPhuc\Management\Components\NavbarComponent' => 'navbar',
+            'TamPhuc\Management\Components\FBChatComponent' => 'fBChat'
         ];
     }
 
