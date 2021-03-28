@@ -46,12 +46,11 @@ class FBChatComponent extends ComponentBase
             if ($city) {
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
-                    $location_id = $location->id;
                     $this->fb_page_id = '106524191123178';
                 } else {
                     $cityArray = ['Hai Lang', 'Huế', 'Dong Ha', 'Quang Tri', 'Tam Ky', 'Quang Nam'];
                     if (in_array($city, $cityArray)) {
-                        $this->fb_page_id = '106524191123178';
+                        $this->fb_page_id = '2118731971519169';
                     }
                 }
             }
