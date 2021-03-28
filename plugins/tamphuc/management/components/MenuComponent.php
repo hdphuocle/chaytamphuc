@@ -44,7 +44,7 @@ class MenuComponent extends ComponentBase
             $location_id = 1;
             $this->location_name = 'Hà Nội';
         } elseif (strcmp($local, 'hcm') == 0) {
-            $location_id = 2;
+            $location_id = 1;
             $this->location_name = 'TP. Hồ Chí Minh';
         } elseif (strcmp($local, 'danang') == 0) {
             $location_id = 3;

@@ -2,14 +2,14 @@
 
 <div class="fb-customerchat"
      attribution="setup_tool"
-     page_id={{ fb_page_id }}>
+     page_id="{{ fb_page_id }}">
 </div>
 
 <script>
     window.fbAsyncInit = function () {
         FB.init({
             xfbml: true,
-            version: 'v10.0'
+            version: 'v9.0'
         });
     };
 
@@ -20,4 +20,5 @@
         js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>

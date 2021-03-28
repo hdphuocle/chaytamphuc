@@ -32,13 +32,13 @@ class FBChatComponent extends ComponentBase
     public function onRun()
     {
         $local = $this->property('location');
-        $fb_page_id = '106524191123178';
+        $this->fb_page_id = '106524191123178';
         if (strcmp($local, 'hanoi') == 0) {
-            $fb_page_id = '106524191123178';
+            $this->fb_page_id = '106524191123178';
         } elseif (strcmp($local, 'hcm') == 0) {
-            $fb_page_id = '106524191123178';
+            $this->fb_page_id = '106524191123178';
         } elseif (strcmp($local, 'danang') == 0) {
-            $fb_page_id = '106524191123178';
+            $this->fb_page_id = '106524191123178';
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
@@ -47,11 +47,11 @@ class FBChatComponent extends ComponentBase
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
                     $location_id = $location->id;
-                    $fb_page_id = '106524191123178';
+                    $this->fb_page_id = '106524191123178';
                 } else {
                     $cityArray = ['Hai Lang', 'Huế', 'Dong Ha', 'Quang Tri', 'Tam Ky', 'Quang Nam'];
                     if (in_array($city, $cityArray)) {
-                        $fb_page_id = '106524191123178';
+                        $this->fb_page_id = '106524191123178';
                     }
                 }
             }
