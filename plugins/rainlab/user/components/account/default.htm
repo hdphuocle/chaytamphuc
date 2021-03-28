@@ -12,13 +12,17 @@
 <!-- Tab panes -->
 <div class="tab-content justify-content-center pt-4">
     <div class="tab-pane container active" id="login-page">
-        <div class="col-md-6">
-            {% partial __SELF__ ~ '::signin' %}
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6">
+                {% partial __SELF__ ~ '::signin' %}
+            </div>
         </div>
     </div>
     <div class="tab-pane container fade" id="register-page">
-        <div class="col-md-6">
-            {% partial __SELF__ ~ '::register' %}
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6">
+                {% partial __SELF__ ~ '::register' %}
+            </div>
         </div>
     </div>
 </div>

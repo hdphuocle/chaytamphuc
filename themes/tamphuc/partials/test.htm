@@ -1,269 +1,362 @@
-<div>
-<!--    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>-->
-<!--    <div class="fb-share-button" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>-->
-
-<!--    <div class="fb-comments" data-width="" data-numposts="5"></div>-->
-
-    <div class="gallery" id="gallery">
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,care" alt=""></div>
+<section id="our_menu" class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Thực Đơn Nhà Hàng Tâm Phúc</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,studied" alt=""></div>
+        <div class="row">
+            <ul class="nav nav-tabs menu_tab mb-4" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="breakfast-tab" data-toggle="tab" href="#breakfast" role="tab">Bữa Sáng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab">Bữa Trưa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dinner-tab" data-toggle="tab" href="#dinner" role="tab">Bữa Tối</a>
+                </li>
+            </ul>
         </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,substance" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,feature" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,line" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,railroad" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,pride" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,too" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,bottle" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,base" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,cell" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,bag" alt=""></div>
-        </div>
-        <div class="gallery-item">
-            <div class="content"><img src="https://source.unsplash.com/random/?tech,card" alt=""></div>
+        <div class="row">
+            <div class="tab-content col-lg-12" id="myTabContent">
+                <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+                                <div class="menu_content">
+                                    <h4>Súp Nấm  <span>30.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+                                <div class="menu_content">
+                                    <h4>Súp Bí Ngô<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+                                <div class="menu_content">
+                                    <h4>Súp Súp Lơ Xanh<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>Súp Rong Biển<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+                                <div class="menu_content">
+                                    <h4>Súp Nấm  <span>30.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+                                <div class="menu_content">
+                                    <h4>Súp Bí Ngô<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+                                <div class="menu_content">
+                                    <h4>Súp Súp Lơ Xanh<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>Súp Rong Biển<span>35.000</span></h4>
+                                    <p>Mushroom Soup</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/Aowufa1.jpg" alt="pizza">
+                                <div class="menu_content">
+                                    <h4>12" Pizza  <span>35.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/DJlmZDJ.jpg" alt="salad">
+                                <div class="menu_content">
+                                    <h4>Salad <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/knnQm7e.jpg" alt="green tea">
+                                <div class="menu_content">
+                                    <h4>green tea <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>meat  <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+                                <div class="menu_content">
+                                    <h4>Chicken Burger  <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+                                <div class="menu_content">
+                                    <h4>Black coffee <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+                                <div class="menu_content">
+                                    <h4>Fried Rice  <span>45.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>meat  <span>40.000</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+                                <div class="menu_content">
+                                    <h4>Chicken Burger  <span>$24</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+                                <div class="menu_content">
+                                    <h4>Black coffee <span>$20</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+                                <div class="menu_content">
+                                    <h4>Fried Rice  <span>$45</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>meat  <span>$24</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+                                <div class="menu_content">
+                                    <h4>Chicken Burger  <span>$24</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+                                <div class="menu_content">
+                                    <h4>Black coffee <span>$20</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+                                <div class="menu_content">
+                                    <h4>Fried Rice  <span>$45</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                            <div class="single_menu">
+                                <img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+                                <div class="menu_content">
+                                    <h4>meat  <span>$24</span></h4>
+                                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class=" menu_btn btn btn-danger">view more</a>
         </div>
     </div>
-
-
-</div>
+</section>
 
 <style>
-    .full {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
+    .page_title {
+        padding: 30px 0px;
     }
-    .full .content {
-        background-color: rgba(0,0,0,0.75) !important;
-        height: 100%;
-        width: 100%;
-        display: grid;
+    .page_title h1 {
+        color: #c0392b;
+        font-weight: 700;
+        line-height: 2;
+        margin-bottom: 0;
+        position: relative;
+        text-transform: capitalize;
     }
-    .full .content img {
+    .page_title h1::before {
+        background: #c0392b;
+        width: 70px;
+        height: 2px;
+        position: absolute;
+        content: '';
+        top: 90%;
         left: 50%;
-        transform: translate3d(0, 0, 0);
-        animation: zoomin 1s ease;
-        max-width: 70%;
-        max-height: 70%;
-        margin: auto;
+        transform: translate(-50%, -50%);
     }
-    .byebye {
-        opacity: 0;
+    .page_title h1::after {
+        position: absolute;
+        content: '';
+        background: #fbc531;
+        width: 30px;
+        height: 2px;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .byebye:hover {
-        transform: scale(0.2) !important;
+    /*Menu starts*/
+    .menu_tab {
+        margin: 0 auto;
+        justify-content: center;
     }
-    .gallery {
-        display: grid;
-        grid-column-gap: 8px;
-        grid-row-gap: 8px;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-auto-rows: 8px;
+    .nav-item {
+        display: inline-block;
+        text-align: center;
     }
-    .gallery img {
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 0 16px #333;
-        transition: all 1.5s ease;
+    .nav-tabs .nav-link{
+        transition: .3s;
     }
-    .gallery img:hover {
-        box-shadow: 0 0 32px #333;
+    .nav-tabs .nav-link.active {
+        background: #c0392b;
+        color: #fff;
+        font-weight: 700;
+        border: 1px solid #c0392b;
+        text-transform: capitalize;
     }
-    .gallery .content {
-        padding: 4px;
+    .nav-link {
+        color: #000;
     }
-    .gallery .gallery-item {
-        transition: grid-row-start 300ms linear;
-        transition: transform 300ms ease;
-        transition: all 0.5s ease;
-        cursor: pointer;
+    .nav-tabs .nav-link:hover {
+        background: #c0392b;
+        color: #fff;
+        border: 1px solid #c0392b;
     }
-    .gallery .gallery-item:hover {
-        transform: scale(1.025);
+    .single_menu {
+        position: relative;
+        margin-bottom: 75px;
+        transition: .3s;
     }
-    @media (max-width: 600px) {
-        .gallery {
-            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-        }
-    }
-    @media (max-width: 400px) {
-        .gallery {
-            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-        }
-    }
-    @-moz-keyframes zoomin {
-        0% {
-            max-width: 50%;
-            transform: rotate(-30deg);
-            filter: blur(4px);
-        }
-        30% {
-            filter: blur(4px);
-            transform: rotate(-80deg);
-        }
-        70% {
-            max-width: 50%;
-            transform: rotate(45deg);
-        }
-        100% {
-            max-width: 100%;
-            transform: rotate(0deg);
-        }
-    }
-    @-webkit-keyframes zoomin {
-        0% {
-            max-width: 50%;
-            transform: rotate(-30deg);
-            filter: blur(4px);
-        }
-        30% {
-            filter: blur(4px);
-            transform: rotate(-80deg);
-        }
-        70% {
-            max-width: 50%;
-            transform: rotate(45deg);
-        }
-        100% {
-            max-width: 100%;
-            transform: rotate(0deg);
-        }
-    }
-    @-o-keyframes zoomin {
-        0% {
-            max-width: 50%;
-            transform: rotate(-30deg);
-            filter: blur(4px);
-        }
-        30% {
-            filter: blur(4px);
-            transform: rotate(-80deg);
-        }
-        70% {
-            max-width: 50%;
-            transform: rotate(45deg);
-        }
-        100% {
-            max-width: 100%;
-            transform: rotate(0deg);
-        }
-    }
-    @keyframes zoomin {
-        0% {
-            max-width: 50%;
-            transform: rotate(-30deg);
-            filter: blur(4px);
-        }
-        30% {
-            filter: blur(4px);
-            transform: rotate(-80deg);
-        }
-        70% {
-            max-width: 50%;
-            transform: rotate(45deg);
-        }
-        100% {
-            max-width: 100%;
-            transform: rotate(0deg);
-        }
-    }
+    .single_menu:hover img{
+        -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 
+    }
+    .single_menu img {
+        width: 25%;
+        position: absolute;
+        height: 100px;
+        -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        transition: .3s;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .menu_content {
+        padding-left: 200px;
+    }
+    .menu_content h4 {
+        font-size: 25px;
+        font-weight: 300;
+        border-bottom: 1px dashed #c0392b;
+        line-height: 2;
+        text-transform: capitalize;
+    }
+    .menu_content h4 span {
+        font-size: 25px;
+        font-weight: 800;
+        float: right;
+        font-style: italic;
+        color: #c0392b;
+    }
+    .menu_content p {
+        font-weight: 200;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .menu_btn.btn.btn-danger {
+        margin: 0 auto;
+        display: block;
+        width: 140px;
+    }
+    /*Menu ends*/
+    .menu_btn.btn.btn-danger {
+        margin: 0 auto;
+        display: block;
+        width: 140px;
+    }
+    .btn.btn-danger {
+        background: #c0392b;
+        border: 1px solid #c0392b;
+        transition: .3s;
+        position: relative;
+        z-index: 1;
+        text-transform: capitalize;
+        font-weight: 700;
+        overflow: hidden;
+        padding: 15px 25px;
+    }
+    .btn.btn-danger::before {
+        position: absolute;
+        content: '';
+        background: #e74c3c;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        top: 100%;
+        transition: .3s;
+        z-index: -1;
+    }
+    .btn.btn-danger:hover:before{
+        top: 0;
+        left: 0;
+    }
 </style>
-
-<script>
-    var gallery = document.querySelector('#gallery');
-    var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
-    var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
-    var resizeAll = function () {
-        var altura = getVal(gallery, 'grid-auto-rows');
-        var gap = getVal(gallery, 'grid-row-gap');
-        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-            var el = item;
-            el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
-        });
-    };
-    gallery.querySelectorAll('img').forEach(function (item) {
-        item.classList.add('byebye');
-        if (item.complete) {
-            console.log(item.src);
-        }
-        else {
-            item.addEventListener('load', function () {
-                var altura = getVal(gallery, 'grid-auto-rows');
-                var gap = getVal(gallery, 'grid-row-gap');
-                var gitem = item.parentElement.parentElement;
-                gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
-                item.classList.remove('byebye');
-            });
-        }
-    });
-    window.addEventListener('resize', resizeAll);
-    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
-        item.addEventListener('click', function () {
-            item.classList.toggle('full');
-        });
-    });
-
-</script>
-

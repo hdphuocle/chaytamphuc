@@ -1,5 +1,5 @@
 list: $/phuocle/blogcomments/models/comments/columns.yaml
-modelClass: PhuocLe\BlogComments\Models\Comments
+modelClass: phuocle\BlogComments\Models\Comments
 title: Comments
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

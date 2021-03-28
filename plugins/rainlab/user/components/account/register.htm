@@ -1,51 +1,53 @@
 {% if canRegister %}
-    {{ form_ajax('onRegister') }}
+{{ form_ajax('onRegister') }}
 
-        <div class="form-group">
-            <label for="registerName">Tên Đầy Đủ</label>
-            <input
-                name="name"
-                type="text"
-                class="form-control"
-                id="registerName"
-                placeholder="Nhập tên đầy đủ của bạn" />
-        </div>
+<div class="form-group">
+    <label for="registerName">Tên Đầy Đủ</label>
+    <input
+        name="name"
+        type="text"
+        class="form-control"
+        id="registerName"
+        placeholder="Nhập tên đầy đủ của bạn"/>
+</div>
 
-        <div class="form-group">
-            <label for="registerEmail">Email</label>
-            <input
-                name="email"
-                type="email"
-                class="form-control"
-                id="registerEmail"
-                placeholder="Nhập email của bạn" />
-        </div>
+<div class="form-group">
+    <label for="registerEmail">Email</label>
+    <input
+        name="email"
+        type="email"
+        class="form-control"
+        id="registerEmail"
+        placeholder="Nhập email của bạn"/>
+</div>
 
-        {% if loginAttribute == "username" %}
-            <div class="form-group">
-                <label for="registerUsername">Tên đăng nhập</label>
-                <input
-                    name="username"
-                    type="text"
-                    class="form-control"
-                    id="registerUsername"
-                    placeholder="Nhập tên đăng nhập" />
-            </div>
-        {% endif %}
+{% if loginAttribute == "username" %}
+<div class="form-group">
+    <label for="registerUsername">Tên đăng nhập</label>
+    <input
+        name="username"
+        type="text"
+        class="form-control"
+        id="registerUsername"
+        placeholder="Nhập tên đăng nhập"/>
+</div>
+{% endif %}
 
-        <div class="form-group">
-            <label for="registerPassword">Mật Khẩu</label>
-            <input
-                name="password"
-                type="password"
-                class="form-control"
-                id="registerPassword"
-                placeholder="Nhập mật khẩu" />
-        </div>
+<div class="form-group">
+    <label for="registerPassword">Mật Khẩu</label>
+    <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="registerPassword"
+        placeholder="Nhập mật khẩu"/>
+</div>
+<div class="login-buttons">
 
-<button type="submit" class="auth_button button button--social-login">Đăng Ký</button>
+    <button type="submit" class="auth_button button button--social-login">Đăng Ký</button>
+</div>
 
-    {{ form_close() }}
+{{ form_close() }}
 {% else %}
-    <!-- Registration is disabled. -->
+<!-- Registration is disabled. -->
 {% endif %}

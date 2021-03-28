@@ -184,6 +184,10 @@
     display: none;
 }
 
+.view-more-container {
+}
+
+
 #return-to-top {
     position: fixed;
     bottom: 90px;

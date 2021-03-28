@@ -7,6 +7,6 @@ authorUrl: 'http://www.templatemo.com/'
 form:
     fields:
         site_name:
-            label: 'Site name'
-            comment: 'The website name as it should appear on the front-end'
-            default: 'Grill Template by templatemo'
+            label: 'Chay Tâm Phúc'
+            comment: 'Nhà hàng chay Tâm Phúc Website'
+            default: 'Nhà hàng chay Tâm Phúc Website'

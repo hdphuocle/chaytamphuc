@@ -4,11 +4,13 @@
     flex-direction: row;
     justify-content: center;
 }
-.login-buttons{
+
+.login-buttons {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 .social-buttons .social-button {
     width: auto;
     display: inline-block;
@@ -48,7 +50,8 @@
     display: inline-block;
     width: 40px;
 }
-social-buttons .button--social-login .icon span{
+
+social-buttons .button--social-login .icon span {
     margin-left: 8px !important;
 }
 
@@ -90,16 +93,20 @@ social-buttons .button--social-login .icon span{
 .social-buttons .button--google:hover {
     background-color: #d73925;
 }
+
 .social-buttons .button--twitter {
     background-color: #3B94D9;
     border: 1px solid #257abc;
 }
+
 .social-buttons .button--twitter .icon {
     border-right: 1px solid #257abc;
 }
+
 .social-buttons .button--twitter .icon:after {
     border-right: 1px solid #66abe1;
 }
+
 .social-buttons .button--twitter:hover {
     background-color: #2988d2;
 }
@@ -150,3 +157,9 @@ social-buttons .button--social-login .icon span{
 .auth_button .icon:after {
     content: "";
 }
+
+/*#login-page, #register-page {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/

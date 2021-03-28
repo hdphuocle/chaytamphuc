@@ -20,8 +20,14 @@ fields:
         label: 'Vị trí'
         span: auto
         type: number
-    image_url:
-        label: 'Hình Ảnh'
+    imageUrl:
+        label: 'Tải Hình Ảnh'
         mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        type: mediafinder
+        type: fileupload

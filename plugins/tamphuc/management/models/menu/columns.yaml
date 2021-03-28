@@ -15,9 +15,6 @@ columns:
     describe:
         label: describe
         type: text
-    image_url:
-        label: image_url
-        type: text
     slug:
         label: slug
         type: text

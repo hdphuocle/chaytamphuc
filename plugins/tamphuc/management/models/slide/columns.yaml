@@ -24,9 +24,6 @@ columns:
     updated_at:
         label: updated_at
         type: datetime
-    image_url:
-        label: image_url
-        type: text
     href:
         label: href
         type: text

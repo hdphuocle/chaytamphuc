@@ -35,14 +35,17 @@ fields:
         label: 'Đang khuyến mãi'
         span: auto
         type: checkbox
-    image_url:
-        label: 'Hình Ảnh'
+    imageUrl:
+        label: 'Tải Hình Ảnh'
         mode: image
         imageWidth: '100'
         imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
         span: auto
-        required: 1
-        type: mediafinder
+        type: fileupload
     describe:
         label: 'Mô tả'
         span: auto

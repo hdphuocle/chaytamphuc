@@ -25,14 +25,21 @@ class Menu extends Model
     }
 
     private $slug;
+
     public function getNameAttribute($value)
     {
-        return $this->slug = $value;
+        $this->slug = $value;
+        return mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
     }
-    public function getSlugAttribute(){
+
+    public function getSlugAttribute()
+    {
         return $this->attributes['slug'] = str_slug($this->slug);
     }
 
+    public $attachOne = [
+        'imageUrl' => ['System\Models\File', 'public' => true]
+    ];
     /**
      * @var array Validation rules
      */

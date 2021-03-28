@@ -14,7 +14,9 @@ class Slide extends Model
      * @var string The database table used by the model.
      */
     public $table = 'tamphuc_management_slide';
-
+    public $attachOne = [
+        'imageUrl' => ['System\Models\File', 'public' => true]
+    ];
     /**
      * @var array Validation rules
      */

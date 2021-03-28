@@ -219,6 +219,10 @@ html {
     background: #eee !important;
     padding-top: 24px;
 }
+.view-more-container {
+    background: #eee !important;
+    padding-top: 24px;
+}
 
 .book-now-btn-home .animate {
     transition: all 0.1s;
@@ -230,10 +234,10 @@ html {
     position: relative;
     padding: 4px 40px;
     /*margin: 0px 10px 4px 0px;*/
-    float: left;
     border-radius: 10px;
     font-size: 22px;
     color: #FFF;
+    justify-content: center;
     text-decoration: none;
 }
 
