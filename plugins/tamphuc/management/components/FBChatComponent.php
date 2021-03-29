@@ -38,7 +38,7 @@ class FBChatComponent extends ComponentBase
         } elseif (strcmp($local, 'hcm') == 0) {
             $this->fb_page_id = '106524191123178';
         } elseif (strcmp($local, 'danang') == 0) {
-            $this->fb_page_id = '106524191123178';
+            $this->fb_page_id = '2118731971519169';
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
