@@ -1,12 +1,12 @@
-name: 'Nhà Hàng Chay Tâm Phúc'
-description: 'Nhà hàng chay Tâm Phúc Website'
-author: '@chaytamphuc.vn'
-homepage: 'http://chaytamphuc.vn'
+name: 'Chay Tâm Phúc'
+description: 'Chay Tâm Phúc'
+author: 'chaytamphuc'
+homepage: 'https://chaytamphuc.vn'
 code: 'Chay Tâm Phúc'
-authorUrl: 'http://www.templatemo.com/'
+authorUrl: 'https://chaytamphuc.vn'
 form:
     fields:
         site_name:
             label: 'Chay Tâm Phúc'
-            comment: 'Nhà hàng chay Tâm Phúc Website'
-            default: 'Nhà hàng chay Tâm Phúc Website'
+            comment: 'Chay Tâm Phúc'
+            default: 'Chay Tâm Phúc'
