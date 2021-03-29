@@ -21,6 +21,13 @@ class BookComponent extends ComponentBase
         $this->addCss('/plugins/tamphuc/management/assets/css/book.css');
     }
 
+    public $gg_recapcha_id;
+
+    public function onRun()
+    {
+        $this->gg_recapcha_id = $this->property('gg_recapcha_id');
+    }
+
     public function onBookSubmit()
     {
         $validate = Validator::make(
@@ -49,6 +56,12 @@ class BookComponent extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'gg_recapcha_id' => [
+                'title' => 'gg_recapcha_id',
+                'description' => 'Google Recapcha v2 Id',
+                'type' => 'string',
+            ],
+        ];
     }
 }

@@ -1,3 +1,5 @@
+{% set gg_recapcha_id = __SELF__.gg_recapcha_id  %}
+
 {{ form_ajax('onBookSubmit') }}
 <div class="message-form">
     <form role="form" method="post" @submit="checkBookForm" class="g-recaptcha">

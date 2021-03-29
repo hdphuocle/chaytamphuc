@@ -1,3 +1,5 @@
+{% set gg_recapcha_id = __SELF__.gg_recapcha_id  %}
+
 {{ form_ajax('onAdvisorySubmit') }}
 <div class="message-form">
     <form role="form" class="send-message" @submit="checkAdvisoryForm">
@@ -35,7 +37,7 @@
             </b-field>
         </section>
         <section class="advisory-wrap-send">
-            <div id="advisory-g-recaptcha" class="g-recaptcha" data-sitekey="6Lc98zAaAAAAAJouxCQ7qTgPBmxnPB6NiFVXMUIb"></div>
+            <div id="advisory-g-recaptcha" class="g-recaptcha" data-sitekey="{{ gg_recapcha_id }}"></div>
             <div class="send">
                 <button type="submit" name="submit" class="g-capcha" required="required">Gửi</button>
             </div>

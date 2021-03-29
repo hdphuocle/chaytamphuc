@@ -43,8 +43,21 @@ class AdvisoryComponent extends ComponentBase
         $model->save();
     }
 
+    public $gg_recapcha_id;
+
+    public function onRun()
+    {
+        $this->gg_recapcha_id = $this->property('gg_recapcha_id');
+    }
+
     public function defineProperties()
     {
-        return [];
+        return [
+            'gg_recapcha_id' => [
+                'title' => 'gg_recapcha_id',
+                'description' => 'Google Recapcha v2 Id',
+                'type' => 'string',
+            ],
+        ];
     }
 }
