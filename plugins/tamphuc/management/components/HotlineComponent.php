@@ -48,8 +48,8 @@ class HotlineComponent extends ComponentBase
             $this->location_name = 'Đà Nẵng';
         } else {
             $ip_address = $this->getUserIP();
-            $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
-            $city = $geo["geoplugin_city"];
+            $geo = unserialize(file_get_contents("http://ip-api.com/php/$ip_address"));
+            $city = $geo["regionName"];
             if ($city) {
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
