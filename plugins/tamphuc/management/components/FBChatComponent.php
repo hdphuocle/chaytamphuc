@@ -8,10 +8,11 @@ class FBChatComponent extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'FBChat Component',
+            'name' => 'FBChat Component',
             'description' => 'No description provided yet...'
         ];
     }
+
     public $fb_page_id = '106524191123178';
 
     function getUserIP()
@@ -29,6 +30,7 @@ class FBChatComponent extends ComponentBase
         }
         return $ip;
     }
+
     public function onRun()
     {
         $local = $this->property('location');
@@ -46,7 +48,11 @@ class FBChatComponent extends ComponentBase
             if ($city) {
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
-                    $this->fb_page_id = '106524191123178';
+                    if ($location->id == 3) {
+                        $this->fb_page_id = '2118731971519169';
+                    } else {
+                        $this->fb_page_id = '106524191123178';
+                    }
                 } else {
                     $cityArray = ['Hai Lang', 'Huế', 'Dong Ha', 'Tinh Quang Tri', 'Tam Ky', 'Tinh Quang Nam'];
                     if (in_array($city, $cityArray)) {
