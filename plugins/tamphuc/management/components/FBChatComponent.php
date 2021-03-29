@@ -42,13 +42,13 @@ class FBChatComponent extends ComponentBase
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip_address"));
-            $city = $geo["geoplugin_region"];
+            $city = $geo["geoplugin_regionName"];
             if ($city) {
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
                     $this->fb_page_id = '106524191123178';
                 } else {
-                    $cityArray = ['Hai Lang', 'Huế', 'Dong Ha', 'Quang Tri', 'Tam Ky', 'Quang Nam'];
+                    $cityArray = ['Hai Lang', 'Huế', 'Dong Ha', 'Tinh Quang Tri', 'Tam Ky', 'Tinh Quang Nam'];
                     if (in_array($city, $cityArray)) {
                         $this->fb_page_id = '2118731971519169';
                     }
