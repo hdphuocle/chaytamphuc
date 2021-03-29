@@ -44,8 +44,8 @@ class FBChatComponent extends ComponentBase
         } else {
             $ip_address = $this->getUserIP();
             $geo = unserialize(file_get_contents("http://ip-api.com/php/$ip_address"));
-            $city = $geo["regionName"];
-            if ($city) {
+            if ($geo["status"] === 'success') {
+                $city = $geo["regionName"];
                 $location = DB::table('tamphuc_management_location')->where('slug', 'LIKE', $city)->first();
                 if ($location) {
                     if ($location->id == 3) {
@@ -60,9 +60,8 @@ class FBChatComponent extends ComponentBase
                     }
                 }
             }
+
         }
-
-
     }
 
     public function defineProperties()
