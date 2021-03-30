@@ -1,0 +1,101 @@
+title = "Liên Hệ Với Chúng Tôi"
+url = "/lien-he"
+layout = "default"
+description = "Trang Liên Hệ"
+meta_description = "Liên Hệ Với Chay Tâm Phúc"
+is_hidden = 0
+[fBChat]
+location = "any"
+
+[hotline]
+location= "any"
+
+[navbar]
+location= "any"
+
+[advisoryForm]
+gg_recapcha_id = "6LdPQ5MaAAAAAN_ljm4xvdNU3PDfHZcQkFoQERj8"
+==
+<header>
+    {% partial "top" %}
+    {% component "navbar" %}
+</header>
+
+{% component 'fBChat' %}
+
+{% component 'hotline' %}
+
+
+<div id="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-content">
+                    <h2>Liên hệ</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="app">
+    <div id="advisory">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="heading-section">
+                        <h2>Tư vấn ăn chay</h2>
+                        <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                    </div>
+                    <div class="product-item">
+                        {% component 'advisoryForm' %}
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4">
+                    <div class="info" style="margin-top: 160px">
+                        <span>Tại Đà Nẵng</span>
+                        <ul>
+                            <li><i class="fa fa-phone"></i>0972624014</li>
+                            <li><i class="fa fa-globe"></i>132A, Quang Trung, Hải Châu, Đà Nẵng</li>
+                            <li><i class="fa fa-envelope"></i><a href="#">chaytamphuc.danang@gmail.com</a></li>
+                        </ul>
+                        <span>Tại Hà Nội</span>
+                        <ul>
+                            <li><i class="fa fa-phone"></i>0989925919</li>
+                            <li><i class="fa fa-globe"></i>133, Phố Vệ Hồ, Tây Hồ, Hà Nội</li>
+                            <li><i class="fa fa-envelope"></i><a href="#">chaytamphuc.hannoi@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="map"></div>
+
+<style>
+    #map {
+        height: 100%;
+    }
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<script>
+    function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
+    }
+</script>
+
