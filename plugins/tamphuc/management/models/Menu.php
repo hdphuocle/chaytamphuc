@@ -32,6 +32,10 @@ class Menu extends Model
         return mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
     }
 
+    public function getDescribeAttribute($value){
+        return mb_convert_case($value, MB_CASE_TITLE, "UTF-8");
+    }
+
     public function getSlugAttribute()
     {
         return $this->attributes['slug'] = str_slug($this->slug);
