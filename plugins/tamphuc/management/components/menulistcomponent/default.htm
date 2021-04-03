@@ -8,7 +8,7 @@
 <div class="single_menu col-md-6">
     <img src={{ item.imageUrl.path }}>
     <div class="menu_content">
-        <h4>{{ item.name }}<span>{{ item.price|default(30000) }}</span></h4>
+        <h4>{{ item.name }}<span>{{ item.price|number_format }}</span></h4>
         <p>{{ item.describe }}</p>
     </div>
 </div>
