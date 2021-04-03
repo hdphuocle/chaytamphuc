@@ -8,6 +8,7 @@ class Plugin extends PluginBase
     {
         return [
             'TamPhuc\Management\Components\MenuComponent' => 'menuList',
+            'TamPhuc\Management\Components\MenuListComponent' => 'allMenu',
             'TamPhuc\Management\Components\DanangMenuComponent' => 'danangMenuList',
             'TamPhuc\Management\Components\HanoiMenuComponent' => 'hanoiMenuList',
             'TamPhuc\Management\Components\ServiceComponent' => 'serviceList',
