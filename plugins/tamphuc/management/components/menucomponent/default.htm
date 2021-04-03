@@ -4,6 +4,7 @@
 {% set typeList = __SELF__.typeList %}
 
 {% set location_name = __SELF__.location_name  %}
+{% set menuLink = __SELF__.menuLink  %}
 
 {% macro render_item(menuList) %}
 {% for item in menuList %}
@@ -53,7 +54,7 @@
         </div>
         <div class="view-more-container pt-5">
             <div class="d-flex justify-content-center book-now-btn-home">
-                <a class="custom-btn btn-8" href="/thuc-don"><span>Xem Thêm</span></a>
+                <a class="custom-btn btn-8" href="{{ menuLink }}"><span>Xem Thêm</span></a>
             </div>
         </div>
     </div>

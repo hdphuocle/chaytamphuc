@@ -18,6 +18,7 @@ class MenuComponent extends ComponentBase
     public $menuList;
     public $typeList;
     public $location_name = 'Hà Nội';
+    public $menuLink = '/thuc-don';
 
     function getUserIP()
     {
@@ -38,6 +39,13 @@ class MenuComponent extends ComponentBase
     public function onRun()
     {
         $local = $this->property('location');
+        if ($local === 'hanoi') {
+            $this->menuLink = '/thuc-don-hanoi';
+        } elseif ($local === 'danang') {
+            $this->menuLink = '/thuc-don-danang';
+        } else {
+            $this->menuLink = '/thuc-don';
+        }
         $limitSize = $this->property('limit');
         $location_id = 1;
         if (strcmp($local, 'hanoi') == 0) {
@@ -77,6 +85,7 @@ class MenuComponent extends ComponentBase
             $menu->slugType = $type->slug;
             return $menu;
         });
+
     }
 
     public function defineProperties()
