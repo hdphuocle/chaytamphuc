@@ -7,7 +7,10 @@
 
 {% macro render_item(menuList) %}
 {% for item in menuList %}
-<div class="mx-auto">
+<div class="mx-auto main_item">
+    {% if item.is_new == true %}
+    <img class="new_label" src="https://tamphuc.s3-ap-southeast-1.amazonaws.com/media/new.png">
+    {% endif %}
     <div class="card-content1">
         <div class="img-menu">
             <img src={{ item.imageUrl.path }}>
@@ -58,6 +61,17 @@
 
 
 <style>
+    .main_item{
+        position: relative;
+    }
+    .new_label{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 60px;
+        width: 80px;
+        z-index: 99999;
+    }
     .custom-btn {
         width: 130px;
         height: 40px;
