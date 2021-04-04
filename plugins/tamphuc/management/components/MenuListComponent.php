@@ -4,6 +4,7 @@ use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\DB;
 use TamPhuc\Management\Models\Menu;
 use TamPhuc\Management\Models\Type;
+use function Aws\map;
 
 class MenuListComponent extends ComponentBase
 {
@@ -69,14 +70,12 @@ class MenuListComponent extends ComponentBase
         }
 
         $this->menuList = Menu::where('location_id', $location_id)->get();
-
-        $this->typeList = Type::orderBy('position')->get();
-
-        $this->menuList = $this->menuList->map(function ($menu) {
-            $type = Type::where('id', $menu->type_id)->first();
-            $menu->slugType = $type->slug;
-            return $menu;
-        });
+        $type_arr = array();
+        foreach ($this->menuList as $item) {
+            $type_arr[] = $item->type_id;
+        }
+        $type_arr = array_unique($type_arr);
+        $this->typeList = Type::whereIn('id', $type_arr)->get();
     }
 
     public function defineProperties()

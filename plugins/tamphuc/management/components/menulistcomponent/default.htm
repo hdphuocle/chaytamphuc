@@ -3,20 +3,36 @@
 {% set typeList = __SELF__.typeList %}
 
 {% set location_name = __SELF__.location_name  %}
-{% macro render_item(menuList) %}
+{% macro render_item(menuList, type_id) %}
 {% for item in menuList %}
-<div class="single_menu col-md-6">
-    <img src={{ item.imageUrl.path }}>
-    <div class="menu_content">
-        <h4>{{ item.name }}<span>{{ item.price|number_format }}</span></h4>
-        <p>{{ item.describe }}</p>
+{% if item.type_id == type_id %}
+    <div class="single_menu col-md-6">
+        <img src={{ item.imageUrl.path }}>
+        <div class="menu_content">
+            <h4>{{ item.name }}<span>{{ item.price|number_format }}</span></h4>
+            <p>{{ item.describe }}</p>
+        </div>
     </div>
-</div>
+{% endif %}
+
 {% endfor %}
 {% endmacro %}
 
-{% import _self as menu %}
+{% macro render_type(typeList, menuList) %}
+{% for type in typeList %}
+{% import _self as mn %}
 
+<div class="menu-section">
+    <h2>{{ type.name }}</h2>
+</div>
+<div class="h-divider">
+    <div class="shadow"></div>
+</div>
+{{ mn.render_item(menuList, type.id ) }}
+
+{% endfor %}
+{% endmacro %}
+{% import _self as menu %}
 
 <section class="pt-5 pb-5">
     <div class="container">
@@ -30,16 +46,14 @@
         </div>
         <div class="col-lg-12">
             <div class="row">
-                {{ menu.render_item(menuList) }}
+                {{ menu.render_type(typeList, menuList) }}
             </div>
         </div>
+
     </div>
 </section>
 
 <style>
-    .page_title {
-        padding: 30px 0px;
-    }
 
     .page_title h1 {
         color: #c0392b;
@@ -73,17 +87,6 @@
         transform: translate(-50%, -50%);
     }
 
-    /*Menu starts*/
-    .menu_tab {
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    .nav-item {
-        display: inline-block;
-        text-align: center;
-    }
-
     .nav-tabs .nav-link {
         transition: .3s;
     }
@@ -94,10 +97,6 @@
         font-weight: 700;
         border: 1px solid #c0392b;
         text-transform: capitalize;
-    }
-
-    .nav-link {
-        color: #000;
     }
 
     .nav-tabs .nav-link:hover {
@@ -160,59 +159,36 @@
         font-family: 'Goldman', sans-serif;
     }
 
-    .menu_btn.btn.btn-danger {
-        margin: 0 auto;
-        display: block;
-        width: 140px;
-    }
 
-    /*Menu ends*/
-    .menu_btn.btn.btn-danger {
-        margin: 0 auto;
-        display: block;
-        width: 140px;
-    }
-
-    .btn.btn-danger {
-        background: #c0392b;
-        border: 1px solid #c0392b;
-        transition: .3s;
-        position: relative;
-        z-index: 1;
-        text-transform: capitalize;
-        font-weight: 700;
-        overflow: hidden;
-        padding: 15px 25px;
-    }
-
-    .btn.btn-danger::before {
-        position: absolute;
-        content: '';
-        background: #e74c3c;
+    .menu-section {
         width: 100%;
-        height: 100%;
-        left: -100%;
-        top: 100%;
-        transition: .3s;
-        z-index: -1;
+        text-align: center;
+        z-index: 999;
     }
 
-    .btn.btn-danger:hover:before {
-        top: 0;
-        left: 0;
+    .menu-section h2 {
+        font-family: 'Goldman', sans-serif;
+        font-size: 22px;
+        color: #dd1628;
+        text-shadow: 5px 2px 4px grey;
+        font-weight: 900;
+        text-transform: uppercase;
     }
+
     @media only screen and (max-width: 600px) {
         .menu_content {
             padding-left: 100px;
         }
+
         .single_menu {
             padding-right: 0;
             padding-left: 0;
         }
+
         .menu_content h4 {
             font-size: 17px;
             font-weight: 800;
-            border-bottom: 1px dashed #c0392b;
+            border-bottom: 1px dashed #c02333;
             line-height: 2;
             text-transform: capitalize;
             font-family: 'Goldman', sans-serif;
@@ -223,7 +199,7 @@
             font-weight: 800;
             float: right;
             font-style: italic;
-            color: #c0392b;
+            color: #c0161f;
             font-family: 'Goldman', sans-serif;
         }
 
@@ -234,16 +210,46 @@
             letter-spacing: 1px;
             font-family: 'Goldman', sans-serif;
         }
+
         .single_menu img {
             height: 90px;
         }
-        .heading-section h2{
+
+        .heading-section h2 {
             font-size: 24px;
         }
-        .heading-section{
+
+        .heading-section {
             padding-top: 0;
         }
 
+        .menu-section h2 {
+            font-size: 18px;
+        }
     }
+
+    .h-divider {
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 80px;
+        width: 100%;
+        position: relative;
+    }
+
+    .h-divider .shadow {
+        overflow: hidden;
+        height: 4px;
+    }
+
+    .h-divider .shadow:after {
+        content: '';
+        display: block;
+        margin: -25px auto 0;
+        width: 100%;
+        height: 25px;
+        border-radius: 125px/12px;
+        box-shadow: 0 0 8px black;
+    }
+
 </style>
 
