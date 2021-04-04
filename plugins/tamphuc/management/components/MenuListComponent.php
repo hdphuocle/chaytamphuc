@@ -75,7 +75,7 @@ class MenuListComponent extends ComponentBase
             $type_arr[] = $item->type_id;
         }
         $type_arr = array_unique($type_arr);
-        $this->typeList = Type::whereIn('id', $type_arr)->get();
+        $this->typeList = Type::whereIn('id', $type_arr)->orderBy('position')->get();
     }
 
     public function defineProperties()
