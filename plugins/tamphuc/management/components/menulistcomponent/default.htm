@@ -6,13 +6,19 @@
 {% macro render_item(menuList, type_id) %}
 {% for item in menuList %}
 {% if item.type_id == type_id %}
-    <div class="single_menu col-md-6">
+<div class="main_item col-md-6">
+    {% if item.is_new == true %}
+    <img class="new_label" src="https://tamphuc.s3-ap-southeast-1.amazonaws.com/media/new.png">
+    {% endif %}
+    <div class="single_menu">
         <img src={{ item.imageUrl.path }}>
         <div class="menu_content">
             <h4>{{ item.name }}<span>{{ item.price|number_format }}</span></h4>
             <p>{{ item.describe }}</p>
         </div>
     </div>
+</div>
+
 {% endif %}
 
 {% endfor %}
@@ -54,7 +60,17 @@
 </section>
 
 <style>
-
+    .main_item{
+        position: relative;
+    }
+    .new_label{
+        position: absolute;
+        top: -19px;
+        left: 0;
+        height: 50px;
+        width: 50px;
+        z-index: 99999;
+    }
     .page_title h1 {
         color: #c0392b;
         font-weight: 700;
