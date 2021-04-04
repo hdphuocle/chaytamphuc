@@ -1,11 +1,21 @@
 title = "Thực Đơn"
 url = "/thuc-don-danang"
 layout = "default"
+description = "Chay Tâm Phúc"
+meta_description = "Chào mừng quý khách đến với website của Chay Tâm Phúc."
+meta_keywords = "Tâm Phúc, restaurant, Chay, Chay Tâm Phúc, Vệ Hồ, Hải Châu"
+meta_author = "chaytamphuc"
 is_hidden = 0
 role = 0
 permission = 0
 anonymous_only = 0
 logged_only = 0
+
+[fBChat]
+location = "any"
+
+[hotline]
+location= "any"
 
 [allMenu]
 location = "danang"
@@ -17,5 +27,7 @@ location= "any"
     {% partial "top" %}
     {% component "navbar" %}
 </header>
+{% component 'fBChat' %}
+
 {% component 'hotline' %}
 {% component "allMenu" %}
